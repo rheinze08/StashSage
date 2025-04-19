@@ -150,6 +150,5 @@ cython_debug/
 *.exe
 *.zip
 
-# EXCEPTIONS: allow installers in /docs/
-!docs/*.exe
-!docs/*.zip
+# Ignore files built from build_dist.bat
+.gitattributes
