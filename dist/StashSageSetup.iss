@@ -10,16 +10,7 @@ Compression=lzma
 SolidCompression=yes
 
 [Files]
-; Install everything inside your /dist/ folder to the app directory
-Source: "dist\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
+Source: "dist\StashSage.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-; Shortcut to the compiled .exe (not run.bat)
-Name: "{group}\StashSage"; Filename: "{app}\StashSage.exe"; WorkingDir: "{app}"
-
-; Optional desktop shortcut
-Name: "{commondesktop}\StashSage"; Filename: "{app}\StashSage.exe"; Tasks: desktopicon
-
-[Tasks]
-Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional icons:"
-
+Name: "{group}\StashSage"; Filename: "{app}\StashSage.exe"

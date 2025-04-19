@@ -1,0 +1,77 @@
+poe2trade.utils Submodule - README
+
+Overview
+The poe2trade.utils submodule is a collection of utility modules designed to support various functionalities in the poe2trade project. It provides tools for chart generation, log parsing, mod string analysis, and feature extraction. Each module within this submodule handles specific tasks related to processing trade data and item details for the Path of Exile (PoE) trading system.
+
+Modules and Their Functionalities
+
+log_utils.py
+
+parse_line_for_trade: Parses a single line from a client log to extract trade details such as timestamp, buyer, item name, amount, and currency. Returns a dictionary with parsed trade details if the line matches the expected pattern; otherwise, returns None.
+
+read_all_log_trades: Reads through provided log file paths, parsing each line using parse_line_for_trade, and aggregates valid trade records. Duplicate lines are skipped. Returns a list of dictionaries representing all valid trades.
+
+chart_utils.py
+
+generate_price_chart_for_item: Generates a dual-axis price chart that plots the trade history of an item with separate lines for Exalted and Divine prices over time. It accepts the item name, a DataFrame containing trade records, an item column (default "item_name"), and chart dimensions (width and height). It returns a BytesIO buffer containing the chart as a PNG image.
+
+generate_offers_table_chart: Creates a table image showing the last three unique buyer offers for an item. Optionally displays a predicted price along with a difference value. It accepts parameters including the item name, trade DataFrame, item column (default "item_name"), an optional predicted price, a difference value, and chart dimensions. It returns a BytesIO buffer containing the table chart as a PNG image.
+
+mods_utils.py
+
+parse_mod: Normalizes a mod string by converting it to lowercase, stripping whitespace, and replacing digits with a placeholder. It extracts numeric ranges and determines eligibility for multiplicity calculations. It also identifies whether the mod affects defensive stats (Armour, Evasion, Energy Shield). Returns a tuple containing the normalized mod pattern, minimum and maximum values, a boolean indicating multiplicity eligibility, and integer flags for Armour, Evasion, and Energy Shield.
+
+compare_mods: Compares two mod strings to check if one mod is a valid multiple of another. It ensures matching normalized patterns, compatible multiplicity eligibility, and numeric range containment. When eligible, it calculates the number of valid multiples. Returns a tuple (boolean, integer or None) indicating if the mods match and, if applicable, the multiple count.
+
+parse_utils.py
+
+parse_item_string: Extracts detailed information from a raw PoE item string. It retrieves basic item details (name, category, quality), pre-mod lines (lines before tier lines), mod tiers with corresponding mod texts (up to 9 mods), corruption status, and price/seller details from an optional secondary string. Returns a dictionary with all parsed fields.
+
+parse_excel_file: Reads an input Excel file containing item data, applies parse_item_string to each row, and compiles the results into a structured DataFrame. It also constructs an "Item Title" by combining mod and item name fields, then writes the final report to an output Excel file. Returns the resulting DataFrame.
+
+feature_utils.py
+
+parse_rolled_mod: Parses a fully assigned (rolled) mod string to return its normalized pattern, numeric bounds (min and max), and an indicator if it affects base defensive stats. Returns a tuple with the normalized pattern, min value, max value, and a flag indicating whether it affects base values.
+
+parse_unrolled_mod: Parses an unrolled (template) mod string that may contain dash-based ranges. It normalizes the mod, extracts numeric tokens, determines multiplicity eligibility, and identifies if it affects base defensive stats. Returns a tuple with the normalized pattern, min value, max value, a boolean for multiplicity eligibility, and an affects-base flag.
+
+compare_mods: Compares a rolled mod with an unrolled mod to determine if they match by checking numeric range containment (for dash-based mods) or verifying integer multiples (for mods eligible for multiplicity). Returns a tuple (boolean, integer or None) indicating a match and the multiple count if applicable.
+
+parse_pre_mods: Processes pre-mod columns in a DataFrame row by parsing candidate mod strings and comparing them against template data for rune and corruption mods. Updates the row with additional fields based on the comparisons and returns the selected candidate mod or None if no valid candidate is found.
+
+process_post_mods: Processes mod columns (mod1 through mod9) in a DataFrame row by parsing them using the unrolled mod approach and storing the resulting pattern and value in the row. Returns the first valid mod string found or None.
+
+process_all_mods: Integrates pre-mod and post-mod processing into a unified mod dataset. Aggregates mod patterns and values to create unique mod entries and appends these as new columns in the DataFrame row. Returns the updated row with unified mod information.
+
+parse_excel_file: Reads an input Excel file, applies the complete mod processing pipeline (including loading category items, corruption mods, and rune mods), reorders columns for clarity, and writes the final processed report to an output Excel file. Returns the resulting DataFrame.
+
+Installation and Dependencies
+Python version 3.7 or higher is recommended.
+
+Dependencies include:
+
+matplotlib (for chart generation)
+
+pandas (for data manipulation and Excel file operations)
+
+openpyxl (for writing Excel files)
+
+To install the dependencies, run: pip install matplotlib pandas openpyxl
+
+Usage Examples
+Generating a Price Chart: Import generate_price_chart_for_item from chart_utils.py. Provide a DataFrame of trade data and the item name to obtain a PNG image buffer containing the price chart.
+
+Parsing Log Files for Trades: Use read_all_log_trades from log_utils.py with a list of log file paths to extract and aggregate valid trade records from client logs.
+
+Parsing an Excel File with Item Data: Call parse_excel_file from parse_utils.py, passing the input and output Excel file paths. The function processes each row using parse_item_string, constructs an Item Title, and writes the parsed report to the specified output file.
+
+Processing Mods from an Excel File: Utilize parse_excel_file from feature_utils.py to load mod data, apply the mod processing pipeline, reorder the columns, and save the final mod report to a new Excel file.
+
+Contributing
+Contributions to enhance functionality or add new features are welcome. Please follow the existing coding style and include tests for any new functionality. Contributions can be submitted via the project repository.
+
+License
+This project is licensed under the MIT License. Please refer to the LICENSE file for more details.
+
+Additional Information
+The utilities in this submodule are specifically tailored for processing PoE trade data and are a core component of the poe2trade project. For issues, feature requests, or further assistance, please consult the project repository or open an issue.
