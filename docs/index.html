@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StashSage – Lightweight POE 2 Stash Companion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --blue:#0078d4;
+      --blue-dark:#005a9e;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --shadow:0 4px 16px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);color:#333;line-height:1.6;
+    }
+    header{text-align:center;padding:60px 20px 40px}
+    header h1{font-size:3rem;font-weight:700;margin-bottom:.4em;color:#222}
+    header p{max-width:720px;margin:0 auto;font-size:1.15rem}
+
+    .btn{display:inline-block;margin:32px auto 0;padding:16px 32px;font-size:1.05rem;font-weight:600;
+      color:#fff;background:var(--blue);border-radius:6px;text-decoration:none;transition:.25s}
+    .btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
+
+    main{max-width:900px;margin:40px auto;padding:0 20px;display:flex;flex-direction:column;gap:48px}
+    section{background:var(--card);padding:32px;border-radius:12px;box-shadow:var(--shadow)}
+    section h2{font-size:1.6rem;font-weight:600;margin-bottom:16px;color:#222}
+    ol{margin-left:20px}
+    ol li{margin-bottom:10px;font-size:1rem}
+    code{background:#eef;font-family:monospace;padding:2px 4px;border-radius:4px}
+
+    footer{text-align:center;margin:60px 0 20px;font-size:.9rem;color:#777}
+    footer a{color:var(--blue);text-decoration:none}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>StashSage</h1>
+    <p>Your <strong>lightweight</strong>, private companion for monitoring Path&nbsp;of&nbsp;Exile 2 stash trades & prices.<br>
+       Built with ❤ by Roland Heinze.</p>
+    <a class="btn" href="https://github.com/rheinze08/StashSage/releases/latest/download/StashSageInstaller.zip">⬇️ Download Installer (.zip)</a>
+  </header>
+
+  <main>
+    <section id="windows-install">
+      <h2>First‑Time Installation (Windows only)</h2>
+      <ol>
+        <li>Download <strong>StashSageInstaller.zip</strong> (above).</li>
+        <li>Extract the ZIP anywhere (e.g. your <em>Downloads</em> folder).</li>
+        <li><strong>Right‑click → <code>Scan with Microsoft Defender</code></strong>.<br>
+            &nbsp;&nbsp;PyInstaller apps can trigger a false Trojan alert.&nbsp;A manual scan clears it.</li>
+        <li>Double‑click <code>StashSage.exe</code>. If Windows SmartScreen appears, choose <em>More info → Run anyway</em>.</li>
+        <li>Finish the installer and launch <strong>StashSage</strong>.</li>
+        <li>Set your Steam / GGG log paths; click <em>Save Config &amp; Restart</em>.</li>
+        <li>(Optional) Add your Discord IDs (see below) and save.</li>
+      </ol>
+    </section>
+
+    <section id="discord-setup">
+      <h2>Discord Bot Setup <small style="font-weight:400">&nbsp;•&nbsp; <a href="docs/Discord Bot Setup How-To.docx" target="_blank">Full how‑to (.docx)</a></small></h2>
+      <ol>
+        <li>Create a new application at the <a href="https://discord.com/developers/applications" target="_blank">Discord Developer&nbsp;Portal</a>.</li>
+        <li>In the <em>Bot</em> tab enable <strong>Message Content Intent</strong>.</li>
+        <li>Invite the bot to a private server via OAuth URL (<code>permissions=8</code>).</li>
+        <li>DM the bot once so it can DM you back.</li>
+        <li>Copy the bot token → paste into <em>Discord Bot Token</em>.</li>
+        <li>Enable <em>Developer Mode</em> in Discord → right‑click your name → <em>Copy User ID</em> → paste into <em>Discord User ID</em>.</li>
+        <li>Click <em>Save Config &amp; Restart</em> → you’ll receive a confirmation DM.</li>
+      </ol>
+      <p style="margin-top:18px;font-size:.95rem;color:#555">Questions? Ping <strong>Austin Powers</strong> on Discord — I don’t bite!</p>
+    </section>
+  </main>
+
+  <footer>
+    Version 1.0 • © Roland Heinze • <a href="https://github.com/rheinze08/StashSage" target="_blank">GitHub</a>
+  </footer>
+</body>
+</html>
