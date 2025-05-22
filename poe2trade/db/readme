@@ -1,0 +1,46 @@
+POE2TRADE.DB SUBMODULE - README
+
+OVERVIEW
+The poe2trade.db submodule manages workflows for scraping, parsing, and feature extraction of item data in the Path of Exile (PoE) ecosystem. It contains command-line entry points and supporting scripts that collaborate to produce categorized data files.
+
+FILE DESCRIPTIONS
+1) __main__.py
+   - Provides a command-line interface allowing users to specify actions (scrape, parse, features, model) and categories (e.g., Body Armour, Weapons).
+   - If no actions are passed, both "scrape" and "parse" run by default.
+   - Usage Examples (omitting the "model" action for brevity):
+     - python -m poe2trade.db scrape Body Armour
+     - python -m poe2trade.db parse Body Armour
+     - python -m poe2trade.db features Body Armour
+     - python -m poe2trade.db scrape parse Body Armour Weapons
+     - python -m poe2trade.db Body Armour Weapons
+
+2) scrape_cat.py
+   - Defines a function that uses sub-filters to retrieve data for each item in the specified category. 
+   - Saves the scraped data in separate Excel files named according to the item.
+
+3) parse_cat.py
+   - Locates the Excel files produced by scraping and parses them with the parse_utils module.
+   - Produces parsed Excel files (suffixed with "_parsed.xlsx") and aggregates them into a combined report (suffixed with "_agg_parsed.xlsx").
+
+4) feature_cat.py
+   - Locates parsed Excel files, applies feature extraction (via feature_utils), and produces feature-rich Excel files (suffixed with "_features.xlsx").
+   - Aggregates them into a combined report (suffixed with "_agg_features.xlsx").
+
+WORKFLOW
+1) Scrape
+   - Execute "python -m poe2trade.db scrape <Category>" to gather raw trade data into per-item Excel files.
+2) Parse
+   - Execute "python -m poe2trade.db parse <Category>" to read all scraped Excel files, parse them, and produce both individual and aggregated Excel reports.
+3) Features
+   - Execute "python -m poe2trade.db features <Category>" to further process the parsed files for deeper insights, outputting additional Excel reports containing feature data.
+
+DEPENDENCIES
+- Requires the poe2trade.utils submodule, which includes scrape_utils, parse_utils, and feature_utils.
+- Requires pandas and openpyxl for Excel operations.
+
+CONTRIBUTIONS
+- Follow the established patterns and file structures for new categories or actions.
+- Ensure backward compatibility with existing workflows.
+
+LICENSE
+- Distributed under MIT License. Refer to the main project LICENSE file for details.
