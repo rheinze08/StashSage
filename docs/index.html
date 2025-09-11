@@ -1,0 +1,210 @@
+<!--
+  =========================
+  StashSage site template (index.html.j2)
+  This whole block is an HTML comment so it NEVER shows in the browser
+  even if the file is opened without Jinja rendering.
+  =========================
+  You can override any of these from Python/CI:
+    - Python: env.get_template("index.html.j2").render(version="1.2", ...)
+    - CLI:    jinja2 index.html.j2 -D version=1.2 > index.html
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StashSage – POE2 Trading App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--blue:#0078d4;--blue-dark:#005a9e;--bg:#f7f9fc;--card:#ffffff;--shadow:0 4px 16px rgba(0,0,0,.08)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:#333;line-height:1.6}
+    header{text-align:center;padding:50px 20px 20px}
+    .logo{height:40px;vertical-align:middle;margin:0 10px}
+    header h1{font-size:2.5rem;font-weight:700;margin-bottom:.4em;color:#222;display:flex;justify-content:center;align-items:center;gap:10px}
+    header p{max-width:720px;margin:0 auto 10px;font-size:1.15rem}
+    .donate{font-size:1rem;margin-top:10px}
+    .donate a{color:var(--blue);text-decoration:none;font-weight:600}
+    .donate a:hover{color:var(--blue-dark)}
+    .btn{display:inline-block;margin:24px auto 0;padding:14px 28px;font-size:1.05rem;font-weight:600;color:#fff;background:var(--blue);border-radius:6px;text-decoration:none;transition:.25s}
+    .btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
+    main{max-width:900px;margin:40px auto;padding:0 20px;display:flex;flex-direction:column;gap:40px}
+    section{background:var(--card);padding:28px;border-radius:12px;box-shadow:var(--shadow)}
+    section h2{font-size:1.5rem;font-weight:600;margin-bottom:14px;color:#222}
+    ol{margin-left:20px}
+    ol li{margin-bottom:10px;font-size:1rem}
+    code{background:#eef;font-family:monospace;padding:2px 5px;border-radius:4px}
+    .gallery{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px -8px 0}
+    .gallery a{display:block;flex:1 1 200px;max-width:200px;padding:8px}
+    .gallery img{width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:transform .2s;cursor:pointer}
+    .gallery img:hover{transform:scale(1.05)}
+    .video-container{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    footer{text-align:center;margin:50px 0 20px;font-size:.9rem;color:#777}
+    footer a{color:#0078d4;text-decoration:none}
+    footer a:hover{color:#005a9e}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+      StashSage for POE2
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+    </h1>
+
+    <p>Instant price predictions.<br>
+       24/7 Discord alerts so you never miss a trade message.</p>
+
+    <p><br>Version 0.3.1 (<span id="build-date">09/11/2025</span>)</p>
+    <p><br>Built with ❤ by Budodude.</p>
+
+    <p>Questions or Feedback? <a href="https://discord.gg/xzdzUKXT" target="_blank" rel="noopener">Join our Discord!</a></p>
+    <p>Or message <strong>Budodudette</strong> in-game!</p>
+
+    <p class="donate">
+      We appreciate any support for our work — <a href="https://www.patreon.com/c/Budodude?redirect=true" target="_blank" rel="noopener">Support us on Patreon</a>
+    </p>
+    <a class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v1.1.0/StashSageInstaller.zip">⬇️ Download Installer (.zip)</a>
+  </header>
+
+  <main>
+    <!-- 1. StashSage Demo Video -->
+    <section id="demo-video">
+      <h2>StashSage Demo Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VmsiqPns4Ac"
+                title="StashSage Demo Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 2a. Using Price History and Price Aura -->
+    <section id="using-app">
+      <h2>Using Price History and Price Aura</h2>
+      <ol>
+        <li>Select or hover over the item in game for which you’d like to see historical price trends and predictions.</li>
+        <li>Press <code>CTRL+1</code> to bring up the overlay.</li>
+        <li>Review your offer history visualizations and item price aura (<strong style="color:red;">red</strong>=worst, <strong style="color:green;">green</strong>=best).</li>
+        <li><i>Note: item price valuations not available for main-hands and off-hands in beta!</i></li>
+        <li><i>Note: app is currently optimized for Windowed Fullscreen!</i></li>
+      </ol>
+
+      <div class="gallery">
+        <a href="stashsage1.png" target="_blank" rel="noopener"><img src="stashsage1.png" alt="StashSage screenshot 1"></a>
+        <a href="stashsage2.png" target="_blank" rel="noopener"><img src="stashsage2.png" alt="StashSage screenshot 2"></a>
+        <a href="stashsage3.png" target="_blank" rel="noopener"><img src="stashsage3.png" alt="StashSage screenshot 3"></a>
+      </div>
+    </section>
+
+    <!-- 2b. Using Price Mirror -->
+    <section id="using-app-2">
+      <h2>Using Price Mirror</h2>
+      <ol>
+        <li>Select or hover over the item in game for which you’d like to see predictions.</li>
+        <li>Press <code>CTRL+2</code> to bring up the overlay.</li>
+        <li>Review your high-level summary of 10 most similar item prices and compare your item to the results.</li>
+        <li><i>Note: item price valuations not available for main-hands and off-hands in beta!</i></li>
+        <li><i>Note: app is currently optimized for Windowed Fullscreen!</i></li>
+      </ol>
+
+      <div class="gallery">
+        <a href="stashsage7.png" target="_blank" rel="noopener"><img src="stashsage7.png" alt="StashSage screenshot 7"></a>
+        <a href="stashsage8.png" target="_blank" rel="noopener"><img src="stashsage8.png" alt="StashSage screenshot 8"></a>
+      </div>
+    </section>
+
+    <!-- 3. StashSage Install Video -->
+    <section id="installation-demo">
+      <h2>StashSage Install Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qw3zpxPFRKY"
+                title="StashSage Install Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 4. Discord Bot Setup Video -->
+    <section id="discord-setup-video">
+      <h2>Discord Bot Setup Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/U6O2sB3dhUA"
+                title="StashSage Discord Bot Setup Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 5. Discord Bot Setup -->
+    <section id="discord-setup">
+      <h2>Discord Bot Setup
+        <small style="font-weight:400">
+          &nbsp;•&nbsp;
+          <a href="Discord Bot Setup.docx" target="_blank" rel="noopener">Discord Bot Setup Guide (.docx)</a>
+        </small>
+      </h2>
+      <ol>
+        <li>Create a new application at the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener">Discord Developer&nbsp;Portal</a>.</li>
+        <li>In the <em>Bot</em> tab enable <strong>Message Content Intent</strong>.</li>
+        <li>Invite the bot to a private server. Don’t delete this server!</li>
+        <li>DM the bot once so it can DM you back.</li>
+        <li>Copy the bot token → paste into <em>Discord Bot Token</em>.</li>
+        <li><strong>Pro Tip:</strong> save this somewhere locally so you don't need to re-copy it later!</li>
+        <li>Enable <em>Developer Mode</em> in Discord → right-click your name → <em>Copy User ID</em> → paste into <em>Discord User ID</em>.</li>
+        <li>Click <em>Update Settings & Reload</em> → you’ll receive a confirmation DM.</li>
+      </ol>
+
+      <div class="gallery">
+        <a href="stashsage4.png" target="_blank" rel="noopener"><img src="stashsage4.png" alt="Discord bot settings (stashsage4)"></a>
+        <a href="stashsage5.png" target="_blank" rel="noopener"><img src="stashsage5.png" alt="Copy User-ID in Discord (stashsage5)"></a>
+        <a href="stashsage6.png" target="_blank" rel="noopener"><img src="stashsage6.png" alt="Copy User-ID in Discord (stashsage6)"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Version 0.3.1 • © rheinze08 • 
+    <a href="https://github.com/rheinze08/StashSage" target="_blank" rel="noopener">GitHub</a> •
+    <a href="https://github.com/rheinze08/StashSage/tree/main" target="_blank" rel="noopener">See the Developer Docs</a>
+  </footer>
+
+  <script>
+    // If BUILD_DATE wasn't injected by Jinja, fill it in on the client.
+    (function () {
+      var el = document.getElementById('build-date');
+      if (el && !el.textContent.trim()) {
+        var now = new Date();
+        el.textContent = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'numeric'});
+      }
+    })();
+  </script>
+</body>
+</html>

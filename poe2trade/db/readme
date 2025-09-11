@@ -1,0 +1,136 @@
+POE2TRADE.DB SUBMODULE - README
+
+OVERVIEW
+The poe2trade.db submodule manages workflows for scraping, parsing, and feature extraction of item data in the Path of Exile (PoE) ecosystem. It contains command-line entry points and supporting scripts that collaborate to produce categorized data files.
+
+FILE DESCRIPTIONS
+1) __main__.py
+   - Provides a command-line interface allowing users to specify actions (scrape, parse, features, model) and categories (e.g., Body Armour, Weapons).
+   - If no actions are passed, both "scrape" and "parse" run by default.
+   - Usage Examples (omitting the "model" action for brevity):
+     - python -m poe2trade.db scrape Body Armour
+     - python -m poe2trade.db parse Body Armour
+     - python -m poe2trade.db features Body Armour
+     - python -m poe2trade.db scrape parse Body Armour Weapons
+     - python -m poe2trade.db Body Armour Weapons
+
+2) scrape_cat.py (NOTE: not publicly accessible, this is StashSage's secret sauce for data generation, sorry!)
+   - Defines a function that uses sub-filters to retrieve data for each item in the specified category. 
+   - Saves the scraped data in separate Excel files named according to the item.
+
+3) parse_cat.py
+   - Locates the Excel files produced by scraping and parses them with the parse_utils module.
+   - Produces parsed Excel files (suffixed with "_parsed.xlsx") and aggregates them into a combined report (suffixed with "_agg_parsed.xlsx").
+
+4) feature_cat.py
+   - Locates parsed Excel files, applies feature extraction (via feature_utils), and produces feature-rich Excel files (suffixed with "_features.xlsx").
+   - Aggregates them into a combined report (suffixed with "_agg_features.xlsx").
+
+WORKFLOW
+1) Scrape
+   - Execute "python -m poe2trade.db scrape <Category>" to gather raw trade data into per-item Excel files.
+2) Parse
+   - Execute "python -m poe2trade.db parse <Category>" to read all scraped Excel files, parse them, and produce both individual and aggregated Excel reports.
+3) Features
+   - Execute "python -m poe2trade.db features <Category>" to further process the parsed files for deeper insights, outputting additional Excel reports containing feature data.
+
+DEPENDENCIES
+- Requires the poe2trade.utils submodule, which includes scrape_utils, parse_utils, and feature_utils.
+- Requires pandas and openpyxl for Excel operations.
+
+CONTRIBUTIONS
+- Follow the established patterns and file structures for new categories or actions.
+- Ensure backward compatibility with existing workflows.
+
+LICENSE
+- Distributed under MIT License. Refer to the main project LICENSE file for details.
+POE2TRADE.DB SUBMODULE — UPDATED 2025-09-07
+
+Overview
+The `poe2trade.db` package contains the offline data pipeline and model
+artifacts used by the app GUI overlays. It owns category data under `db/files/`,
+generates feature matrices, and trains both supervised regressors and
+unsupervised KNN models.
+
+Top‑Level Actions (python -m poe2trade.db)
+- scrape_selenium: Drive the PoE2 trade site with Selenium and save JSON dumps.
+- parse: Flatten the per-item JSON into tidy tables (xlsx/parquet).
+- matrix: Build feature matrices (overlay + model variants).
+- train_super: Train supervised regressors (XGB/RF/GBR) per category/segment.
+- score_super: Score matrices with trained models and update bucket stats.
+- train_unsuper: Train KNN reference models per category/segment.
+
+Examples
+- python -m poe2trade.db scrape_selenium Body_Armour Boots
+- python -m poe2trade.db parse Body_Armour
+- python -m poe2trade.db matrix Body_Armour
+- python -m poe2trade.db train_super Body_Armour
+- python -m poe2trade.db score_super Body_Armour
+- python -m poe2trade.db train_unsuper Body_Armour
+
+Key Scripts (how they connect)
+- __main__.py: CLI that dispatches to the actions listed above.
+- scrape_selenium_cat.py: Reads `db/files/category_items.xlsx`, opens the site
+  with Selenium, applies filters, and writes one JSON file per item under
+  `db/files/<Category_With_Underscores>/`.
+- parse_cat.py: Uses `utils/parse_utils.py` to flatten those JSON files into a
+  single `<category>_agg_parsed.xlsx` and `.parquet` in the same folder.
+- matrix_cat.py: Uses `utils/matrix_utils.py:build_feature_matrix` to create:
+  - `<category>_feature_matrix_overlay.(xlsx|parquet)`
+  - `<category>_feature_matrix_model.(xlsx|parquet)`
+  The model variant is pruned for model training; both standardize columns
+  to lowercase and compute normalized defences `ar_norm/ev_norm/es_norm`.
+- train_super_cat.py: Calls `utils/train_utils.py:train_super_model_from_matrix`
+  to fit XGB/RF/GBR (depending on project flags). Saves pickles under
+  `db/super_models/` with per‑model READMEs. Models are per armour segment
+  (e.g. `body_armour_ar_ev_only_xgb_model.pkl`); jewellery has no segment key.
+- score_super_cat.py: Calls `utils/score_super_utils.py:score_matrix` to score
+  matrices, produce per‑segment spreadsheets and histograms, and update
+  `db/super_models/category_segment_stats.json` (used at runtime for
+  bucket labelling and confidence intervals).
+- train_unsuper_cat.py: Calls `utils/train_utils.py:train_unsuper_model_from_matrix`
+  to build KNN reference models per category/segment. Saves pickles under
+  `db/unsuper_models/` containing `nn_model`, `feature_cols`, `scaler_data`,
+  `overlay_df` (for GUI overlay rows), and `row_indices`.
+
+Important Folders
+- db/files/
+  - category_items.xlsx: Source list of items per category for scraping.
+  - <Category>/
+    - Raw JSON dumps per item.
+    - <category>_agg_parsed.(xlsx|parquet)
+    - <category>_feature_matrix_overlay.(xlsx|parquet)
+    - <category>_feature_matrix_model.(xlsx|parquet)
+- db/base_icons/
+  - PNG icons by base type (used by the unsupervised “Price Mirror” overlay).
+  - Built by `utils/get_icon_utils.py` alongside `db/files/base_images.json`.
+- db/super_models/
+  - <base>_<model>_model.pkl (e.g. `body_armour_ar_ev_only_xgb_model.pkl`)
+  - <base>_<model>_model_readme.txt
+  - category_segment_stats.json (bucket intervals + summary stats)
+- db/unsuper_models/
+  - <base>_knn_model.pkl (or `<base>_<segment>_knn_model.pkl` for armour)
+  - <base>_knn_model_readme.txt
+
+Naming Conventions
+- “Category” filenames use underscores: `Body Armour` -> `Body_Armour`.
+- Armour is segmented by defence combos: `ar_only`, `ev_only`, `es_only`,
+  `ar_ev_only`, `ar_es_only`, `ev_es_only`, `all_three`.
+- Supervised model base name: `<category>` for jewellery or
+  `<category>_<segment>` for armour.
+
+How the App Uses These Artifacts
+- Supervised overlay (Ctrl+1 in the GUI):
+  - `utils/ml_super_utils.call_ml` loads any available regressors under
+    `db/super_models/`, predicts, aggregates, and bucketises using
+    `category_segment_stats.json`. Charts are rendered via `utils/chart_utils.py`.
+- Unsupervised overlay (Ctrl+2 “Price Mirror”):
+  - `utils/ml_unsuper_utils.call_ml` loads the appropriate KNN bundle under
+    `db/unsuper_models/`, filters by a runtime price threshold, and returns
+    an `overlay_df` slice for side‑by‑side comparison. Icons are resolved via
+    `db/files/base_images.json` and `db/base_icons/`.
+
+Dependencies
+- Core: pandas, numpy, scikit‑learn, xgboost, matplotlib, openpyxl.
+- Scraping (selenium action): selenium, pyautogui, Chrome.
+- Optional: shap (feature explanations for supervised models).
