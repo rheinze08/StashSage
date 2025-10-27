@@ -1,0 +1,479 @@
+<!--
+  =========================
+  StashSage site template (index.html.j2)
+  This whole block is an HTML comment so it NEVER shows in the browser
+  even if the file is opened without Jinja rendering.
+  =========================
+  You can override any of these from Python/CI:
+    - Python: env.get_template("index.html.j2").render(version="1.2", ...)
+    - CLI:    jinja2 index.html.j2 -D version=1.2 > index.html
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFMHCLVQ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <title>StashSage – POE2 Price Predictions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--blue:#0078d4;--blue-dark:#005a9e;--bg:#f7f9fc;--card:#ffffff;--shadow:0 4px 16px rgba(0,0,0,.08)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:#333;line-height:1.6}
+    header{text-align:center;padding:50px 20px 20px}
+    .logo{height:40px;vertical-align:middle;margin:0 10px}
+    header h1{font-size:2.5rem;font-weight:700;margin-bottom:.4em;color:#222;display:flex;justify-content:center;align-items:center;gap:10px}
+    header p{max-width:720px;margin:0 auto 10px;font-size:1.15rem}
+    .donate{font-size:1rem;margin-top:10px}
+    .donate a{color:var(--blue);text-decoration:none;font-weight:600}
+    .donate a:hover{color:var(--blue-dark)}
+    .btn{display:inline-block;margin:24px auto 0;padding:14px 28px;font-size:1.05rem;font-weight:600;color:#fff;background:var(--blue);border-radius:6px;text-decoration:none;transition:.25s}
+    .btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
+    .trust{font-size:.9rem;color:#555;margin-top:10px}
+    main{max-width:900px;margin:40px auto;padding:0 20px;display:flex;flex-direction:column;gap:40px}
+    section{background:var(--card);padding:28px;border-radius:12px;box-shadow:var(--shadow)}
+    section h2{font-size:1.5rem;font-weight:600;margin-bottom:14px;color:#222}
+    ol{margin-left:20px}
+    ol li{margin-bottom:10px;font-size:1rem}
+    code{background:#eef;font-family:monospace;padding:2px 5px;border-radius:4px}
+    .gallery{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px -8px 0}
+    .gallery a{display:block;flex:1 1 200px;max-width:200px;padding:8px}
+    .gallery img{width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:transform .2s;cursor:pointer}
+    .gallery img:hover{transform:scale(1.05)}
+    .video-container{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    footer{text-align:center;margin:50px 0 20px;font-size:.9rem;color:#777}
+    footer a{color:#0078d4;text-decoration:none}
+    footer a:hover{color:#005a9e}
+    footer .disclaimer{margin-top:8px;font-size:.85rem;color:#999}
+    .accordion{border:1px solid #e6eaf2;border-radius:10px;overflow:hidden}
+    .accordion summary{list-style:none;cursor:pointer;padding:14px 16px;background:#f3f6fb;font-weight:600}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion .content{padding:16px}
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+    select{padding:8px 10px;border:1px solid #d4d9e3;border-radius:6px;background:#fff}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px 10px;border-bottom:1px solid #eef2f7;text-align:left}
+    th{background:#f7f9fc}
+    .muted{color:#777;font-size:.95rem}
+    .philosophy-grid{display:grid;gap:18px;margin-top:18px}
+    @media (min-width: 780px){.philosophy-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .philosophy-card{background:#f3f6fb;padding:18px;border-radius:10px;box-shadow:0 2px 6px rgba(17,34,56,.08)}
+    .philosophy-card h3{font-size:1.1rem;margin-bottom:8px;color:#1f3c55}
+    .philosophy-card p{margin-bottom:10px;color:#3a4a60}
+    .philosophy-card ul{margin-left:16px;margin-top:8px}
+    .philosophy-card li{margin-bottom:6px}
+    .callout{margin-top:20px;padding:18px;border-radius:12px;background:#eaf4ff;border-left:4px solid var(--blue);color:#17324d}
+    /* Legal section */
+    .legal{background:#fff}
+    .legal h2{margin-bottom:8px}
+    .legal h3{font-size:1.1rem;margin-top:16px;color:#1f3c55}
+    .legal p, .legal li{color:#3a4a60}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFMHCLVQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <h1>
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+      StashSage for POE2
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+    </h1>
+
+    <p><strong>v0.3.2 (<span id="build-date">10/27/2025</span>)</strong></p>
+
+    <p>Machine learning and automation to save you time and grow your currency.<br>
+
+    <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join our Discord!</a></p>
+    <a id="download-installer" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.3.2/StashSageInstaller.zip">⬇️ Download Installer (.zip)</a>
+    <p class="trust"><strong><em>None of your data is ever shared with StashSage; all operations are performed locally.</em></strong></p>
+  </header>
+
+  <main>
+
+    <!-- 2a-2. Model Feature Importances -->
+    <section id="feature-importances">
+      <h2>Top 10 Model Feature Importances</h2>
+      <details class="accordion" id="fi-accordion">
+        <summary>Browse trained models (collapsed by default)</summary>
+        <div class="content">
+          <div class="row">
+            <label>
+              Category
+              <select id="fi-category"></select>
+            </label>
+            <label>
+              Segment
+              <select id="fi-segment"></select>
+            </label>
+            <label>
+              Model
+              <select id="fi-model"></select>
+            </label>
+          </div>
+          <div class="muted">Importances are normalized per model. Values shown as percentages.</div>
+          <table id="fi-table" style="display:none">
+            <thead><tr><th>#</th><th>Feature</th><th>Importance</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <!-- 2a. Using Prediction Overlay -->
+    <section id="using-app">
+      <h2>Using Prediction Overlay</h2>
+      <ol>
+        <li>Select or hover over the item in game for which you’d like to see price predictions.</li>
+        <li>Press <code>CTRL+1</code> (or custom hotkey) to bring up the (unfiltered) prediction overlay.</li>
+        <li>Press <code>CTRL+2</code> (or custom hotkey) to bring up the mod filters and filtered prediction overlay.</li>
+        <li>Review the predictions (#1 = xgboost, #2 = knn) and compare to similar items.</li>
+      </ol>
+
+      <div class="gallery">
+        <a href="v031_1.png" target="_blank" rel="noopener"><img src="v031_1.png" alt="StashSage screenshot 1"></a>
+        <a href="v031_2.png" target="_blank" rel="noopener"><img src="v031_2.png" alt="StashSage screenshot 2"></a>
+        <a href="v031_3.png" target="_blank" rel="noopener"><img src="v031_3.png" alt="StashSage screenshot 3"></a>
+      </div>
+    </section>
+
+    <section id="using-stash-scrape">
+      <h2>Using Stash Scrape</h2>
+      <ol>
+        <li>Select <strong>Stash Scrape</strong> from the main menu.</li>
+        <li>Enter your Trade API username and a target directory in which to save output files.</li>
+        <li>Enter <strong>Seconds Between Searches</strong>; we suggest at least <code>300</code>s to minimize rate limiting.</li>
+        <li>Select the listing type (All Listings = public premium stash tabs + merchant tabs).</li>
+        <li>Select the categories to scrape; each necessitates a separate search as in step 3.</li>
+        <li>Upon pipeline completion, fetch the output file from the target directory.</li>
+      </ol>
+
+      <div class="gallery">
+        <a href="v031_5.png" target="_blank" rel="noopener"><img src="v031_5.png" alt="Stash Scrape configuration dialog"></a>
+        <a href="v031_6.png" target="_blank" rel="noopener"><img src="v031_6.png" alt="Stash Scrape progress window"></a>
+        <a href="v031_7.png" target="_blank" rel="noopener"><img src="v031_7.png" alt="Stash Scrape output directory"></a>
+      </div>
+    </section>
+
+    <!-- 2b. Model Insights and Pricing Notes -->
+    <section id="model-insights">
+      <h2>Notes for Using the Tool</h2>
+      <ol>
+        <li>Models based on <strong>current (unsold) offers</strong>; data is noisy; reasonably-priced items do not always sell.</li>
+        <li>Models #1 (xgb) and #2 (knn) may not agree on predictions, but both approaches are equally valid.</li>
+        <li>Model #1 visualization shows how an item's prediction compares to all others in same category.</li>
+        <li>Careful when using Model #2 (knn) to price items with less than 6-mods, comparing to 6-m items can be tricky. Ask yourself, is a 4-m item more similar to (a) a 4-m item with the same 4-m but very different values, or (b) a 5-m item with 3 of the exact same mods and values, and 2 non-overlapping mods?</li>
+        <li><i>Models trained to price <strong>rare</strong> items, not <strong>magic</strong> (forthcoming) or <strong>unique</strong>.</i></li>
+        <li><i>Models available for body armour, helmet, gloves, boots, belt, amulet, ring, jewel, wand, sceptre, quiver, focus, shield, buckler.</i></li>
+        <li><i>Models unavailable for other main-hands and off-hands (bow, xbow, mace, qstave -- forthcoming).</i></li>
+        <li><i>Overlay is optimized for Windowed Fullscreen only.</i></li>
+        <li><i>New models trained every few days and posted for download.</i></li>         
+      </ol>
+    </section>
+
+    <!-- 2b. Model Insights and Pricing Notes -->
+    <section id="model-insights">
+      <h2>Modeling Notes</h2>
+      <ol>
+        <li>The model ignores "mark of the abyssal lord", "allocates passive", "on corruption" mods.
+        <li>The model ignores "corrupted", "fractured", "descrated" item statuses, socket counts (forthcoming).
+        <li>The model ignores socketables as they are not considered an underlying modifier.
+        <li>Items with quality and socketables have had their modifier values normalized to their base values.
+        <li>Armour, evasion, energy shield mods are represented in the base stat values.
+
+      </ol>
+    </section>
+
+    <section id="modeling-philosophy">
+      <h2>Modeling Philosophy</h2>
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <h3>No Single Ground Truth</h3>
+          <p>
+            There is no single “right” answer for an item's price. Demand changes with every league and patch,
+            so yesterday’s completed sales may not represent today’s market.
+          </p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Trading Reality</h3>
+          <p>
+            The data we see is from items that haven't yet sold. Expensive listings linger while good deals disappear,
+            so raw trade results are noisy and unreliable on their own. If anything, they may represent a price ceiling.
+          </p>
+        </div>
+        <div class="philosophy-card">
+          <h3>How We Measure Value</h3>
+          <p>
+            StashSage focuses on practical shortcuts instead of perfect accuracy. We look for tools that help you:
+          </p>
+          <ul>
+            <li>Judge a reasonable listing price in seconds.</li>
+            <li>Track and encode market dynamics.</li>
+            <li>Avoid obvious price trolls or stale posts.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Bottom line:</strong> our goal is faster choices. If you spend less time scrolling trade listings and
+        more time playing, the system is doing its job—even if some items never sell.
+      </div>
+    </section>
+
+    <section class="legacy-divider">
+      <h2>⚠️ Legacy Content from 0.2 Dawn of the Hunt</h2>
+      <p>This section contains notes from the previous version. Some may no longer apply.</p>
+    </section>
+
+    <!-- 2. StashSage Demo Video -->
+    <section id="demo-video">
+      <h2>StashSage Demo Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/VmsiqPns4Ac"
+                title="StashSage Demo Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 3. StashSage Install Video -->
+    <section id="installation-demo">
+      <h2>StashSage Install Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qw3zpxPFRKY"
+                title="StashSage Install Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 4. Discord Bot Setup Video -->
+    <section id="discord-setup-video">
+      <h2>Discord Bot Setup Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/U6O2sB3dhUA"
+                title="StashSage Discord Bot Setup Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- 5. Discord Bot Setup -->
+    <section id="discord-setup">
+      <h2>Discord Bot Setup
+        <small style="font-weight:400">
+          &nbsp;•&nbsp;
+          <a href="Discord Bot Setup.docx" target="_blank" rel="noopener">Discord Bot Setup Guide (.docx)</a>
+        </small>
+      </h2>
+      <ol>
+        <li>Create a new application at the <a href="https://discord.com/developers/applications" target="_blank" rel="noopener">Discord Developer&nbsp;Portal</a>.</li>
+        <li>In the <em>Bot</em> tab enable <strong>Message Content Intent</strong>.</li>
+        <li>Invite the bot to a private server. Don’t delete this server!</li>
+        <li>DM the bot once so it can DM you back.</li>
+        <li>Copy the bot token → paste into <em>Discord Bot Token</em>.</li>
+        <li><strong>Pro Tip:</strong> save this somewhere locally so you don't need to re-copy it later!</li>
+        <li>Enable <em>Developer Mode</em> in Discord → right-click your name → <em>Copy User ID</em> → paste into <em>Discord User ID</em>.</li>
+        <li>Click <em>Update Settings & Reload</em> → you’ll receive a confirmation DM.</li>
+      </ol>
+
+      <div class="gallery">
+        <a href="stashsage4.png" target="_blank" rel="noopener"><img src="stashsage4.png" alt="Discord bot settings (stashsage4)"></a>
+        <a href="stashsage5.png" target="_blank" rel="noopener"><img src="stashsage5.png" alt="Copy User-ID in Discord (stashsage5)"></a>
+        <a href="stashsage6.png" target="_blank" rel="noopener"><img src="stashsage6.png" alt="Copy User-ID in Discord (stashsage6)"></a>
+      </div>
+    </section>
+
+    <!-- ===== Legal / Policies (single-page anchors for TikTok form) ===== -->
+    <section class="legal" id="policies">
+      <h2>Legal</h2>
+
+      <h3 id="terms">Terms of Service</h3>
+      <p>
+        By downloading or using StashSage, you agree to these terms. This software is provided
+        “as is,” without warranties of any kind. You are responsible for how you use the app and for
+        compliance with the terms of any third-party services you access. We may update or discontinue
+        features at any time. To the maximum extent permitted by law, we are not liable for indirect,
+        incidental, or consequential damages arising from use of the app.
+      </p>
+      <p>Contact: <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a></p>
+
+      <h3 id="privacy">Privacy Policy</h3>
+      <p>
+        StashSage is designed for local operation. <strong>We do not collect, store, or sell personal
+        data.</strong> Any data processed by the app (e.g., configuration, model inputs/outputs) stays on
+        your device. If the app calls third-party APIs you authorize, the data is transmitted only as
+        required to perform the requested operation and is not retained by us. Crash logs or analytics are
+        not sent to our servers.
+      </p>
+      <p>
+        If this policy changes in the future, we will update this page and the app’s release notes.
+        For questions or requests, email <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a>.
+      </p>
+
+      <p class="muted" style="margin-top:8px">
+        Quick links: <a href="#terms">Terms of Service</a> • <a href="#privacy">Privacy Policy</a>
+      </p>
+    </section>
+    <!-- ===== /Legal ===== -->
+
+  </main>
+
+  <footer>
+    <p>
+      Version 0.3.2 &bull; &copy; rheinze08 &bull;
+      <a href="https://github.com/rheinze08/StashSage" target="_blank" rel="noopener">GitHub Source Code</a>
+      &bull; <a href="#terms">Terms</a> &bull; <a href="#privacy">Privacy</a>
+    </p>
+    <div class="disclaimer">
+      This product isn't affiliated with or endorsed by Grinding Gear Games in any way.
+    </div>
+  </footer>
+
+  <script>
+    // If BUILD_DATE wasn't injected by Jinja, fill it in on the client.
+    (function () {
+      var el = document.getElementById('build-date');
+      if (el && !el.textContent.trim()) {
+        var now = new Date();
+        el.textContent = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'numeric'});
+      }
+    })();
+
+    // Dynamic Feature Importances Section
+    (function(){
+      const manifestUrl = 'poe2trade/db/super_models/feature_importances_index.json';
+      const catSel = document.getElementById('fi-category');
+      const segSel = document.getElementById('fi-segment');
+      const modSel = document.getElementById('fi-model');
+      const table  = document.getElementById('fi-table');
+      const tbody  = table.querySelector('tbody');
+      const acc    = document.getElementById('fi-accordion');
+
+      function uniq(arr){ return Array.from(new Set(arr)); }
+      function percent(x){ return (x*100).toFixed(2) + '%'; }
+      const FEATURE_LABELS = { ar_norm: 'armour', ev_norm: 'evasion', es_norm: 'energy shield' };
+      const NONE = '__NONE__';
+
+      function renderRows(features){
+        tbody.innerHTML='';
+        const sorted=[...features].sort((a,b)=>b.importance-a.importance);
+        const top = sorted.slice(0, 10);
+        top.forEach((f,i)=>{
+          const tr=document.createElement('tr');
+          const name = FEATURE_LABELS[f.name] || f.name;
+          tr.innerHTML = `<td>${i+1}</td><td>${name}</td><td>${percent(f.importance)}</td>`;
+          tbody.appendChild(tr);
+        });
+        table.style.display = top.length? 'table' : 'none';
+      }
+
+      function populateSegments(entries, cat){
+        const segs = uniq(entries.filter(e=>e.category===cat).map(e=>e.segment||NONE));
+        const segOpts = segs
+          .map(s => ({ value: s, label: (s===NONE ? '(none)' : s) }))
+          .sort((a,b) => {
+            if (a.value===NONE && b.value!==NONE) return -1;
+            if (a.value!==NONE && b.value===NONE) return 1;
+            return a.label.localeCompare(b.label);
+          });
+        segSel.innerHTML = segOpts.map(o=>`<option value=\"${o.value}\">${o.label}</option>`).join('');
+      }
+
+      function populateModels(entries, cat, seg){
+        const models = uniq(entries.filter(e=>e.category===cat && ( (seg===NONE&&!e.segment) || (e.segment===seg) )).map(e=>e.model_type));
+        modSel.innerHTML = models.map(m=>`<option value="${m}">${m}</option>`).join('');
+      }
+
+      function pickEntry(entries, cat, seg, mod){
+        return entries.find(e=>e.category===cat && e.model_type===mod && ((seg===NONE&&!e.segment) || e.segment===seg));
+      }
+
+      fetch(manifestUrl).then(r=> r.ok? r.json(): []).then(data=>{
+        if(!Array.isArray(data) || !data.length){ return; }
+        // categories (sorted by display label)
+        const cats = uniq(data.map(e=>e.category));
+        const catOpts = cats
+          .map(c => ({ value: c, label: c.replace(/_/g,' ').toUpperCase() }))
+          .sort((a,b) => a.label.localeCompare(b.label));
+        catSel.innerHTML = catOpts.map(o=>`<option value=\"${o.value}\">${o.label}</option>`).join('');
+
+        function refresh(){
+  const cat = catSel.value;
+  const prevSeg = segSel.value || NONE;
+  const prevMod = modSel.value;
+  populateSegments(data, cat);
+  let seg = prevSeg;
+  if (Array.from(segSel.options).some(o => o.value === prevSeg)) {
+    segSel.value = prevSeg;
+  } else {
+    seg = segSel.value || NONE;
+  }
+  populateModels(data, cat, seg);
+  let mod = prevMod;
+  if (Array.from(modSel.options).some(o => o.value === prevMod)) {
+    modSel.value = prevMod;
+  } else {
+    mod = modSel.value;
+  }
+  const entry = pickEntry(data, cat, seg, mod);
+  let feats = entry? entry.features: [];
+  // Hide redundant '% increased block chance' for shield-like categories
+  if (cat === 'shield' || cat === 'buckler') {
+    feats = feats.filter(f => String(f.name).trim().toLowerCase() !== '#% increased block chance');
+  }
+  renderRows(feats);
+  if(entry){ acc.open = true; }
+}
+
+        catSel.addEventListener('change', refresh);
+        segSel.addEventListener('change', refresh);
+        modSel.addEventListener('change', refresh);
+        // initial
+        refresh();
+      }).catch(()=>{/* ignore */});
+    })();
+  </script>
+</body>
+</html>

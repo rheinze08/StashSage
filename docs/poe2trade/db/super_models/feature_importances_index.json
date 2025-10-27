@@ -1,0 +1,6672 @@
+[
+  {
+    "category": "body_armour",
+    "segment": "ar_es_only",
+    "model_type": "XGB",
+    "r2": 0.24210299076075492,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02290921099483967
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.020545924082398415
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.011738729663193226
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.019002029672265053
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.030328724533319473
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.12328342348337173
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.022072525694966316
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.024886321276426315
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.005394120700657368
+      },
+      {
+        "name": "#% faster start of energy shield recharge",
+        "importance": 0.02592191845178604
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.05897325277328491
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.07156357914209366
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.011026477441191673
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.04397428780794144
+      },
+      {
+        "name": "#% of damage is taken from mana before life",
+        "importance": 0.01921861618757248
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.015629490837454796
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.026215359568595886
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.006698428187519312
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.02427789755165577
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.0190266165882349
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.010811084881424904
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.03093506209552288
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.018861981108784676
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.014959572814404964
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.057294800877571106
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.040945544838905334
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.039250679314136505
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.039679963141679764
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.013569926843047142
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.017598170787096024
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.056299757212400436
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.057106588035821915
+      }
+    ]
+  },
+  {
+    "category": "body_armour",
+    "segment": "ar_only",
+    "model_type": "XGB",
+    "r2": 0.3151232268290278,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.026346860453486443
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.02971305139362812
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.009577848017215729
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.01568000018596649
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.039987292140722275
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.05148972570896149
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0192999467253685
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.02310756780207157
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.02253805100917816
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.051825642585754395
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.02887091599404812
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.020566701889038086
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.017930934205651283
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.08582364767789841
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.02298329770565033
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.013963068835437298
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.038840457797050476
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.02350948564708233
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.02320745401084423
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.010465079918503761
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.026471110060811043
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.025071056559681892
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.014465373009443283
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.041173916310071945
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.038668934255838394
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.04004805535078049
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03738180175423622
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.04173985496163368
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.013488558121025562
+      },
+      {
+        "name": "regenerate #% of maximum life per second",
+        "importance": 0.01799769327044487
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.12776660919189453
+      }
+    ]
+  },
+  {
+    "category": "body_armour",
+    "segment": "ar_ev_only",
+    "model_type": "XGB",
+    "r2": 0.24000282788299276,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02178782969713211
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.021293725818395615
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.02371090091764927
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.013535575941205025
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.035054001957178116
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.05105007439851761
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.02202935330569744
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.029169443994760513
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.018260551616549492
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.06272970139980316
+      },
+      {
+        "name": "#% increased reservation efficiency of companion skills",
+        "importance": 0.014845697209239006
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.02434469200670719
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.018417583778500557
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.06092926114797592
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.025535471737384796
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.02238113060593605
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.00557698542252183
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.025754695758223534
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.021844081580638885
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.013706063851714134
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.015592146664857864
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.02372289076447487
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.028273941949009895
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.039913028478622437
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.028922928497195244
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.0379997082054615
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03543257713317871
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.03759218007326126
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.02328602597117424
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.01486853789538145
+      },
+      {
+        "name": "prevent +#% of damage from deflected hits",
+        "importance": 0.016902850940823555
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.08220216631889343
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.08333417028188705
+      }
+    ]
+  },
+  {
+    "category": "body_armour",
+    "segment": "ev_only",
+    "model_type": "XGB",
+    "r2": 0.3653181612181151,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02575620450079441
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.015386465936899185
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.01848454400897026
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.011128135956823826
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.02356134168803692
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.0787571370601654
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.022876713424921036
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.02583463303744793
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.017973465844988823
+      },
+      {
+        "name": "#% increased elemental ailment threshold",
+        "importance": 0.027780644595623016
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.03018701635301113
+      },
+      {
+        "name": "#% increased reservation efficiency of companion skills",
+        "importance": 0.01627165824174881
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.020185673609375954
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.02045571617782116
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.018818382173776627
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.01689237169921398
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.008304259739816189
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.0278676338493824
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.02140936441719532
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.024296529591083527
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.02511979639530182
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.05275722220540047
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.02285735122859478
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.03417488560080528
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.016701430082321167
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.04000704735517502
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.04188483580946922
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.038341276347637177
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03510911762714386
+      },
+      {
+        "name": "allocates frantic fighter",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates inner faith",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates shimmering",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates vengeance",
+        "importance": 0.0
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.05675666779279709
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.03529341146349907
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.017733557149767876
+      },
+      {
+        "name": "prevent +#% of damage from deflected hits",
+        "importance": 0.03015408292412758
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.0808815211057663
+      }
+    ]
+  },
+  {
+    "category": "body_armour",
+    "segment": "es_only",
+    "model_type": "XGB",
+    "r2": 0.4261663127535793,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02198120392858982
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.06285221874713898
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.008753531612455845
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.016570908948779106
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.033579930663108826
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.1362418234348297
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.00807567872107029
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.016817357391119003
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.00808203686028719
+      },
+      {
+        "name": "#% faster start of energy shield recharge",
+        "importance": 0.024485213682055473
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.0232207290828228
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.01595454290509224
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.07919374853372574
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.012981199659407139
+      },
+      {
+        "name": "#% of damage is taken from mana before life",
+        "importance": 0.05250483751296997
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.010698806494474411
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.013641750440001488
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.006683885119855404
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.020676037296652794
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.01837056688964367
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.007240774109959602
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.015251989476382732
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.013031520880758762
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.006658382713794708
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.038712188601493835
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.04407668486237526
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.04678422212600708
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.04962090402841568
+      },
+      {
+        "name": "allocates blurred motion",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates mental toughness",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates precise point",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates stormcharged",
+        "importance": 0.0
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.03463301807641983
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.011058970354497433
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.14156532287597656
+      }
+    ]
+  },
+  {
+    "category": "body_armour",
+    "segment": "ev_es_only",
+    "model_type": "XGB",
+    "r2": 0.35969439601295716,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02005092240869999
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.030334584414958954
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.015908338129520416
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.015144082717597485
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.031322162598371506
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.08822371810674667
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.008800756186246872
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.022417688742280006
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.01221680548042059
+      },
+      {
+        "name": "#% faster start of energy shield recharge",
+        "importance": 0.01498781330883503
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.01637432537972927
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.025853803381323814
+      },
+      {
+        "name": "#% increased reservation efficiency of companion skills",
+        "importance": 0.011241736821830273
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.024685272946953773
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.012205220758914948
+      },
+      {
+        "name": "#% of damage is taken from mana before life",
+        "importance": 0.01109532080590725
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.009161093272268772
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.012859349139034748
+      },
+      {
+        "name": "#% of physical damage from hits taken as chaos damage",
+        "importance": 0.005269789136946201
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.018253734335303307
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.012923045083880424
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.008325825445353985
+      },
+      {
+        "name": "#% reduced elemental ailment duration on you",
+        "importance": 0.01265439111739397
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.016896529123187065
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.01647823303937912
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.007056441158056259
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.042079389095306396
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.03312195464968681
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.037677496671676636
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03711717948317528
+      },
+      {
+        "name": "allocates first approach",
+        "importance": 0.005270869471132755
+      },
+      {
+        "name": "allocates heavy buffer",
+        "importance": 0.00766096543520689
+      },
+      {
+        "name": "allocates lightning quick",
+        "importance": 0.002658253302797675
+      },
+      {
+        "name": "allocates lockdown",
+        "importance": 0.0015181559138000011
+      },
+      {
+        "name": "allocates the frenzied bear",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates the wild cat",
+        "importance": 0.0
+      },
+      {
+        "name": "allocates toxic tolerance",
+        "importance": 0.0061990851536393166
+      },
+      {
+        "name": "allocates warm the heart",
+        "importance": 0.0
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.06845182180404663
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.01327394787222147
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.00762985972687602
+      },
+      {
+        "name": "prevent +#% of damage from deflected hits",
+        "importance": 0.011652314104139805
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.15553134679794312
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.08941633254289627
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "ar_ev_only",
+    "model_type": "XGB",
+    "r2": 0.3614501949698946,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.011155854910612106
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.004509583581238985
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.009768018499016762
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.004444978199899197
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.026832005009055138
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.009584239684045315
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.01976241171360016
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.013895845040678978
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.5567641854286194
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.008168009109795094
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.002527819946408272
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.03992777317762375
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.01673690602183342
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.010437631979584694
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.01718532294034958
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.012399889528751373
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.012360901571810246
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.00476045673713088
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.011031733825802803
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.031250961124897
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.009574294090270996
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.012184194289147854
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.020690899342298508
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.018200809136033058
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.018661780282855034
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.017557093873620033
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.010921851731836796
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.0015802376437932253
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.017598552629351616
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.01919984258711338
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.03032597154378891
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "es_only",
+    "model_type": "XGB",
+    "r2": 0.5418898370665688,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.0135633684694767
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.003390920115634799
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.0062254443764686584
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.010500042699277401
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.016472795978188515
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.013579979538917542
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.011023017577826977
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.01485648937523365
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.4800746440887451
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.011422823183238506
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.00865800492465496
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.009249897673726082
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.004346558358520269
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.062324315309524536
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.02420073188841343
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.009653287008404732
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.01935873180627823
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.01386561244726181
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.013311167247593403
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.023237915709614754
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.025477776303887367
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0063367681577801704
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.016028793528676033
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.012346599251031876
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.02632252871990204
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.02306116372346878
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.024987738579511642
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.024209219962358475
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.011112700216472149
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.012604080140590668
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.014316336251795292
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.03388052061200142
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "ar_only",
+    "model_type": "XGB",
+    "r2": 0.45606690608488754,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.008023771457374096
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.0015805453294888139
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.005936077795922756
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.004418019205331802
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.03458889573812485
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.010054128244519234
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.019161779433488846
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.012941326014697552
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.6489488482475281
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.0084804967045784
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.0015247808769345284
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.038788311183452606
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.015768054872751236
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.008250938728451729
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.019907301291823387
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.011997035704553127
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.007475477643311024
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.009533707983791828
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.0011242300970479846
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.01748385652899742
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.009373415261507034
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.005951548460870981
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.017084207385778427
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.014348733238875866
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.013276522979140282
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.013295166194438934
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.009276485070586205
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.006964273285120726
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.024441976100206375
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "ar_es_only",
+    "model_type": "XGB",
+    "r2": 0.4925358421950793,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.007256926037371159
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.0001599642273504287
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.0041732522659003735
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.009612075984477997
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.027640467509627342
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.007247938774526119
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.020717913284897804
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.008604058064520359
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.6203080415725708
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.007133837789297104
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.012783118523657322
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.0019168262369930744
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.004945293068885803
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.03504533693194389
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.017035633325576782
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.006675409153103828
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.007507505360990763
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.0102531211450696
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.009318438358604908
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.006148302927613258
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.008373583666980267
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.00317054963670671
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.0547027587890625
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.008596467785537243
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.008993672206997871
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.015499320812523365
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.010387239046394825
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.012407219968736172
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.012208083644509315
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.005223114974796772
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.011501980014145374
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.010353783145546913
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.014098670333623886
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "ev_only",
+    "model_type": "XGB",
+    "r2": 0.49645943510841806,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.011973815970122814
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.0
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.01413868460804224
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.006564709357917309
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.01262229960411787
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.014209907501935959
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0050286538898944855
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.015458118170499802
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.6027348041534424
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.005817761644721031
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.004107948858290911
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.0046336958184838295
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.04499996453523636
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.015736624598503113
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.004968490917235613
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.011795253492891788
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.00804441049695015
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.002248672768473625
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.009907225146889687
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.0034245005808770657
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.008700682781636715
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.000886257563252002
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.012390739284455776
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.007133631035685539
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.02117396891117096
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.016471143811941147
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.01931496523320675
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.017456015571951866
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.0038231993094086647
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.007236497942358255
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.04078550636768341
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.04621193930506706
+      }
+    ]
+  },
+  {
+    "category": "boots",
+    "segment": "ev_es_only",
+    "model_type": "XGB",
+    "r2": 0.49854143558867925,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.016965001821517944
+      },
+      {
+        "name": "# metres to dodge roll distance",
+        "importance": 0.0
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.0063531044870615005
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.005546200554817915
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.014433849602937698
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.011192582547664642
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.00742690172046423
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.0168264452368021
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.5732553601264954
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.00632189167663455
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.006937838159501553
+      },
+      {
+        "name": "#% increased mana cost efficiency if you have dodge rolled recently",
+        "importance": 0.003314655739814043
+      },
+      {
+        "name": "#% increased mana regeneration rate while stationary",
+        "importance": 0.003790341317653656
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.058124423027038574
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.017920514568686485
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.004244284238666296
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.01350571122020483
+      },
+      {
+        "name": "#% reduced chill duration on you",
+        "importance": 0.008843962103128433
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.0003770491457544267
+      },
+      {
+        "name": "#% reduced freeze duration on you",
+        "importance": 0.011102099902927876
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.005281960591673851
+      },
+      {
+        "name": "#% reduced movement speed penalty from using skills while moving",
+        "importance": 0.00398858031257987
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced shock duration on you",
+        "importance": 0.011200540699064732
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.0037492155097424984
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.022822607308626175
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.018626485019922256
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.018027741461992264
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.012142334133386612
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.004516719840466976
+      },
+      {
+        "name": "corrupted blood cannot be inflicted on you",
+        "importance": 0.0016008896054700017
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.030313603579998016
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.024829460307955742
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.056417565792798996
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "ar_es_only",
+    "model_type": "XGB",
+    "r2": 0.13659412383781389,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.0220798347145319
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.021409334614872932
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.02133375033736229
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.02189721167087555
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.04112716019153595
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.03266928717494011
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.02394590899348259
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.029873821884393692
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.04399213194847107
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.026240168139338493
+      },
+      {
+        "name": "#% increased area of effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.03166797012090683
+      },
+      {
+        "name": "#% increased effect of arcane surge on you",
+        "importance": 0.013322101905941963
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.03355523198843002
+      },
+      {
+        "name": "#% increased glory generation",
+        "importance": 0.0007667493773624301
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.004782633390277624
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.033472687005996704
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.026223041117191315
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.03377961739897728
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.03172559663653374
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.011686270125210285
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.04476311057806015
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.03954431042075157
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.038369081914424896
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.03731122240424156
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.015349754132330418
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.03722843527793884
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.022311992943286896
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.024862995371222496
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.02729591727256775
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.03050210140645504
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.034903835505247116
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.028579583391547203
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.019037308171391487
+      },
+      {
+        "name": "gain #% of damage as extra chaos damage",
+        "importance": 0.0
+      },
+      {
+        "name": "meta skills gain #% increased energy",
+        "importance": 0.005212264601141214
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.04167249798774719
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.04750511050224304
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "ar_only",
+    "model_type": "XGB",
+    "r2": 0.20323248095474444,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02001681923866272
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02383578009903431
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.008231397718191147
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.026687104254961014
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.023743316531181335
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.0633755475282669
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.022086767479777336
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.008104607462882996
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.07439305633306503
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.02596357837319374
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.02455170825123787
+      },
+      {
+        "name": "#% increased glory generation",
+        "importance": 0.014493641443550587
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.008726847358047962
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.02164493128657341
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.019724668934941292
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.01983688771724701
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.029105467721819878
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.023838236927986145
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.040843673050403595
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.028735825791954994
+      },
+      {
+        "name": "#% increased warcry speed",
+        "importance": 0.0
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.08511614799499512
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.057166937738657
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.01180132944136858
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.018421050161123276
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.026009412482380867
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.027230972424149513
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.04521062597632408
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.03624189272522926
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.033253014087677
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.04126468673348427
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.009944193996489048
+      },
+      {
+        "name": "gain #% of damage as extra chaos damage",
+        "importance": 0.0
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.08039982616901398
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "ar_ev_only",
+    "model_type": "XGB",
+    "r2": 0.13720576119275374,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.023138076066970825
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02218845672905445
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.024258356541395187
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.021240048110485077
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.023817744106054306
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.03147316724061966
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.02767469920217991
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.016287026926875114
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.041084833443164825
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.03101438656449318
+      },
+      {
+        "name": "#% increased cooldown recovery rate",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.03282012417912483
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.034817907959222794
+      },
+      {
+        "name": "#% increased glory generation",
+        "importance": 0.041300684213638306
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.014641223475337029
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.022709259763360023
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.028601061552762985
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.030802322551608086
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.030393514782190323
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.010181063786149025
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.03853504732251167
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.03184361755847931
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.006832536775618792
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.03180069476366043
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.011967841535806656
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.014719019643962383
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.021825727075338364
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.03150870278477669
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.0302280280739069
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.03360433503985405
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.032058220356702805
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.038779888302087784
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.024091478437185287
+      },
+      {
+        "name": "enemies you mark take #% increased damage",
+        "importance": 0.03238696977496147
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.02525683306157589
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.042489342391490936
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.043627750128507614
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "ev_only",
+    "model_type": "XGB",
+    "r2": 0.2648512089698999,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.02672600746154785
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02838585525751114
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.020640172064304352
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.02862592227756977
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.024611040949821472
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.030194474384188652
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.02536504901945591
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.03644551709294319
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.05301306024193764
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.02416064403951168
+      },
+      {
+        "name": "#% increased area of effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.0539938360452652
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.04503961279988289
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.027521001175045967
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.019872888922691345
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.004740879870951176
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.020234476774930954
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.02998381108045578
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.038790829479694366
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.011494165286421776
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.0
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.025129031389951706
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.028430765494704247
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.03588377684354782
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.037251297384500504
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.033574942499399185
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.038356732577085495
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.03052268549799919
+      },
+      {
+        "name": "enemies you mark take #% increased damage",
+        "importance": 0.02979877218604088
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.050877295434474945
+      },
+      {
+        "name": "meta skills gain #% increased energy",
+        "importance": 0.0
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.14033550024032593
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "ev_es_only",
+    "model_type": "XGB",
+    "r2": 0.19141373136679685,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.020269587635993958
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02082805521786213
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.025504961609840393
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.01911165565252304
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.02532905340194702
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.027234995737671852
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.023819535970687866
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.032934028655290604
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.04126319661736488
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.02691926434636116
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.03830119967460632
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.044570498168468475
+      },
+      {
+        "name": "#% increased curse magnitudes",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased effect of arcane surge on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.02399456314742565
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.01306631788611412
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.025998430326581
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.02336820587515831
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.026650024577975273
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.0200241357088089
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.02744707092642784
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.03797776624560356
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.024652842432260513
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.025453556329011917
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.011698877438902855
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.03083324432373047
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.0370308980345726
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.032777171581983566
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.034734636545181274
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03189738839864731
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.027914192527532578
+      },
+      {
+        "name": "enemies you mark take #% increased damage",
+        "importance": 0.0
+      },
+      {
+        "name": "gain #% of damage as extra chaos damage",
+        "importance": 0.0
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.04283230006694794
+      },
+      {
+        "name": "meta skills gain #% increased energy",
+        "importance": 0.0
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.06602920591831207
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.08953307569026947
+      }
+    ]
+  },
+  {
+    "category": "helmet",
+    "segment": "es_only",
+    "model_type": "XGB",
+    "r2": 0.38518195626541685,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.03061251901090145
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02459043078124523
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.011114849708974361
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.02095649391412735
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.053356729447841644
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.030171992257237434
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.024460434913635254
+      },
+      {
+        "name": "# to maximum power charges",
+        "importance": 0.030863113701343536
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.13826361298561096
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.013221859000623226
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.08002492785453796
+      },
+      {
+        "name": "#% increased effect of arcane surge on you",
+        "importance": 0.01745215803384781
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.020354539155960083
+      },
+      {
+        "name": "#% increased life cost efficiency",
+        "importance": 0.008356171660125256
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.0112051572650671
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.029591036960482597
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.007255435921251774
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.010281302034854889
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.010125149972736835
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.04698092117905617
+      },
+      {
+        "name": "#% increased spirit reservation efficiency of skills",
+        "importance": 0.06433740258216858
+      },
+      {
+        "name": "#% of cold damage taken recouped as life",
+        "importance": 0.0
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.008020752109587193
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.03714862838387489
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.03651813417673111
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.029083091765642166
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.027819545939564705
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03219664469361305
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.01477545965462923
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.13086159527301788
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "ar_only",
+    "model_type": "XGB",
+    "r2": 0.4440691532753729,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.0036701757926493883
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.006175426300615072
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.0010800951858982444
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.039288390427827835
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.0012497022980824113
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.016281574964523315
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.00622324226424098
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.017261698842048645
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.0014736419543623924
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.02101561799645424
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0006611173157580197
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0005211204406805336
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.00743113923817873
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.710838258266449
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.0021271503064781427
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.0027491773944348097
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.008757720701396465
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.013666238635778427
+      },
+      {
+        "name": "#% of leech is instant",
+        "importance": 0.01071259193122387
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0009140808251686394
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.004258233588188887
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.009622887708246708
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.007060591597110033
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.008443521335721016
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.007381146773695946
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.0069622863084077835
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.0072430274449288845
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.012668825685977936
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.00942305289208889
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.0024347626604139805
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.0030270786955952644
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.0013369208900257945
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.00419748155400157
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.006462753284722567
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.005730966106057167
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.008011536672711372
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.0031335828825831413
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.003602757351472974
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.016900427639484406
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "ar_es_only",
+    "model_type": "XGB",
+    "r2": 0.49904138277429466,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.005856120027601719
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.0053463708609342575
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.005115069914609194
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.021661685779690742
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.007649840787053108
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.024431275203824043
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.005704789888113737
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.012360249646008015
+      },
+      {
+        "name": "#% chance for attack hits to apply incision",
+        "importance": 0.0041072191670536995
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.0009255301556549966
+      },
+      {
+        "name": "#% chance to gain arcane surge when you deal a critical hit",
+        "importance": 0.03735227882862091
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.022105421870946884
+      },
+      {
+        "name": "#% increased cast speed when on full life",
+        "importance": 0.001456511439755559
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.001130564953200519
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.022274455055594444
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.6085714101791382
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.0039450195617973804
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.0009588059620000422
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.0072240266017615795
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.004219874739646912
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.008279724046587944
+      },
+      {
+        "name": "#% increased skill speed if you've consumed a frenzy charge recently",
+        "importance": 0.0030323201790452003
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.004874571692198515
+      },
+      {
+        "name": "#% of leech is instant",
+        "importance": 0.02279067598283291
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0009756528888829052
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.004510651342570782
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.01095662359148264
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.0074401190504431725
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.006320754066109657
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.007753916550427675
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.010395978577435017
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.011429781094193459
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.015652023255825043
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.011137265712022781
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.008183009922504425
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.005003484431654215
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.006958399899303913
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.0057991803623735905
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.004260191228240728
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.005644431337714195
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.006118888966739178
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.005710385274142027
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.005972773302346468
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.009809018112719059
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.008593694306910038
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "ar_ev_only",
+    "model_type": "XGB",
+    "r2": 0.37542220214499167,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.006239116657525301
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.007300796452909708
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.0035308334045112133
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.04689224809408188
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.009087830781936646
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.01461820863187313
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.0116390660405159
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.011157087981700897
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.0034097961615771055
+      },
+      {
+        "name": "#% increased area of effect of curses",
+        "importance": 0.0039625829085707664
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.040977008640766144
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 4.445093509275466e-05
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.02623417228460312
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.48208722472190857
+      },
+      {
+        "name": "#% increased immobilisation buildup",
+        "importance": 0.005290970206260681
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.003989949356764555
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.006694418843835592
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.015430774539709091
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.011144849471747875
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.008757432922720909
+      },
+      {
+        "name": "#% of leech is instant",
+        "importance": 0.02311856858432293
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0007262876024469733
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.007370950188487768
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.013492493890225887
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.00989114586263895
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.008084256201982498
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.009297853335738182
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.022940311580896378
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.016560323536396027
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.030535338446497917
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.02040543593466282
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.010431219823658466
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.007255673874169588
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.012102414853870869
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.012155614793300629
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.005727752111852169
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.010342426598072052
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.010296949185431004
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.009487294591963291
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.008255712687969208
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.0077001554891467094
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.013341276906430721
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.011991702951490879
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "ev_only",
+    "model_type": "XGB",
+    "r2": 0.4953034692825433,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.006986522115767002
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.010139359161257744
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.0013295401586219668
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.04355816915631294
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.0037144655361771584
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.009540122002363205
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.03277209401130676
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.002285954775288701
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.0012700457591563463
+      },
+      {
+        "name": "#% increased area of effect of curses",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.06792313605546951
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0013287975452840328
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.02922600694000721
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.5644581317901611
+      },
+      {
+        "name": "#% increased immobilisation buildup",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.0014665109338238835
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.005137077998369932
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.008939924649894238
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.01389775425195694
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.004968730267137289
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.0070623052306473255
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.006180517841130495
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.006239152047783136
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.020440446212887764
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.015747763216495514
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.039500486105680466
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.023043040186166763
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.003342582145705819
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.0026421111542731524
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.0028266021981835365
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.002825830364599824
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.005418678279966116
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.009316228330135345
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.012319152243435383
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.009717259556055069
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.003593937959522009
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.0032388921827077866
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.01760271191596985
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "es_only",
+    "model_type": "XGB",
+    "r2": 0.5150091365479298,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.008503749966621399
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.009177396073937416
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.012084590271115303
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.02449517883360386
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.007990796118974686
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.01736539602279663
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.011793217621743679
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.004734448157250881
+      },
+      {
+        "name": "#% chance for attack hits to apply incision",
+        "importance": 0.004840195644646883
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.006366121582686901
+      },
+      {
+        "name": "#% chance to gain arcane surge when you deal a critical hit",
+        "importance": 0.04807344451546669
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.027915146201848984
+      },
+      {
+        "name": "#% increased cast speed when on full life",
+        "importance": 0.006020029075443745
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.0185435488820076
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.4210466146469116
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.008904905989766121
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.010620837099850178
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.004405733663588762
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.008675714023411274
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.016326619312167168
+      },
+      {
+        "name": "#% increased skill speed if you've consumed a frenzy charge recently",
+        "importance": 0.008566473610699177
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0018132199766114354
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.008218659088015556
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.02161015011370182
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.017192430794239044
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.017267094925045967
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.01450986135751009
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.017112845554947853
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.015873167663812637
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.027113962918519974
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.02016461454331875
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.018500536680221558
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.010025247931480408
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.011079579591751099
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.009152228012681007
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.011505357921123505
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.009846258908510208
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.011379693634808064
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.011920977383852005
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.012493140995502472
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.011920488439500332
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.034850358963012695
+      }
+    ]
+  },
+  {
+    "category": "gloves",
+    "segment": "ev_es_only",
+    "model_type": "XGB",
+    "r2": 0.5089980371483178,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.007929758168756962
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.009834662079811096
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.0055782306008040905
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.03143171966075897
+      },
+      {
+        "name": "# to maximum frenzy charges",
+        "importance": 0.005334597080945969
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.009243092499673367
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.015489631332457066
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0034285455476492643
+      },
+      {
+        "name": "#% chance for attack hits to apply incision",
+        "importance": 0.002065707230940461
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.0020804216619580984
+      },
+      {
+        "name": "#% chance to gain arcane surge when you deal a critical hit",
+        "importance": 0.005847244057804346
+      },
+      {
+        "name": "#% increased area of effect of curses",
+        "importance": 0.004063000902533531
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.06071644276380539
+      },
+      {
+        "name": "#% increased cast speed when on full life",
+        "importance": 0.0022536960896104574
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.06042146310210228
+      },
+      {
+        "name": "#% increased effect of socketed items",
+        "importance": 0.5128431916236877
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.0046987333334982395
+      },
+      {
+        "name": "#% increased immobilisation buildup",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.0044840858317911625
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.003202553605660796
+      },
+      {
+        "name": "#% increased quantity of gold dropped by slain enemies",
+        "importance": 0.0025261305272579193
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.010435848496854305
+      },
+      {
+        "name": "#% increased skill speed if you've consumed a frenzy charge recently",
+        "importance": 0.0
+      },
+      {
+        "name": "#% of lightning damage taken recouped as life",
+        "importance": 0.0019400707678869367
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.009219326078891754
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.009859188459813595
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.009045552462339401
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.00951288640499115
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.007938875816762447
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.01948346383869648
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.020870525389909744
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.0316925123333931
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.025764228776097298
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.004009093623608351
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.003100400557741523
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.006666027475148439
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.0029180485289543867
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.005384081043303013
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.009951011277735233
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.007809552364051342
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.008144047111272812
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.008634848520159721
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.008001980371773243
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.011077217757701874
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.015068382024765015
+      }
+    ]
+  },
+  {
+    "category": "belt",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.4107415606514946,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "has # charm slots",
+        "importance": 0.0198093019425869
+      },
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.018210958689451218
+      },
+      {
+        "name": "# to # fire thorns damage per # maximum life",
+        "importance": 0.013061610981822014
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.01305981632322073
+      },
+      {
+        "name": "# to armour",
+        "importance": 0.018590716645121574
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.017002329230308533
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.012551463209092617
+      },
+      {
+        "name": "# to maximum endurance charges",
+        "importance": 0.005879961419850588
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.04869438335299492
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.022225383669137955
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0343109630048275
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.02305481769144535
+      },
+      {
+        "name": "#% chance for charms you use to not consume charges",
+        "importance": 0.021067287772893906
+      },
+      {
+        "name": "#% chance for flasks you use to not consume charges",
+        "importance": 0.01702527329325676
+      },
+      {
+        "name": "#% increased armour",
+        "importance": 0.015950456261634827
+      },
+      {
+        "name": "#% increased charm charges gained",
+        "importance": 0.016241829842329025
+      },
+      {
+        "name": "#% increased charm effect duration",
+        "importance": 0.013469415716826916
+      },
+      {
+        "name": "#% increased evasion rating",
+        "importance": 0.0170027706772089
+      },
+      {
+        "name": "#% increased flask charges gained",
+        "importance": 0.016860462725162506
+      },
+      {
+        "name": "#% increased flask life recovery rate",
+        "importance": 0.015287649817764759
+      },
+      {
+        "name": "#% increased flask mana recovery rate",
+        "importance": 0.013636943884193897
+      },
+      {
+        "name": "#% increased life recovery from flasks",
+        "importance": 0.01316600851714611
+      },
+      {
+        "name": "#% increased life regeneration rate during effect of any life flask",
+        "importance": 0.021674051880836487
+      },
+      {
+        "name": "#% increased mana recovery from flasks",
+        "importance": 0.01378070842474699
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.03664262592792511
+      },
+      {
+        "name": "#% increased maximum energy shield",
+        "importance": 0.038839198648929596
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.014167547225952148
+      },
+      {
+        "name": "#% of fire damage taken recouped as life",
+        "importance": 0.016267476603388786
+      },
+      {
+        "name": "#% of flask recovery applied instantly",
+        "importance": 0.015285320580005646
+      },
+      {
+        "name": "#% reduced charm charges used",
+        "importance": 0.02102825604379177
+      },
+      {
+        "name": "#% reduced duration of bleeding on you",
+        "importance": 0.008920476771891117
+      },
+      {
+        "name": "#% reduced flask charges used",
+        "importance": 0.02012760378420353
+      },
+      {
+        "name": "#% reduced ignite duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced poison duration on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you if you've used a charm recently",
+        "importance": 0.0
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.08139374852180481
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.061302948743104935
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.0685548409819603
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.06097942963242531
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.031941018998622894
+      },
+      {
+        "name": "#% to thorns critical hit chance",
+        "importance": 0.0
+      },
+      {
+        "name": "charms gain # charges per second",
+        "importance": 0.010823027230799198
+      },
+      {
+        "name": "flasks gain # charges per second",
+        "importance": 0.01293970737606287
+      },
+      {
+        "name": "gain #% of maximum mana as armour",
+        "importance": 0.01590687781572342
+      },
+      {
+        "name": "life flasks gain # charges per second",
+        "importance": 0.019182691350579262
+      },
+      {
+        "name": "mana flasks gain # charges per second",
+        "importance": 0.024082647636532784
+      }
+    ]
+  },
+  {
+    "category": "amulet",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.4361198727661876,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.005998343229293823
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.006454546004533768
+      },
+      {
+        "name": "# to all attributes",
+        "importance": 0.006979821249842644
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.006512829102575779
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.006655142176896334
+      },
+      {
+        "name": "# to level of all melee skills",
+        "importance": 0.05485881492495537
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.045303456485271454
+      },
+      {
+        "name": "# to level of all projectile skills",
+        "importance": 0.19211801886558533
+      },
+      {
+        "name": "# to level of all skills",
+        "importance": 0.010659623891115189
+      },
+      {
+        "name": "# to level of all spell skills",
+        "importance": 0.12917934358119965
+      },
+      {
+        "name": "# to maximum energy shield",
+        "importance": 0.009162195026874542
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.010349988006055355
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.008881788700819016
+      },
+      {
+        "name": "# to spirit",
+        "importance": 0.04064159095287323
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.007277254480868578
+      },
+      {
+        "name": "#% increased armour",
+        "importance": 0.008301490917801857
+      },
+      {
+        "name": "#% increased armour from equipped body armour",
+        "importance": 0.006712638307362795
+      },
+      {
+        "name": "#% increased attack damage while on low life",
+        "importance": 0.004347938112914562
+      },
+      {
+        "name": "#% increased cast speed",
+        "importance": 0.022253813222050667
+      },
+      {
+        "name": "#% increased cooldown recovery rate",
+        "importance": 0.006510722916573286
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.01552475057542324
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.02147538773715496
+      },
+      {
+        "name": "#% increased deflection rating",
+        "importance": 0.010232378728687763
+      },
+      {
+        "name": "#% increased dexterity",
+        "importance": 0.009496891871094704
+      },
+      {
+        "name": "#% increased energy shield from equipped body armour",
+        "importance": 0.017104223370552063
+      },
+      {
+        "name": "#% increased evasion rating",
+        "importance": 0.009004693478345871
+      },
+      {
+        "name": "#% increased evasion rating from equipped body armour",
+        "importance": 0.0128984609618783
+      },
+      {
+        "name": "#% increased exposure effect",
+        "importance": 0.00485679367557168
+      },
+      {
+        "name": "#% increased global defences",
+        "importance": 0.026460975408554077
+      },
+      {
+        "name": "#% increased intelligence",
+        "importance": 0.01009046658873558
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.00838675070554018
+      },
+      {
+        "name": "#% increased maximum energy shield",
+        "importance": 0.01496695727109909
+      },
+      {
+        "name": "#% increased maximum life",
+        "importance": 0.01884157583117485
+      },
+      {
+        "name": "#% increased maximum mana",
+        "importance": 0.011070024222135544
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.01618112251162529
+      },
+      {
+        "name": "#% increased reservation efficiency of herald skills",
+        "importance": 0.004724548198282719
+      },
+      {
+        "name": "#% increased skill effect duration",
+        "importance": 0.0054472810588777065
+      },
+      {
+        "name": "#% increased skill speed",
+        "importance": 0.008771560154855251
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.009568918496370316
+      },
+      {
+        "name": "#% increased spell damage while on full energy shield",
+        "importance": 0.009390534833073616
+      },
+      {
+        "name": "#% increased strength",
+        "importance": 0.01096841786056757
+      },
+      {
+        "name": "#% of damage is taken from mana before life",
+        "importance": 0.0025396591518074274
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.008857603184878826
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.009656223468482494
+      },
+      {
+        "name": "#% to all elemental resistances",
+        "importance": 0.013289275579154491
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.0
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.011531520634889603
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.009235017001628876
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.009154556319117546
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.009767979383468628
+      },
+      {
+        "name": "#% to quality of all skills",
+        "importance": 0.012501966208219528
+      },
+      {
+        "name": "aura skills have #% increased magnitudes",
+        "importance": 0.006541484501212835
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "charms gain # charges per second",
+        "importance": 0.0
+      },
+      {
+        "name": "equipment and skill gems have #% reduced attribute requirements",
+        "importance": 0.006289450451731682
+      },
+      {
+        "name": "invocated spells have #% chance to consume half as much energy",
+        "importance": 0.0077146682888269424
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.006745546590536833
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.005313756875693798
+      },
+      {
+        "name": "life flasks gain # charges per second",
+        "importance": 0.0
+      },
+      {
+        "name": "mana flasks gain # charges per second",
+        "importance": 0.0
+      },
+      {
+        "name": "minions deal #% increased damage if you've hit recently",
+        "importance": 0.0077428314834833145
+      },
+      {
+        "name": "minions have #% increased cooldown recovery rate",
+        "importance": 0.006443273741751909
+      },
+      {
+        "name": "recover #% of maximum life on kill",
+        "importance": 0.008393993601202965
+      },
+      {
+        "name": "recover #% of maximum mana on kill",
+        "importance": 0.004314059391617775
+      },
+      {
+        "name": "remnants can be collected from #% further away",
+        "importance": 0.0
+      },
+      {
+        "name": "remnants have #% increased effect",
+        "importance": 0.004723867401480675
+      },
+      {
+        "name": "skills have a #% chance to not consume glory",
+        "importance": 0.004621151369065046
+      }
+    ]
+  },
+  {
+    "category": "ring",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.49541605379554476,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life regeneration per second",
+        "importance": 0.014159132726490498
+      },
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.01226005144417286
+      },
+      {
+        "name": "# to all attributes",
+        "importance": 0.010794898495078087
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.010861221700906754
+      },
+      {
+        "name": "# to evasion rating",
+        "importance": 0.01460678968578577
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.012372744269669056
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.03253019228577614
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.017401432618498802
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0154715059325099
+      },
+      {
+        "name": "#% increased amount of life leeched",
+        "importance": 0.011450202204287052
+      },
+      {
+        "name": "#% increased amount of mana leeched",
+        "importance": 0.011836724355816841
+      },
+      {
+        "name": "#% increased attack damage while on low life",
+        "importance": 0.011425113305449486
+      },
+      {
+        "name": "#% increased cast speed",
+        "importance": 0.03393295779824257
+      },
+      {
+        "name": "#% increased chaos damage",
+        "importance": 0.014005351811647415
+      },
+      {
+        "name": "#% increased cold damage",
+        "importance": 0.01635562628507614
+      },
+      {
+        "name": "#% increased cooldown recovery rate",
+        "importance": 0.015383947640657425
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.018321065232157707
+      },
+      {
+        "name": "#% increased damage",
+        "importance": 0.011427801102399826
+      },
+      {
+        "name": "#% increased exposure effect",
+        "importance": 0.008819193579256535
+      },
+      {
+        "name": "#% increased fire damage",
+        "importance": 0.013738367706537247
+      },
+      {
+        "name": "#% increased freeze buildup if you've consumed an power charge recently",
+        "importance": 0.009443503804504871
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.011750930920243263
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.011478171683847904
+      },
+      {
+        "name": "#% increased lightning damage",
+        "importance": 0.02804652228951454
+      },
+      {
+        "name": "#% increased magnitude of ignite if you've consumed an endurance charge recently",
+        "importance": 0.011198308318853378
+      },
+      {
+        "name": "#% increased magnitude of shock if you've consumed a frenzy charge recently",
+        "importance": 0.016773493960499763
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.01716950535774231
+      },
+      {
+        "name": "#% increased maximum mana",
+        "importance": 0.03493860363960266
+      },
+      {
+        "name": "#% increased rarity of items found",
+        "importance": 0.04390733689069748
+      },
+      {
+        "name": "#% increased skill effect duration",
+        "importance": 0.011599522083997726
+      },
+      {
+        "name": "#% increased skill speed",
+        "importance": 0.018652262166142464
+      },
+      {
+        "name": "#% increased spell damage while on full energy shield",
+        "importance": 0.03268192708492279
+      },
+      {
+        "name": "#% to all elemental resistances",
+        "importance": 0.03181864321231842
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.03365625441074371
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.020012032240629196
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.020919781178236008
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.021260574460029602
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.032525841146707535
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.02906157448887825
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.060208119451999664
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.03566889464855194
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.01707122102379799
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.01684657670557499
+      },
+      {
+        "name": "grants # additional skill slot",
+        "importance": 0.017423763871192932
+      },
+      {
+        "name": "leech #% of physical attack damage as life",
+        "importance": 0.014432011172175407
+      },
+      {
+        "name": "leech #% of physical attack damage as mana",
+        "importance": 0.021439876407384872
+      },
+      {
+        "name": "maximum quality is #%",
+        "importance": 0.01479850523173809
+      },
+      {
+        "name": "minions deal #% increased damage if you've hit recently",
+        "importance": 0.013507126830518246
+      },
+      {
+        "name": "recover #% of maximum life on kill",
+        "importance": 0.01331933494657278
+      },
+      {
+        "name": "recover #% of maximum mana on kill",
+        "importance": 0.014636246487498283
+      },
+      {
+        "name": "remnants can be collected from #% further away",
+        "importance": 0.007813304662704468
+      },
+      {
+        "name": "remnants have #% increased effect",
+        "importance": 0.008785907179117203
+      }
+    ]
+  },
+  {
+    "category": "sapphire",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.3375664558626045,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to dexterity",
+        "importance": 0.004013729281723499
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.009734299965202808
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.007950752973556519
+      },
+      {
+        "name": "#% faster curse activation",
+        "importance": 0.02008693665266037
+      },
+      {
+        "name": "#% faster start of energy shield recharge",
+        "importance": 0.009237034246325493
+      },
+      {
+        "name": "#% increased area of effect",
+        "importance": 0.008135751821100712
+      },
+      {
+        "name": "#% increased area of effect of curses",
+        "importance": 0.015129117295145988
+      },
+      {
+        "name": "#% increased armour",
+        "importance": 0.004452926572412252
+      },
+      {
+        "name": "#% increased attack damage",
+        "importance": 0.01740814559161663
+      },
+      {
+        "name": "#% increased cast speed",
+        "importance": 0.013775530271232128
+      },
+      {
+        "name": "#% increased chance to inflict ailments",
+        "importance": 0.007592290639877319
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to shock",
+        "importance": 0.007359048817306757
+      },
+      {
+        "name": "#% increased chaos damage",
+        "importance": 0.010300380177795887
+      },
+      {
+        "name": "#% increased chill duration on enemies",
+        "importance": 0.008329288102686405
+      },
+      {
+        "name": "#% increased cold damage",
+        "importance": 0.010126838460564613
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.038131844252347946
+      },
+      {
+        "name": "#% increased critical hit chance",
+        "importance": 0.04298541694879532
+      },
+      {
+        "name": "#% increased critical hit chance for spells",
+        "importance": 0.0316486693918705
+      },
+      {
+        "name": "#% increased critical spell damage bonus",
+        "importance": 0.04117104783654213
+      },
+      {
+        "name": "#% increased curse duration",
+        "importance": 0.0064068506471812725
+      },
+      {
+        "name": "#% increased curse magnitudes",
+        "importance": 0.006680267862975597
+      },
+      {
+        "name": "#% increased damage if you have consumed a corpse recently",
+        "importance": 0.00822759885340929
+      },
+      {
+        "name": "#% increased dexterity",
+        "importance": 0.005535592325031757
+      },
+      {
+        "name": "#% increased duration of damaging ailments on enemies",
+        "importance": 0.00935252383351326
+      },
+      {
+        "name": "#% increased elemental damage",
+        "importance": 0.018671544268727303
+      },
+      {
+        "name": "#% increased energy shield from equipped focus",
+        "importance": 0.01053466647863388
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.010058694519102573
+      },
+      {
+        "name": "#% increased evasion rating",
+        "importance": 0.02163214422762394
+      },
+      {
+        "name": "#% increased exposure effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased fire damage",
+        "importance": 0.0010431731352582574
+      },
+      {
+        "name": "#% increased flammability magnitude",
+        "importance": 0.010726054199039936
+      },
+      {
+        "name": "#% increased freeze buildup",
+        "importance": 0.00824623554944992
+      },
+      {
+        "name": "#% increased freeze buildup with quarterstaves",
+        "importance": 0.007888995110988617
+      },
+      {
+        "name": "#% increased freeze threshold",
+        "importance": 0.00885827001184225
+      },
+      {
+        "name": "#% increased global physical damage",
+        "importance": 0.0040327031165361404
+      },
+      {
+        "name": "#% increased ignite magnitude",
+        "importance": 0.008247559890151024
+      },
+      {
+        "name": "#% increased intelligence",
+        "importance": 0.028370102867484093
+      },
+      {
+        "name": "#% increased lightning damage",
+        "importance": 0.008898531086742878
+      },
+      {
+        "name": "#% increased magnitude of abyssal wasting you inflict",
+        "importance": 0.015273944474756718
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.016659123823046684
+      },
+      {
+        "name": "#% increased magnitude of bleeding you inflict",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of damaging ailments you inflict with critical hits",
+        "importance": 0.01232874020934105
+      },
+      {
+        "name": "#% increased magnitude of poison you inflict",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of shock you inflict",
+        "importance": 0.014689402654767036
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.011550965718925
+      },
+      {
+        "name": "#% increased maximum energy shield",
+        "importance": 0.030908463522791862
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.012671437114477158
+      },
+      {
+        "name": "#% increased shock duration",
+        "importance": 0.009650242514908314
+      },
+      {
+        "name": "#% increased skill effect duration",
+        "importance": 0.009314870461821556
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.02447771094739437
+      },
+      {
+        "name": "#% increased strength",
+        "importance": 0.01052088662981987
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.0016332404920831323
+      },
+      {
+        "name": "#% increased totem damage",
+        "importance": 0.015644783154129982
+      },
+      {
+        "name": "#% increased withered magnitude",
+        "importance": 0.010410227812826633
+      },
+      {
+        "name": "#% of damage is taken from mana before life",
+        "importance": 0.01049304660409689
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.00856923870742321
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.018611546605825424
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.017525332048535347
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.014814571477472782
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.011397930793464184
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.0067871008068323135
+      },
+      {
+        "name": "aura skills have #% increased magnitudes",
+        "importance": 0.008407825604081154
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.0
+      },
+      {
+        "name": "companions deal #% increased damage",
+        "importance": 0.0
+      },
+      {
+        "name": "companions have #% increased maximum life",
+        "importance": 0.0
+      },
+      {
+        "name": "damage penetrates #% cold resistance",
+        "importance": 0.011842204257845879
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.0
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.0
+      },
+      {
+        "name": "damaging ailments deal damage #% faster",
+        "importance": 0.009146887809038162
+      },
+      {
+        "name": "debuffs on you expire #% faster",
+        "importance": 0.008721067570149899
+      },
+      {
+        "name": "gain additional ailment threshold equal to #% of maximum energy shield",
+        "importance": 0.010957675985991955
+      },
+      {
+        "name": "gain additional stun threshold equal to #% of maximum energy shield",
+        "importance": 0.015236983075737953
+      },
+      {
+        "name": "meta skills gain #% increased energy",
+        "importance": 0.01040141936391592
+      },
+      {
+        "name": "minions deal #% increased damage",
+        "importance": 0.01947668567299843
+      },
+      {
+        "name": "minions have #% increased attack and cast speed",
+        "importance": 0.020491359755396843
+      },
+      {
+        "name": "minions have #% increased critical damage bonus",
+        "importance": 0.0131203792989254
+      },
+      {
+        "name": "minions have #% increased critical hit chance",
+        "importance": 0.014938215725123882
+      },
+      {
+        "name": "minions have #% increased maximum life",
+        "importance": 0.0
+      },
+      {
+        "name": "minions have +#% to all elemental resistances",
+        "importance": 0.015277418307960033
+      },
+      {
+        "name": "minions have +#% to chaos resistance",
+        "importance": 0.007740068715065718
+      },
+      {
+        "name": "offering skills have #% increased duration",
+        "importance": 0.0044549014419317245
+      },
+      {
+        "name": "offerings have #% increased maximum life",
+        "importance": 0.010204004123806953
+      },
+      {
+        "name": "recover #% of maximum life on kill",
+        "importance": 0.011793052777647972
+      },
+      {
+        "name": "recover #% of maximum mana on kill",
+        "importance": 0.021058309823274612
+      },
+      {
+        "name": "triggered spells deal #% increased spell damage",
+        "importance": 0.011818202212452888
+      }
+    ]
+  },
+  {
+    "category": "emerald",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.3501329550095652,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to dexterity",
+        "importance": 0.013766204938292503
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.008927923627197742
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0067990440875291824
+      },
+      {
+        "name": "#% chance to blind enemies on hit with attacks",
+        "importance": 0.006309072952717543
+      },
+      {
+        "name": "#% chance to daze on hit",
+        "importance": 0.008136028423905373
+      },
+      {
+        "name": "#% chance to pierce an enemy",
+        "importance": 0.004195638932287693
+      },
+      {
+        "name": "#% chance to poison on hit",
+        "importance": 0.008310897275805473
+      },
+      {
+        "name": "#% increased accuracy rating",
+        "importance": 0.009547836147248745
+      },
+      {
+        "name": "#% increased accuracy rating with bows",
+        "importance": 0.008322504349052906
+      },
+      {
+        "name": "#% increased amount of mana leeched",
+        "importance": 0.0070504373870790005
+      },
+      {
+        "name": "#% increased armour",
+        "importance": 0.0004910621210001409
+      },
+      {
+        "name": "#% increased attack damage",
+        "importance": 0.01392491813749075
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.023290226235985756
+      },
+      {
+        "name": "#% increased attack speed with bows",
+        "importance": 0.023306524381041527
+      },
+      {
+        "name": "#% increased attack speed with crossbows",
+        "importance": 0.012944302521646023
+      },
+      {
+        "name": "#% increased attack speed with quarterstaves",
+        "importance": 0.008921155706048012
+      },
+      {
+        "name": "#% increased attack speed with spears",
+        "importance": 0.009170562960207462
+      },
+      {
+        "name": "#% increased blind effect",
+        "importance": 0.006569400429725647
+      },
+      {
+        "name": "#% increased bonuses gained from equipped quiver",
+        "importance": 0.03196895495057106
+      },
+      {
+        "name": "#% increased chance to inflict ailments",
+        "importance": 0.004919032100588083
+      },
+      {
+        "name": "#% increased chance to poison",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chance to shock",
+        "importance": 0.008064955472946167
+      },
+      {
+        "name": "#% increased charm charges gained",
+        "importance": 0.003911207430064678
+      },
+      {
+        "name": "#% increased charm effect duration",
+        "importance": 0.006796424742788076
+      },
+      {
+        "name": "#% increased cooldown recovery rate",
+        "importance": 0.007518937345594168
+      },
+      {
+        "name": "#% increased critical damage bonus for attack damage",
+        "importance": 0.03260953724384308
+      },
+      {
+        "name": "#% increased critical damage bonus with spears",
+        "importance": 0.012729668989777565
+      },
+      {
+        "name": "#% increased critical hit chance for attacks",
+        "importance": 0.03740129992365837
+      },
+      {
+        "name": "#% increased crossbow reload speed",
+        "importance": 0.006893410347402096
+      },
+      {
+        "name": "#% increased damage while you have an active charm",
+        "importance": 0.010276787914335728
+      },
+      {
+        "name": "#% increased damage with bows",
+        "importance": 0.01727636344730854
+      },
+      {
+        "name": "#% increased damage with crossbows",
+        "importance": 0.012848665937781334
+      },
+      {
+        "name": "#% increased damage with hits against rare and unique enemies",
+        "importance": 0.011984526179730892
+      },
+      {
+        "name": "#% increased damage with quarterstaves",
+        "importance": 0.009455427527427673
+      },
+      {
+        "name": "#% increased damage with spears",
+        "importance": 0.00913090817630291
+      },
+      {
+        "name": "#% increased dexterity",
+        "importance": 0.013364083133637905
+      },
+      {
+        "name": "#% increased duration of damaging ailments on enemies",
+        "importance": 0.007824525237083435
+      },
+      {
+        "name": "#% increased duration of ignite, shock and chill on enemies",
+        "importance": 0.006190660875290632
+      },
+      {
+        "name": "#% increased effect of your mark skills",
+        "importance": 0.006869541946798563
+      },
+      {
+        "name": "#% increased elemental ailment threshold",
+        "importance": 0.008119268342852592
+      },
+      {
+        "name": "#% increased elemental damage",
+        "importance": 0.01638834737241268
+      },
+      {
+        "name": "#% increased evasion rating",
+        "importance": 0.010231156833469868
+      },
+      {
+        "name": "#% increased exposure effect",
+        "importance": 0.007469661999493837
+      },
+      {
+        "name": "#% increased flask charges gained",
+        "importance": 0.003433773759752512
+      },
+      {
+        "name": "#% increased flask effect duration",
+        "importance": 0.00591258006170392
+      },
+      {
+        "name": "#% increased freeze buildup with quarterstaves",
+        "importance": 0.004075320903211832
+      },
+      {
+        "name": "#% increased global physical damage",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased hazard damage",
+        "importance": 0.012249283492565155
+      },
+      {
+        "name": "#% increased intelligence",
+        "importance": 0.008761300705373287
+      },
+      {
+        "name": "#% increased life flask charges gained",
+        "importance": 0.0038307136856019497
+      },
+      {
+        "name": "#% increased life recovery from flasks",
+        "importance": 0.008954639546573162
+      },
+      {
+        "name": "#% increased lightning damage",
+        "importance": 0.014951067976653576
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.009420073591172695
+      },
+      {
+        "name": "#% increased magnitude of damaging ailments you inflict with critical hits",
+        "importance": 0.010370898060500622
+      },
+      {
+        "name": "#% increased magnitude of poison you inflict",
+        "importance": 0.011327765882015228
+      },
+      {
+        "name": "#% increased magnitude of shock you inflict",
+        "importance": 0.011711090803146362
+      },
+      {
+        "name": "#% increased mana flask charges gained",
+        "importance": 0.007803147193044424
+      },
+      {
+        "name": "#% increased mana recovery from flasks",
+        "importance": 0.006541503127664328
+      },
+      {
+        "name": "#% increased maximum energy shield",
+        "importance": 0.018076803535223007
+      },
+      {
+        "name": "#% increased melee damage if you've dealt a projectile attack hit in the past eight seconds",
+        "importance": 0.007830164395272732
+      },
+      {
+        "name": "#% increased movement speed",
+        "importance": 0.09679762274026871
+      },
+      {
+        "name": "#% increased parried debuff duration",
+        "importance": 0.0026762732304632664
+      },
+      {
+        "name": "#% increased parry damage",
+        "importance": 0.011367345228791237
+      },
+      {
+        "name": "#% increased pin buildup",
+        "importance": 0.007392121013253927
+      },
+      {
+        "name": "#% increased poison duration",
+        "importance": 0.006446623243391514
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased projectile damage",
+        "importance": 0.01461801677942276
+      },
+      {
+        "name": "#% increased projectile damage if you've dealt a melee hit in the past eight seconds",
+        "importance": 0.009506131522357464
+      },
+      {
+        "name": "#% increased projectile speed",
+        "importance": 0.011724705807864666
+      },
+      {
+        "name": "#% increased shock duration",
+        "importance": 0.00948577281087637
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.0015766496071591973
+      },
+      {
+        "name": "#% increased strength",
+        "importance": 0.007260315585881472
+      },
+      {
+        "name": "#% increased stun threshold if you haven't been stunned recently",
+        "importance": 0.008305690251290798
+      },
+      {
+        "name": "#% increased stun threshold while parrying",
+        "importance": 0.009421040304005146
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased totem damage",
+        "importance": 0.00547568965703249
+      },
+      {
+        "name": "#% reduced slowing potency of debuffs on you",
+        "importance": 0.009854677133262157
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.008815420791506767
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.012891052290797234
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.01995008997619152
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.012997916899621487
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.007078282535076141
+      },
+      {
+        "name": "aura skills have #% increased magnitudes",
+        "importance": 0.0
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.0
+      },
+      {
+        "name": "companions deal #% increased damage",
+        "importance": 0.014284834265708923
+      },
+      {
+        "name": "companions have #% increased maximum life",
+        "importance": 0.012628396041691303
+      },
+      {
+        "name": "damage penetrates #% lightning resistance",
+        "importance": 0.010654978454113007
+      },
+      {
+        "name": "damaging ailments deal damage #% faster",
+        "importance": 0.013915472663939
+      },
+      {
+        "name": "debuffs on you expire #% faster",
+        "importance": 0.010688332840800285
+      },
+      {
+        "name": "herald skills deal #% increased damage",
+        "importance": 0.007380830589681864
+      },
+      {
+        "name": "mark skills have #% increased skill effect duration",
+        "importance": 0.00751273101195693
+      },
+      {
+        "name": "mark skills have #% increased use speed",
+        "importance": 0.007505354937165976
+      },
+      {
+        "name": "minions deal #% increased damage",
+        "importance": 0.0
+      },
+      {
+        "name": "projectiles have #% chance for an additional projectile when forking",
+        "importance": 0.009606811217963696
+      },
+      {
+        "name": "projectiles have #% chance to chain an additional time from terrain",
+        "importance": 0.006703482940793037
+      }
+    ]
+  },
+  {
+    "category": "ruby",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.06536276310624223,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to dexterity",
+        "importance": 0.021248167380690575
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.022728050127625465
+      },
+      {
+        "name": "# to maximum rage",
+        "importance": 0.029300253838300705
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.012731872498989105
+      },
+      {
+        "name": "#% chance for attack hits to apply incision",
+        "importance": 0.0
+      },
+      {
+        "name": "#% chance to inflict bleeding on hit",
+        "importance": 0.007604650687426329
+      },
+      {
+        "name": "#% increased amount of life leeched",
+        "importance": 0.023044968023896217
+      },
+      {
+        "name": "#% increased area of effect",
+        "importance": 0.016724340617656708
+      },
+      {
+        "name": "#% increased armour",
+        "importance": 0.01216311939060688
+      },
+      {
+        "name": "#% increased armour break duration",
+        "importance": 0.00839004386216402
+      },
+      {
+        "name": "#% increased attack damage",
+        "importance": 0.008783858269453049
+      },
+      {
+        "name": "#% increased bleeding duration",
+        "importance": 0.04046158492565155
+      },
+      {
+        "name": "#% increased block chance",
+        "importance": 0.027425825595855713
+      },
+      {
+        "name": "#% increased chance to inflict bleeding",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased chaos damage",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased damage against enemies with fully broken armour",
+        "importance": 0.018344711512327194
+      },
+      {
+        "name": "#% increased damage with maces",
+        "importance": 0.015302393585443497
+      },
+      {
+        "name": "#% increased damage with warcries",
+        "importance": 0.009521130472421646
+      },
+      {
+        "name": "#% increased defences from equipped shield",
+        "importance": 0.013880260288715363
+      },
+      {
+        "name": "#% increased dexterity",
+        "importance": 0.023660747334361076
+      },
+      {
+        "name": "#% increased elemental damage",
+        "importance": 0.022776780650019646
+      },
+      {
+        "name": "#% increased evasion rating",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased exposure effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased fire damage",
+        "importance": 0.011988548561930656
+      },
+      {
+        "name": "#% increased flammability magnitude",
+        "importance": 0.011822178028523922
+      },
+      {
+        "name": "#% increased global physical damage",
+        "importance": 0.01982409879565239
+      },
+      {
+        "name": "#% increased glory generation for banner skills",
+        "importance": 0.019240275025367737
+      },
+      {
+        "name": "#% increased ignite magnitude",
+        "importance": 0.007238956168293953
+      },
+      {
+        "name": "#% increased intelligence",
+        "importance": 0.013115531764924526
+      },
+      {
+        "name": "#% increased knockback distance",
+        "importance": 0.014491062611341476
+      },
+      {
+        "name": "#% increased life regeneration rate",
+        "importance": 0.02363504096865654
+      },
+      {
+        "name": "#% increased magnitude of abyssal wasting you inflict",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of ailments you inflict",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased magnitude of bleeding you inflict",
+        "importance": 0.01701880805194378
+      },
+      {
+        "name": "#% increased maximum energy shield",
+        "importance": 0.015600927174091339
+      },
+      {
+        "name": "#% increased melee damage",
+        "importance": 0.018042778596282005
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.016500378027558327
+      },
+      {
+        "name": "#% increased skill effect duration",
+        "importance": 0.03122865781188011
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased strength",
+        "importance": 0.040771909058094025
+      },
+      {
+        "name": "#% increased stun buildup",
+        "importance": 0.012149274349212646
+      },
+      {
+        "name": "#% increased stun buildup with maces",
+        "importance": 0.01948014460504055
+      },
+      {
+        "name": "#% increased stun threshold",
+        "importance": 0.015509351156651974
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.01111944206058979
+      },
+      {
+        "name": "#% increased totem damage",
+        "importance": 0.023725399747490883
+      },
+      {
+        "name": "#% increased totem life",
+        "importance": 0.010928542353212833
+      },
+      {
+        "name": "#% increased totem placement speed",
+        "importance": 0.03661643713712692
+      },
+      {
+        "name": "#% increased warcry buff effect",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased warcry cooldown recovery rate",
+        "importance": 0.01361280307173729
+      },
+      {
+        "name": "#% increased warcry speed",
+        "importance": 0.02126212790608406
+      },
+      {
+        "name": "#% increased withered magnitude",
+        "importance": 0.0
+      },
+      {
+        "name": "#% of skill mana costs converted to life costs",
+        "importance": 0.025444457307457924
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.010034534148871899
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.020548228174448013
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.014567192643880844
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.016809800639748573
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.018235797062516212
+      },
+      {
+        "name": "aura skills have #% increased magnitudes",
+        "importance": 0.0
+      },
+      {
+        "name": "banner skills have #% increased area of effect",
+        "importance": 0.01578184776008129
+      },
+      {
+        "name": "banner skills have #% increased duration",
+        "importance": 0.009745127521455288
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.012429524213075638
+      },
+      {
+        "name": "companions deal #% increased damage",
+        "importance": 0.0
+      },
+      {
+        "name": "companions have #% increased maximum life",
+        "importance": 0.0
+      },
+      {
+        "name": "damage penetrates #% fire resistance",
+        "importance": 0.013498976826667786
+      },
+      {
+        "name": "empowered attacks deal #% increased damage",
+        "importance": 0.012943281792104244
+      },
+      {
+        "name": "gain # rage on melee hit",
+        "importance": 0.008433670736849308
+      },
+      {
+        "name": "gain # rage when hit by an enemy",
+        "importance": 0.013964791782200336
+      },
+      {
+        "name": "minions deal #% increased damage",
+        "importance": 0.008325206115841866
+      },
+      {
+        "name": "minions have #% additional physical damage reduction",
+        "importance": 0.014913644641637802
+      },
+      {
+        "name": "minions have #% increased area of effect",
+        "importance": 0.007922963239252567
+      },
+      {
+        "name": "minions have #% increased maximum life",
+        "importance": 0.01738552190363407
+      }
+    ]
+  },
+  {
+    "category": "quiver",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.37477046804432335,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to accuracy rating",
+        "importance": 0.02020692080259323
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.01787097007036209
+      },
+      {
+        "name": "# to level of all projectile skills",
+        "importance": 0.14948712289333344
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.010317126289010048
+      },
+      {
+        "name": "#% chance to pierce an enemy",
+        "importance": 0.020669613033533096
+      },
+      {
+        "name": "#% chance to poison on hit with attacks",
+        "importance": 0.018310323357582092
+      },
+      {
+        "name": "#% increased accuracy rating",
+        "importance": 0.01748816668987274
+      },
+      {
+        "name": "#% increased arrow speed",
+        "importance": 0.02737334370613098
+      },
+      {
+        "name": "#% increased attack speed",
+        "importance": 0.0733611136674881
+      },
+      {
+        "name": "#% increased critical damage bonus",
+        "importance": 0.01837565377354622
+      },
+      {
+        "name": "#% increased critical damage bonus for attack damage",
+        "importance": 0.04799947142601013
+      },
+      {
+        "name": "#% increased critical hit chance for attacks",
+        "importance": 0.0531485341489315
+      },
+      {
+        "name": "#% increased damage",
+        "importance": 0.026080239564180374
+      },
+      {
+        "name": "#% increased damage with bow skills",
+        "importance": 0.07143635302782059
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.012708605267107487
+      },
+      {
+        "name": "#% increased projectile speed",
+        "importance": 0.048900872468948364
+      },
+      {
+        "name": "#% increased skill speed",
+        "importance": 0.015425963327288628
+      },
+      {
+        "name": "#% increased stun buildup",
+        "importance": 0.019475050270557404
+      },
+      {
+        "name": "#% of skill mana costs converted to life costs",
+        "importance": 0.007304221857339144
+      },
+      {
+        "name": "adds # to # cold damage to attacks",
+        "importance": 0.02173147350549698
+      },
+      {
+        "name": "adds # to # fire damage to attacks",
+        "importance": 0.02196236327290535
+      },
+      {
+        "name": "adds # to # lightning damage to attacks",
+        "importance": 0.061696603894233704
+      },
+      {
+        "name": "adds # to # physical damage to attacks",
+        "importance": 0.025215044617652893
+      },
+      {
+        "name": "attacks have #% chance to cause bleeding",
+        "importance": 0.01648474670946598
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "gain # life per enemy hit with attacks",
+        "importance": 0.01828119531273842
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.01943865418434143
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.019388223066926003
+      },
+      {
+        "name": "increases and reductions to projectile speed also apply to damage with bows",
+        "importance": 0.016539055854082108
+      },
+      {
+        "name": "projectile attacks have a #% chance to fire two additional projectiles while moving",
+        "importance": 0.01936132274568081
+      },
+      {
+        "name": "projectiles deal #% increased damage with hits against enemies further than #m",
+        "importance": 0.015128507278859615
+      },
+      {
+        "name": "projectiles deal #% increased damage with hits against enemies within #m",
+        "importance": 0.014605171047151089
+      },
+      {
+        "name": "projectiles have #% chance to chain an additional time from terrain",
+        "importance": 0.01842506416141987
+      },
+      {
+        "name": "projectiles have #% increased critical damage bonus against enemies within #m",
+        "importance": 0.012805567122995853
+      },
+      {
+        "name": "projectiles have #% increased critical hit chance against enemies further than #m",
+        "importance": 0.022997286170721054
+      }
+    ]
+  },
+  {
+    "category": "wand",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.4902322143544927,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to intelligence",
+        "importance": 0.009029537439346313
+      },
+      {
+        "name": "# to level of all chaos spell skills",
+        "importance": 0.05285382643342018
+      },
+      {
+        "name": "# to level of all cold spell skills",
+        "importance": 0.051916543394327164
+      },
+      {
+        "name": "# to level of all fire spell skills",
+        "importance": 0.027338270097970963
+      },
+      {
+        "name": "# to level of all lightning spell skills",
+        "importance": 0.21705619990825653
+      },
+      {
+        "name": "# to level of all physical spell skills",
+        "importance": 0.017091112211346626
+      },
+      {
+        "name": "# to level of all spell skills",
+        "importance": 0.05617682635784149
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.026721728965640068
+      },
+      {
+        "name": "#% increased cast speed",
+        "importance": 0.039788760244846344
+      },
+      {
+        "name": "#% increased cast speed for each different non-instant spell you've cast recently",
+        "importance": 0.01152065396308899
+      },
+      {
+        "name": "#% increased cast speed while on full mana",
+        "importance": 0.014034953899681568
+      },
+      {
+        "name": "#% increased chance to shock",
+        "importance": 0.009370008483529091
+      },
+      {
+        "name": "#% increased chaos damage",
+        "importance": 0.035436730831861496
+      },
+      {
+        "name": "#% increased cold damage",
+        "importance": 0.015072939917445183
+      },
+      {
+        "name": "#% increased cost efficiency",
+        "importance": 0.005764555186033249
+      },
+      {
+        "name": "#% increased critical hit chance for spells",
+        "importance": 0.028329040855169296
+      },
+      {
+        "name": "#% increased critical spell damage bonus",
+        "importance": 0.024312743917107582
+      },
+      {
+        "name": "#% increased elemental damage",
+        "importance": 0.013201412744820118
+      },
+      {
+        "name": "#% increased fire damage",
+        "importance": 0.014314091764390469
+      },
+      {
+        "name": "#% increased flammability magnitude",
+        "importance": 0.009512605145573616
+      },
+      {
+        "name": "#% increased freeze buildup",
+        "importance": 0.005967667791992426
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.008885329589247704
+      },
+      {
+        "name": "#% increased lightning damage",
+        "importance": 0.020316259935498238
+      },
+      {
+        "name": "#% increased magnitude of bleeding you inflict",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.03370807319879532
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.010848370380699635
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.02432611957192421
+      },
+      {
+        "name": "#% increased spell damage with spells that cost life",
+        "importance": 0.01791500486433506
+      },
+      {
+        "name": "#% increased spell physical damage",
+        "importance": 0.012975435703992844
+      },
+      {
+        "name": "#% of spell mana cost converted to life cost",
+        "importance": 0.008197590708732605
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.011095529422163963
+      },
+      {
+        "name": "bears the mark of the abyssal lord",
+        "importance": 0.0
+      },
+      {
+        "name": "break #% increased armour",
+        "importance": 0.013073776848614216
+      },
+      {
+        "name": "break armour on critical hit with spells equal to #% of physical damage dealt",
+        "importance": 0.011119714006781578
+      },
+      {
+        "name": "enemies hindered by you take #% increased chaos damage",
+        "importance": 0.006113192066550255
+      },
+      {
+        "name": "enemies hindered by you take #% increased elemental damage",
+        "importance": 0.012245363555848598
+      },
+      {
+        "name": "enemies hindered by you take #% increased physical damage",
+        "importance": 0.004679387900978327
+      },
+      {
+        "name": "gain # life per enemy killed",
+        "importance": 0.010425884276628494
+      },
+      {
+        "name": "gain # mana per enemy killed",
+        "importance": 0.011100197210907936
+      },
+      {
+        "name": "gain #% of damage as extra cold damage",
+        "importance": 0.016552109271287918
+      },
+      {
+        "name": "gain #% of damage as extra fire damage",
+        "importance": 0.015445557422935963
+      },
+      {
+        "name": "gain #% of damage as extra lightning damage",
+        "importance": 0.01793615333735943
+      },
+      {
+        "name": "gain #% of damage as extra physical damage",
+        "importance": 0.019657855853438377
+      },
+      {
+        "name": "invocated spells deal #% increased damage",
+        "importance": 0.008663000538945198
+      },
+      {
+        "name": "minions deal #% increased damage",
+        "importance": 0.011083433404564857
+      },
+      {
+        "name": "spell skills have #% increased area of effect",
+        "importance": 0.00882639829069376
+      }
+    ]
+  },
+  {
+    "category": "sceptre",
+    "segment": null,
+    "model_type": "XGB",
+    "r2": 0.420180878338433,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to intelligence",
+        "importance": 0.036046434193849564
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.09621868282556534
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.03563062846660614
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.03264576196670532
+      },
+      {
+        "name": "#% increased light radius",
+        "importance": 0.028878940269351006
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.03410514444112778
+      },
+      {
+        "name": "#% increased presence area of effect",
+        "importance": 0.05198510363698006
+      },
+      {
+        "name": "#% increased spirit",
+        "importance": 0.08516382426023483
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.03776397928595543
+      },
+      {
+        "name": "allies in your presence deal # to # added attack cold damage",
+        "importance": 0.03387076035141945
+      },
+      {
+        "name": "allies in your presence deal # to # added attack fire damage",
+        "importance": 0.03411056846380234
+      },
+      {
+        "name": "allies in your presence deal # to # added attack lightning damage",
+        "importance": 0.04077481850981712
+      },
+      {
+        "name": "allies in your presence deal # to # added attack physical damage",
+        "importance": 0.03767046704888344
+      },
+      {
+        "name": "allies in your presence deal #% increased damage",
+        "importance": 0.0740022361278534
+      },
+      {
+        "name": "allies in your presence have #% increased attack speed",
+        "importance": 0.04288734123110771
+      },
+      {
+        "name": "allies in your presence have #% increased cast speed",
+        "importance": 0.03640865162014961
+      },
+      {
+        "name": "allies in your presence have #% increased critical damage bonus",
+        "importance": 0.04836134612560272
+      },
+      {
+        "name": "allies in your presence have #% increased critical hit chance",
+        "importance": 0.03819474205374718
+      },
+      {
+        "name": "allies in your presence have +#% to all elemental resistances",
+        "importance": 0.03842291235923767
+      },
+      {
+        "name": "allies in your presence regenerate # life per second",
+        "importance": 0.038200851529836655
+      },
+      {
+        "name": "aura skills have #% increased magnitudes",
+        "importance": 0.06098064035177231
+      },
+      {
+        "name": "minions have #% increased maximum life",
+        "importance": 0.03767617791891098
+      }
+    ]
+  },
+  {
+    "category": "focus",
+    "segment": "es_only",
+    "model_type": "XGB",
+    "r2": 0.4724118016731882,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# to dexterity",
+        "importance": 0.0009981285547837615
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.012369067408144474
+      },
+      {
+        "name": "# to level of all minion skills",
+        "importance": 0.24850282073020935
+      },
+      {
+        "name": "# to level of all spell skills",
+        "importance": 0.1618785262107849
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.0
+      },
+      {
+        "name": "# to maximum mana",
+        "importance": 0.008400396443903446
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.0009922009194269776
+      },
+      {
+        "name": "#% chance for spell skills to fire # additional projectiles",
+        "importance": 0.010898826643824577
+      },
+      {
+        "name": "#% chance when collecting an elemental infusion to gain an\nadditional elemental infusion of the same type",
+        "importance": 0.003331816056743264
+      },
+      {
+        "name": "#% faster curse activation",
+        "importance": 0.0017351806163787842
+      },
+      {
+        "name": "#% faster start of energy shield recharge",
+        "importance": 0.004424319602549076
+      },
+      {
+        "name": "#% increased cast speed",
+        "importance": 0.06692372262477875
+      },
+      {
+        "name": "#% increased chaos damage",
+        "importance": 0.03357873857021332
+      },
+      {
+        "name": "#% increased cold damage",
+        "importance": 0.012832877226173878
+      },
+      {
+        "name": "#% increased critical hit chance for spells",
+        "importance": 0.05658185854554176
+      },
+      {
+        "name": "#% increased critical spell damage bonus",
+        "importance": 0.01220342144370079
+      },
+      {
+        "name": "#% increased curse magnitudes",
+        "importance": 0.004411383997648954
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.007404268253594637
+      },
+      {
+        "name": "#% increased fire damage",
+        "importance": 0.011249259114265442
+      },
+      {
+        "name": "#% increased lightning damage",
+        "importance": 0.050694577395915985
+      },
+      {
+        "name": "#% increased mana cost efficiency",
+        "importance": 0.012143897823989391
+      },
+      {
+        "name": "#% increased mana regeneration rate",
+        "importance": 0.0043692821636796
+      },
+      {
+        "name": "#% increased spell damage",
+        "importance": 0.08777353167533875
+      },
+      {
+        "name": "#% increased spell damage while wielding a melee weapon",
+        "importance": 0.007367096841335297
+      },
+      {
+        "name": "#% increased spell physical damage",
+        "importance": 0.004851840902119875
+      },
+      {
+        "name": "#% of spell mana cost converted to life cost",
+        "importance": 0.002435641596093774
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.011681091971695423
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.004801956936717033
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.008837942034006119
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.015211793594062328
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.014467865228652954
+      },
+      {
+        "name": "invocated spells deal #% increased damage",
+        "importance": 0.0016651510959491134
+      },
+      {
+        "name": "offering skills have #% increased buff effect",
+        "importance": 0.0024531157687306404
+      },
+      {
+        "name": "spell skills have #% increased area of effect",
+        "importance": 0.002559460699558258
+      },
+      {
+        "name": "spell skills have +# to maximum number of summoned totems",
+        "importance": 0.07495765388011932
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.03501131758093834
+      }
+    ]
+  },
+  {
+    "category": "shield",
+    "segment": "ar_ev_only",
+    "model_type": "XGB",
+    "r2": 0.08882681583079433,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life gained when you block",
+        "importance": 0.02998555824160576
+      },
+      {
+        "name": "# mana gained when you block",
+        "importance": 0.014366944320499897
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.027975207194685936
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.02455170825123787
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.023223036900162697
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.0367509089410305
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.031988877803087234
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.032335005700588226
+      },
+      {
+        "name": "#% increased parried debuff duration",
+        "importance": 0.02215757593512535
+      },
+      {
+        "name": "#% increased parried debuff magnitude",
+        "importance": 0.0
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.03635818883776665
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.02277427352964878
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.03489825502038002
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.00497017614543438
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.02805238775908947
+      },
+      {
+        "name": "#% of physical damage taken as lightning while active blocking",
+        "importance": 0.0
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.026111334562301636
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.0
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.03097076527774334
+      },
+      {
+        "name": "#% to all maximum resistances",
+        "importance": 0.027156436815857887
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.03236006572842598
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.0341636948287487
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.04102495312690735
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03604620322585106
+      },
+      {
+        "name": "#% to maximum block chance",
+        "importance": 0.012889987789094448
+      },
+      {
+        "name": "#% to maximum chaos resistance",
+        "importance": 0.03465057909488678
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.03774821013212204
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.03160412237048149
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.037064723670482635
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.043918486684560776
+      },
+      {
+        "name": "hits against you have #% reduced critical damage bonus",
+        "importance": 0.03601904213428497
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.012080957181751728
+      },
+      {
+        "name": "hits with shield skills which heavy stun enemies break fully break armour",
+        "importance": 0.007783402223140001
+      },
+      {
+        "name": "you take #% of damage from blocked hits while active blocking",
+        "importance": 0.0
+      },
+      {
+        "name": "your heavy stun buildup empties #% faster",
+        "importance": 0.015844399109482765
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.04818159341812134
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.051493413746356964
+      },
+      {
+        "name": "block_norm",
+        "importance": 0.032499443739652634
+      }
+    ]
+  },
+  {
+    "category": "shield",
+    "segment": "ar_es_only",
+    "model_type": "XGB",
+    "r2": 0.12545034347287065,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life gained when you block",
+        "importance": 0.020663950592279434
+      },
+      {
+        "name": "# mana gained when you block",
+        "importance": 0.030183516442775726
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.026050224900245667
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.010223318822681904
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.027960311621427536
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.029573211446404457
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.027293777093291283
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.026945864781737328
+      },
+      {
+        "name": "#% increased energy shield recharge rate",
+        "importance": 0.021892014890909195
+      },
+      {
+        "name": "#% increased energy shield recharge rate if you've blocked recently",
+        "importance": 0.03372778370976448
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.038819149136543274
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.03600476309657097
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.033648669719696045
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.007611607201397419
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.012979532591998577
+      },
+      {
+        "name": "#% of elemental damage taken recouped as energy shield",
+        "importance": 0.00446113757789135
+      },
+      {
+        "name": "#% of physical damage taken as lightning while active blocking",
+        "importance": 0.009829021990299225
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.03273757919669151
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.036501482129096985
+      },
+      {
+        "name": "#% to all elemental resistances",
+        "importance": 0.03260093554854393
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.02552393451333046
+      },
+      {
+        "name": "#% to all maximum resistances",
+        "importance": 0.0
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.04087246581912041
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.030041702091693878
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.03099115937948227
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03712822496891022
+      },
+      {
+        "name": "#% to maximum block chance",
+        "importance": 0.035910576581954956
+      },
+      {
+        "name": "#% to maximum chaos resistance",
+        "importance": 0.017938954755663872
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.033063337206840515
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.035359110683202744
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.026054367423057556
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.006479131057858467
+      },
+      {
+        "name": "hits with shield skills which heavy stun enemies break fully break armour",
+        "importance": 0.02698860689997673
+      },
+      {
+        "name": "you take #% of damage from blocked hits while active blocking",
+        "importance": 0.0
+      },
+      {
+        "name": "your heavy stun buildup empties #% faster",
+        "importance": 0.008635351434350014
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.05014796182513237
+      },
+      {
+        "name": "es_norm",
+        "importance": 0.045921873301267624
+      },
+      {
+        "name": "block_norm",
+        "importance": 0.049235448241233826
+      }
+    ]
+  },
+  {
+    "category": "shield",
+    "segment": "ar_only",
+    "model_type": "XGB",
+    "r2": 0.3465673569409229,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life gained when you block",
+        "importance": 0.010200944729149342
+      },
+      {
+        "name": "# mana gained when you block",
+        "importance": 0.013664588332176208
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.027671143412590027
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.014298195019364357
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.012240533716976643
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.04223668947815895
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.022454116493463516
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.030215676873922348
+      },
+      {
+        "name": "#% additional physical damage reduction",
+        "importance": 0.03096199594438076
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.018312036991119385
+      },
+      {
+        "name": "#% of armour also applies to chaos damage",
+        "importance": 0.043563056737184525
+      },
+      {
+        "name": "#% of armour also applies to elemental damage",
+        "importance": 0.08107652515172958
+      },
+      {
+        "name": "#% of damage taken recouped as life",
+        "importance": 0.011415013112127781
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.011250377632677555
+      },
+      {
+        "name": "#% of physical damage taken as lightning while active blocking",
+        "importance": 0.0009334948263131082
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.02160431444644928
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.006028593052178621
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.02416628785431385
+      },
+      {
+        "name": "#% to all maximum resistances",
+        "importance": 0.021648116409778595
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.04244192689657211
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.033367548137903214
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.029229603707790375
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.0265327300876379
+      },
+      {
+        "name": "#% to maximum block chance",
+        "importance": 0.01833394169807434
+      },
+      {
+        "name": "#% to maximum chaos resistance",
+        "importance": 0.014544910751283169
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.018036510795354843
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.023255668580532074
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.01924770511686802
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.02008434385061264
+      },
+      {
+        "name": "hits with shield skills which heavy stun enemies break fully break armour",
+        "importance": 0.03580361604690552
+      },
+      {
+        "name": "you take #% of damage from blocked hits while active blocking",
+        "importance": 0.002017839578911662
+      },
+      {
+        "name": "your heavy stun buildup empties #% faster",
+        "importance": 0.013112795539200306
+      },
+      {
+        "name": "ar_norm",
+        "importance": 0.2166084498167038
+      },
+      {
+        "name": "block_norm",
+        "importance": 0.043440740555524826
+      }
+    ]
+  },
+  {
+    "category": "buckler",
+    "segment": "ev_only",
+    "model_type": "XGB",
+    "r2": 0.34836983138135647,
+    "use_scaler": true,
+    "features": [
+      {
+        "name": "# life gained when you block",
+        "importance": 0.018763400614261627
+      },
+      {
+        "name": "# mana gained when you block",
+        "importance": 0.03690680116415024
+      },
+      {
+        "name": "# to # physical thorns damage",
+        "importance": 0.02585187740623951
+      },
+      {
+        "name": "# to dexterity",
+        "importance": 0.028237059712409973
+      },
+      {
+        "name": "# to intelligence",
+        "importance": 0.03908432647585869
+      },
+      {
+        "name": "# to maximum life",
+        "importance": 0.031287360936403275
+      },
+      {
+        "name": "# to strength",
+        "importance": 0.04538382962346077
+      },
+      {
+        "name": "# to stun threshold",
+        "importance": 0.03006099909543991
+      },
+      {
+        "name": "#% increased parried debuff duration",
+        "importance": 0.026968859136104584
+      },
+      {
+        "name": "#% increased parried debuff magnitude",
+        "importance": 0.05671117082238197
+      },
+      {
+        "name": "#% increased thorns damage",
+        "importance": 0.019984465092420578
+      },
+      {
+        "name": "#% of damage taken recouped as mana",
+        "importance": 0.01234760507941246
+      },
+      {
+        "name": "#% reduced attribute requirements",
+        "importance": 0.028849411755800247
+      },
+      {
+        "name": "#% reduced effect of curses on you",
+        "importance": 0.021809618920087814
+      },
+      {
+        "name": "#% to all maximum elemental resistances",
+        "importance": 0.043492887169122696
+      },
+      {
+        "name": "#% to all maximum resistances",
+        "importance": 0.04686323553323746
+      },
+      {
+        "name": "#% to chaos resistance",
+        "importance": 0.03589656203985214
+      },
+      {
+        "name": "#% to cold resistance",
+        "importance": 0.034748729318380356
+      },
+      {
+        "name": "#% to fire resistance",
+        "importance": 0.03623136878013611
+      },
+      {
+        "name": "#% to lightning resistance",
+        "importance": 0.03466888144612312
+      },
+      {
+        "name": "#% to maximum block chance",
+        "importance": 0.043900810182094574
+      },
+      {
+        "name": "#% to maximum chaos resistance",
+        "importance": 0.03561544045805931
+      },
+      {
+        "name": "#% to maximum cold resistance",
+        "importance": 0.029521673917770386
+      },
+      {
+        "name": "#% to maximum fire resistance",
+        "importance": 0.031867943704128265
+      },
+      {
+        "name": "#% to maximum lightning resistance",
+        "importance": 0.037292398512363434
+      },
+      {
+        "name": "gain deflection rating equal to #% of evasion rating",
+        "importance": 0.03844459354877472
+      },
+      {
+        "name": "hits have #% reduced critical hit chance against you",
+        "importance": 0.03549812361598015
+      },
+      {
+        "name": "ev_norm",
+        "importance": 0.05298943817615509
+      },
+      {
+        "name": "block_norm",
+        "importance": 0.0407210998237133
+      }
+    ]
+  }
+]
