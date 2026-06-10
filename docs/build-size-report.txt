@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-06-10 15:51:24
+Target: C:\Users\rhein\repos\poe2trade\dist\StashSage
+Total: 3.49 GB
+
+Top-level directories
+     3.46 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    69.22 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    41.79 MB  _internal\poe2trade\db\files\Amulet\Solar_Amulet.json
+    41.13 MB  _internal\poe2trade\db\files\Amulet\Gold_Amulet.json
+    40.81 MB  _internal\poe2trade\db\unsuper_models\belt_knn_model.pkl
+    38.73 MB  _internal\poe2trade\db\files\Amulet\Stellar_Amulet.json
+    37.94 MB  _internal\poe2trade\db\files\Amulet\Lunar_Amulet.json
+    37.03 MB  _internal\poe2trade\db\files\Amulet\Lapis_Amulet.json
+    36.58 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    36.51 MB  _internal\poe2trade\db\files\Amulet\Jade_Amulet.json
+    36.49 MB  _internal\poe2trade\db\files\Amulet\Bloodstone_Amulet.json
+    36.42 MB  _internal\poe2trade\db\files\Amulet\Amber_Amulet.json
+    36.06 MB  _internal\poe2trade\db\files\Amulet\Azure_Amulet.json
+    33.75 MB  _internal\poe2trade\db\files\Belt\Utility_Belt.json
+    32.53 MB  _internal\poe2trade\db\files\Amulet\Crimson_Amulet.json
+    31.99 MB  _internal\poe2trade\db\files\Belt\Plate_Belt.json
+    29.48 MB  _internal\poe2trade\db\files\Belt\Heavy_Belt.json
+    28.68 MB  StashSage.exe
+    27.96 MB  _internal\poe2trade\db\files\Belt\Double_Belt.json
+    27.51 MB  _internal\poe2trade\db\files\Belt\Fine_Belt.json
+    26.84 MB  _internal\poe2trade\db\files\Belt\Rawhide_Belt.json
+    26.26 MB  _internal\poe2trade\db\files\Belt\Long_Belt.json
+    24.44 MB  _internal\poe2trade\db\files\Belt\Wide_Belt.json
+    24.08 MB  _internal\poe2trade\db\files\Belt\Linen_Belt.json
+    23.96 MB  _internal\poe2trade\db\files\Belt\Ornate_Belt.json
+    23.67 MB  _internal\poe2trade\db\files\Belt\Mail_Belt.json
+    21.10 MB  _internal\pyarrow\arrow.dll
+    21.04 MB  _internal\poe2trade\db\files\Ring\Breach_Ring.json
+    19.48 MB  _internal\poe2trade\db\files\Ring\Prismatic_Ring.json
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
