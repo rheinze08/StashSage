@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-06-17 19:36:55
+Target: C:\Users\rhein\repos\poe2trade\dist\StashSage
+Total: 1.52 GB
+
+Top-level directories
+     1.49 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    29.80 MB  StashSage.exe
+    25.79 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    21.10 MB  _internal\pyarrow\arrow.dll
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
+    19.22 MB  _internal\scipy.libs\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll
+    17.23 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    14.69 MB  _internal\poe2trade\db\files\Staff\Chiming_Staff.json
+    13.91 MB  _internal\poe2trade\db\files\Ring\Breach_Ring.json
+    13.51 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    12.92 MB  _internal\pyarrow\arrow_flight.dll
+    12.33 MB  _internal\poe2trade\db\files\Wand\Galvanic_Wand.json
+    12.29 MB  _internal\poe2trade\db\files\Ring\Amethyst_Ring.json
+    12.25 MB  _internal\poe2trade\db\files\Sceptre\Rattling_Sceptre.json
+    12.19 MB  _internal\poe2trade\db\files\Wand\Attuned_Wand.json
+    12.19 MB  _internal\poe2trade\db\files\Ring\Prismatic_Ring.json
+    11.74 MB  _internal\poe2trade\db\files\Ring\Gold_Ring.json
+    11.43 MB  _internal\poe2trade\db\files\Ring\Sapphire_Ring.json
+    11.39 MB  _internal\poe2trade\db\files\Helmet\Ancestral_Tiara.json
+    11.28 MB  _internal\poe2trade\db\files\Ring\Topaz_Ring.json
+    11.22 MB  _internal\poe2trade\db\files\Ring\Ruby_Ring.json
+    11.14 MB  _internal\poe2trade\db\files\Staff\Paralysing_Staff.json
+    11.09 MB  _internal\poe2trade\db\files\Staff\Roaring_Staff.json
+    10.51 MB  _internal\poe2trade\db\files\Staff\Sanctified_Staff.json
+    10.50 MB  _internal\poe2trade\db\super_models\amulet_scoring.json
+    10.39 MB  _internal\poe2trade\db\files\Wand\Withered_Wand.json
+    10.31 MB  _internal\poe2trade\db\files\Staff\Voltaic_Staff.json
+    10.13 MB  _internal\poe2trade\db\files\Ring\Pearl_Ring.json
+    10.11 MB  _internal\poe2trade\db\files\Sapphire\Sapphire.json
+     9.75 MB  _internal\poe2trade\db\files\Emerald\Emerald.json
