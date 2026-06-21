@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-06-21 17:49:21
+Target: C:\Users\Roland\repos\poe2trade\dist\StashSage
+Total: 1.98 GB
+
+Top-level directories
+     1.96 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    26.21 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    25.33 MB  StashSage.exe
+    21.10 MB  _internal\pyarrow\arrow.dll
+    20.11 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
+    19.22 MB  _internal\scipy.libs\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll
+    18.60 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    15.59 MB  _internal\poe2trade\db\files\Staff\Chiming_Staff.json
+    14.48 MB  _internal\poe2trade\db\files\Ring\Breach_Ring.json
+    13.26 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    13.20 MB  _internal\poe2trade\db\files\Ring\Amethyst_Ring.json
+    13.17 MB  _internal\poe2trade\db\files\Ring\Prismatic_Ring.json
+    12.92 MB  _internal\pyarrow\arrow_flight.dll
+    12.81 MB  _internal\poe2trade\db\files\Body_Armour\Slipstrike_Vest.json
+    12.62 MB  _internal\poe2trade\db\files\Amulet\Solar_Amulet.json
+    12.60 MB  _internal\poe2trade\db\files\Helmet\Ancestral_Tiara.json
+    12.53 MB  _internal\poe2trade\db\files\Body_Armour\Vile_Robe.json
+    12.53 MB  _internal\poe2trade\db\files\Ring\Gold_Ring.json
+    12.49 MB  _internal\poe2trade\db\files\Sceptre\Rattling_Sceptre.json
+    12.35 MB  _internal\poe2trade\db\files\Amulet\Gold_Amulet.json
+    12.13 MB  _internal\poe2trade\db\files\Ring\Sapphire_Ring.json
+    12.05 MB  _internal\poe2trade\db\files\Ring\Topaz_Ring.json
+    12.00 MB  _internal\poe2trade\db\files\Ring\Ruby_Ring.json
+    11.99 MB  _internal\poe2trade\db\files\Wand\Attuned_Wand.json
+    11.67 MB  _internal\poe2trade\db\files\Wand\Galvanic_Wand.json
+    11.00 MB  _internal\poe2trade\db\files\Amulet\Stellar_Amulet.json
+    10.97 MB  _internal\poe2trade\db\files\Sapphire\Sapphire.json
+    10.87 MB  _internal\poe2trade\db\files\Staff\Paralysing_Staff.json
+    10.86 MB  _internal\poe2trade\db\files\Staff\Roaring_Staff.json

@@ -1,0 +1,27 @@
+{
+  "app_installer_sha256": "4370c1400459d7d67f80c21683e9cc4b0e3571414af578971ed1a6e0b8593f8a",
+  "app_installer_url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.0/StashSageInstaller.exe",
+  "app_version": "0.5.0",
+  "assets": [],
+  "platforms": {
+    "linux": {
+      "kind": "browser-download",
+      "sha256": "46b142e0f6ef9c9234065280c09ac39f3bb0183f96cb9cc94f2652d061640eba",
+      "size": 1048997685,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.0/StashSageLinux.zip"
+    },
+    "windows": {
+      "kind": "inno-installer",
+      "sha256": "4370c1400459d7d67f80c21683e9cc4b0e3571414af578971ed1a6e0b8593f8a",
+      "size": 259576045,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.0/StashSageInstaller.exe"
+    },
+    "windows_zip": {
+      "kind": "browser-download",
+      "sha256": "577029578a6681b0f78087a50efa150a484b9d9cd2396ec796db389b117ec598",
+      "size": 259180753,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.0/StashSageInstaller.zip"
+    }
+  },
+  "schema_version": 1
+}
