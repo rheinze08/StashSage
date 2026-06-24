@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-06-23 21:14:55
+Target: C:\Users\rhein\repos\poe2trade\dist\StashSage
+Total: 2.43 GB
+
+Top-level directories
+     2.40 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    96.53 MB  _internal\poe2trade\db\super_models\ring_scoring.json
+    71.52 MB  _internal\poe2trade\db\super_models\amulet_scoring.json
+    27.26 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    26.50 MB  StashSage.exe
+    21.71 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    21.10 MB  _internal\pyarrow\arrow.dll
+    20.70 MB  _internal\poe2trade\db\super_models\belt_scoring.json
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
+    19.22 MB  _internal\scipy.libs\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll
+    18.97 MB  _internal\poe2trade\db\super_models\staff_scoring.json
+    18.39 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    18.07 MB  _internal\poe2trade\db\super_models\wand_scoring.json
+    15.56 MB  _internal\poe2trade\db\files\Staff\Chiming_Staff.json
+    15.16 MB  _internal\poe2trade\db\super_models\body_armour_ev_only_scoring.json
+    15.15 MB  _internal\poe2trade\db\super_models\body_armour_es_only_scoring.json
+    14.44 MB  _internal\poe2trade\db\files\Ring\Breach_Ring.json
+    13.88 MB  _internal\poe2trade\db\super_models\emerald_scoring.json
+    13.63 MB  _internal\poe2trade\db\files\Ring\Amethyst_Ring.json
+    13.58 MB  _internal\poe2trade\db\files\Ring\Prismatic_Ring.json
+    13.45 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    13.34 MB  _internal\poe2trade\db\super_models\body_armour_ev_es_only_scoring.json
+    12.99 MB  _internal\poe2trade\db\files\Body_Armour\Slipstrike_Vest.json
+    12.92 MB  _internal\pyarrow\arrow_flight.dll
+    12.82 MB  _internal\poe2trade\db\files\Helmet\Ancestral_Tiara.json
+    12.77 MB  _internal\poe2trade\db\files\Body_Armour\Vile_Robe.json
+    12.73 MB  _internal\poe2trade\db\files\Amulet\Gold_Amulet.json
+    12.73 MB  _internal\poe2trade\db\files\Ring\Gold_Ring.json
+    12.64 MB  _internal\poe2trade\db\files\Amulet\Solar_Amulet.json
+    12.46 MB  _internal\poe2trade\db\files\Ring\Sapphire_Ring.json
