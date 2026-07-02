@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-07-02 17:51:55
+Target: C:\Users\Roland\repos\poe2trade\dist\StashSage
+Total: 8.09 GB
+
+Top-level directories
+     8.07 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    82.32 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    66.26 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    40.72 MB  _internal\poe2trade\db\unsuper_models\belt_knn_model.pkl
+    38.23 MB  _internal\poe2trade\db\files\Body_Armour\Sleek_Jacket.json
+    36.82 MB  _internal\poe2trade\db\files\Body_Armour\Falconer_s_Jacket.json
+    35.15 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    35.03 MB  _internal\poe2trade\db\files\Bow\Obliterator_Bow.json
+    35.00 MB  _internal\poe2trade\db\files\Shield\Tawhoan_Tower_Shield.json
+    34.82 MB  _internal\poe2trade\db\files\Wand\Galvanic_Wand.json
+    34.59 MB  _internal\poe2trade\db\files\Sceptre\Rattling_Sceptre.json
+    34.03 MB  _internal\poe2trade\db\files\Sceptre\Omen_Sceptre.json
+    33.73 MB  _internal\poe2trade\db\files\Body_Armour\Rambler_Jacket.json
+    33.48 MB  _internal\poe2trade\db\files\Sceptre\Shrine_Sceptre.json
+    33.48 MB  _internal\poe2trade\db\files\Body_Armour\Vile_Robe.json
+    33.25 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    32.80 MB  _internal\poe2trade\db\files\Body_Armour\Slipstrike_Vest.json
+    32.26 MB  _internal\poe2trade\db\files\Sceptre\Stoic_Sceptre.json
+    32.07 MB  _internal\poe2trade\db\files\Wand\Volatile_Wand.json
+    32.01 MB  _internal\poe2trade\db\files\Sceptre\Wrath_Sceptre.json
+    31.77 MB  _internal\poe2trade\db\files\Wand\Withered_Wand.json
+    31.70 MB  _internal\poe2trade\db\files\Wand\Bone_Wand.json
+    31.33 MB  _internal\poe2trade\db\files\Shield\Vaal_Tower_Shield.json
+    31.09 MB  _internal\poe2trade\db\files\Body_Armour\Corsair_Coat.json
+    30.97 MB  _internal\poe2trade\db\files\Body_Armour\Sacramental_Robe.json
+    30.81 MB  _internal\poe2trade\db\files\Body_Armour\Austere_Garb.json
+    30.58 MB  _internal\poe2trade\db\files\Wand\Attuned_Wand.json
+    30.47 MB  _internal\poe2trade\db\files\Body_Armour\Hawker_s_Jacket.json
+    30.10 MB  _internal\poe2trade\db\files\Body_Armour\Dastard_Armour.json
+    30.05 MB  _internal\poe2trade\db\files\Shield\Blacksteel_Crest_Shield.json
