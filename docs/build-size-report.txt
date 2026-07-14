@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-07-14 10:38:35
+Target: C:\Users\Roland\repos\poe2trade\dist\StashSage
+Total: 8.62 GB
+
+Top-level directories
+     8.59 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    83.00 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    66.62 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    62.01 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    60.07 MB  _internal\poe2trade\db\files\Sceptre\Rattling_Sceptre.json
+    58.63 MB  _internal\poe2trade\db\files\Bow\Obliterator_Bow.json
+    57.89 MB  _internal\poe2trade\db\files\Sceptre\Omen_Sceptre.json
+    57.71 MB  _internal\poe2trade\db\files\Wand\Galvanic_Wand.json
+    56.14 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    55.03 MB  _internal\poe2trade\db\files\Sceptre\Shrine_Sceptre.json
+    53.52 MB  _internal\poe2trade\db\files\Sceptre\Stoic_Sceptre.json
+    53.50 MB  _internal\poe2trade\db\files\Wand\Withered_Wand.json
+    52.84 MB  _internal\poe2trade\db\files\Sceptre\Wrath_Sceptre.json
+    51.55 MB  _internal\poe2trade\db\files\Wand\Attuned_Wand.json
+    48.94 MB  _internal\poe2trade\db\files\Wand\Bone_Wand.json
+    47.48 MB  _internal\poe2trade\db\files\Bow\Warmonger_Bow.json
+    47.33 MB  _internal\poe2trade\db\files\Wand\Volatile_Wand.json
+    44.93 MB  _internal\poe2trade\db\files\Bow\Gemini_Bow.json
+    41.61 MB  _internal\poe2trade\db\unsuper_models\belt_knn_model.pkl
+    40.62 MB  _internal\poe2trade\db\files\Body_Armour\Sleek_Jacket.json
+    39.33 MB  _internal\poe2trade\db\unsuper_models\bow_knn_model.pkl
+    36.86 MB  _internal\poe2trade\db\files\Body_Armour\Falconer_s_Jacket.json
+    36.76 MB  _internal\poe2trade\db\files\Bow\Guardian_Bow.json
+    36.68 MB  _internal\poe2trade\db\files\Shield\Tawhoan_Tower_Shield.json
+    35.26 MB  _internal\poe2trade\db\files\Body_Armour\Slipstrike_Vest.json
+    35.05 MB  _internal\poe2trade\db\files\Body_Armour\Vile_Robe.json
+    34.43 MB  _internal\poe2trade\db\files\Bow\Militant_Bow.json
+    34.38 MB  _internal\poe2trade\db\files\Bow\Fanatic_Bow.json
+    33.84 MB  _internal\poe2trade\db\files\Body_Armour\Rambler_Jacket.json
+    33.45 MB  _internal\poe2trade\db\files\Bow\Twin_Bow.json
