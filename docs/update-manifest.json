@@ -1,0 +1,1205 @@
+{
+  "app_package_sha256": "9146a91f03fe14c01362ef0b0786369ffb32acc5ea2f606b4eb3c18425ffcc0e",
+  "app_package_url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/StashSageWindows.zip",
+  "app_version": "0.5.9",
+  "assets": [
+    {
+      "name": "super_models",
+      "path": "amulet_price_dists.png",
+      "sha256": "af3c00b6558e60b6303044ba0cfdd7d2bb7ed94d99e164c3ebce52f4485e5b60",
+      "size": 31173,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/amulet_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "amulet_scoring.json",
+      "sha256": "5756a3d6e980011dddf4f04f4d150977535c2b2dc0c5dd2e3d9963e8a76aa0bd",
+      "size": 8442243,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/amulet_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "amulet_xgb_model.pkl",
+      "sha256": "3898c78da03e9bc6a3469484787f66ae021649ed2a61e20fc4e43b4e1ede1197",
+      "size": 1811377,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/amulet_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "belt_price_dists.png",
+      "sha256": "00785b56a7fa23370f96d2a877882e5beac2a105f47f899ddd9fc624b28e16f2",
+      "size": 31694,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/belt_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "belt_scoring.json",
+      "sha256": "4e603add0f95bd3801479da4cfb0beaee0afcc0ff8870cfc44e0899170972972",
+      "size": 6828340,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/belt_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "belt_xgb_model.pkl",
+      "sha256": "2da45cf92fc7bce4e4ccb2a88a44c48aa1229a3931433b69ad044e6237f3d5c4",
+      "size": 1614254,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/belt_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_all_three_price_dists.png",
+      "sha256": "f6d911d1819be52f8715ede9efe0a7725e5418f2087e03798dd7b1bbf0de9278",
+      "size": 32157,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_all_three_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_all_three_scoring.json",
+      "sha256": "006c6adadbdd8d6c6137c866c746953d501ec1fa658501433e23ce4b3ade2877",
+      "size": 578304,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_all_three_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_all_three_xgb_model.pkl",
+      "sha256": "ac33f6cde8d5da4de305fad7f41bf4de738d95901669a7202f7e2f28ffe468fe",
+      "size": 1443779,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_all_three_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_es_only_price_dists.png",
+      "sha256": "7b8b165b38049b96edc7b605d8918f09186a249253289e4820ba12e3366e91c9",
+      "size": 38702,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_es_only_scoring.json",
+      "sha256": "78ec3802ff403ea767982381e6baec554e3e54612e38e244e0529902e6d76874",
+      "size": 3732559,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_es_only_xgb_model.pkl",
+      "sha256": "c90aa605fcfa7adf23a52936a839791733c5a1fa687fba84c6a443e2fbc589ca",
+      "size": 349519,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_ev_only_price_dists.png",
+      "sha256": "beac00f651c845e0fcdf85f642ee94e6a3b082cd712f3aa184d7fe09f52b1233",
+      "size": 38799,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_ev_only_scoring.json",
+      "sha256": "6e1c197c50b25ab1f71eb54b04298e831b78a91b0fb9f77d6ac4526c41c79d80",
+      "size": 3888433,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_ev_only_xgb_model.pkl",
+      "sha256": "64e77ae47b567b53b4d63f523cf5d36c6a3d8a12d931de9ff06cf23df8b3eabb",
+      "size": 1476489,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_only_price_dists.png",
+      "sha256": "8ae03bb15bdda4ef60f7bcc5e73fc4bdb015f6a1bd6980bce3505ac0156c29fb",
+      "size": 37994,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_only_scoring.json",
+      "sha256": "2015910a02600d316395d5c0098792945e518a02ef7fa14c88f0ea6574d88432",
+      "size": 4019801,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ar_only_xgb_model.pkl",
+      "sha256": "8694cf0b2c6517779fc97ccadeefb55b5082af2dc7cb5427e9a02d2e1fd9a8c2",
+      "size": 1491227,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_es_only_price_dists.png",
+      "sha256": "695bc74912f618c25bd21261ac65a2da6d6c84ebf1772996567916f5d7be3316",
+      "size": 33855,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_es_only_scoring.json",
+      "sha256": "ca40ce4a442a9f85d6c493364135b9f2d54d8f50b27ce636127c31b90825e372",
+      "size": 4010194,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_es_only_xgb_model.pkl",
+      "sha256": "e43574d137d5814c750f537361f807ef55ddd6a7f5cee6e03cd34d2f9b322f9d",
+      "size": 1734284,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_es_only_price_dists.png",
+      "sha256": "749fc59c90985595a1d5be10fa429696f125a37b660272ada70bdbc1cac2a889",
+      "size": 35869,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_es_only_scoring.json",
+      "sha256": "10e5c4f1bf58d024f88526799b7d6406581b725d60449edee493370f394c7a0f",
+      "size": 4125611,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_es_only_xgb_model.pkl",
+      "sha256": "66810b04a9d812ef1096ea8f24c253b5d13af4a9b678618dc453d30f886101e8",
+      "size": 351739,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_only_price_dists.png",
+      "sha256": "4d6a9252e63c5da762412cd31e9bad1130285b081ac023078c6be721ca0a25c9",
+      "size": 35342,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_only_scoring.json",
+      "sha256": "727e38c02d74d64fe7ccbbe4a49a05be063d6c47a4d9df03871624fc1c81ff43",
+      "size": 4362805,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "body_armour_ev_only_xgb_model.pkl",
+      "sha256": "246e1c92ffdae62cda1b4e1a014a2e5a150a80872474390b98af07ad9dc0ec0e",
+      "size": 1796244,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_es_only_price_dists.png",
+      "sha256": "815058167707a73d1d33286129ea800670cb130f2511b0e1eec61632fd0daa5c",
+      "size": 33739,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_es_only_scoring.json",
+      "sha256": "cc0f21d665946d5b45656e80aa5c3bc39ae4cd354eb592a18e7fa40263acbead",
+      "size": 2980656,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_es_only_xgb_model.pkl",
+      "sha256": "666ce043e9413320dc3a63acd3d9c745aebf6e52bfcfd4b9a33b335f44dddf20",
+      "size": 1637954,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_ev_only_price_dists.png",
+      "sha256": "5367e457b6fb29f9a99caae819ec495b83259576514c6e3518ea4b22c11f0e8b",
+      "size": 37469,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_ev_only_scoring.json",
+      "sha256": "41d21c3bfc9f0393c0a975509e93f6d5459685c634d27234e9b338156fa1a973",
+      "size": 3063763,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_ev_only_xgb_model.pkl",
+      "sha256": "c378274b50bf5bc0f3032356c9a11b14cf6ee2e1c285f7adef9d7629fb1b0890",
+      "size": 3688045,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_only_price_dists.png",
+      "sha256": "3eb2da22f5688e14a36d08ef1458b6d11c27547b6a4cb174d2ab445de02e5628",
+      "size": 38864,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_only_scoring.json",
+      "sha256": "2d955985a603a33d5bc7c97ee65f1e6eb0036ba470fb5229a3efbf9cc812225a",
+      "size": 3479412,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ar_only_xgb_model.pkl",
+      "sha256": "b660099693f30e8a70107d6f262312ddb74ec7119ee7709479cb15fd65a0905e",
+      "size": 1795348,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_es_only_price_dists.png",
+      "sha256": "de9b518702c937520c57791eb2b2752679b31254ee4d58ce8e6e6fa9bb2623c2",
+      "size": 37200,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_es_only_scoring.json",
+      "sha256": "ebfb7b69ebe6ba56e10514bf2c64b6bf6a48774e9df1772113afa01e375c43e4",
+      "size": 3973130,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_es_only_xgb_model.pkl",
+      "sha256": "fee6994c80fef8ab4a212ce1bf3baab354ffa17e400ed5cf3bac0bf7812f82dc",
+      "size": 1757469,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_es_only_price_dists.png",
+      "sha256": "cc574cabc7614703b63f7ef0ab8f16bd415b891921c46e56fa60cdb1202c7128",
+      "size": 34085,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_es_only_scoring.json",
+      "sha256": "ec4866be859f8cf21f5d76068d98e346dbc5a3f8c6a99f02d6f6fb2ab1eb972b",
+      "size": 3437216,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_es_only_xgb_model.pkl",
+      "sha256": "585ff08c7768d01418f2bff891f4097b5621d5ec0ec1e07ef34d4cc1f4ebc93d",
+      "size": 1733042,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_only_price_dists.png",
+      "sha256": "28db033f67678920e097523ecd63284fd6b4070827b4a33cbccecc436b04f68a",
+      "size": 40262,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_only_scoring.json",
+      "sha256": "404d163c7b7f758b5cb34987d9ed4726a058bfd9b02e96690cebe56c3df89528",
+      "size": 3857098,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "boots_ev_only_xgb_model.pkl",
+      "sha256": "8ad5d2e71c2b6728426b5bdef391d1a324d7435495136bc012b251c28bd87247",
+      "size": 1711787,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "bow_price_dists.png",
+      "sha256": "4970708e8edc158f88575fa040315ceb180df0c892463cb18efb42869a6a5443",
+      "size": 36102,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/bow_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "bow_scoring.json",
+      "sha256": "db8210cb7d47044197d41f13d294286a93be7e8063142bdec3c24ac98231b92c",
+      "size": 8803517,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/bow_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "bow_xgb_model.pkl",
+      "sha256": "e6f43658b73e24a5d50cabb18a8c8cdab052effd1c3cd46f28590aca74e090d6",
+      "size": 4001077,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/bow_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "buckler_ev_only_price_dists.png",
+      "sha256": "6cc054422f377b3f7e733607b66889930b3c017d011fecff4fdd01da071bd574",
+      "size": 34832,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/buckler_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "buckler_ev_only_scoring.json",
+      "sha256": "a83ce74bd0affeaa739ac33e0b9c5f609acaaf4a6e6c05e17071c0ceffa93ee2",
+      "size": 2288706,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/buckler_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "buckler_ev_only_xgb_model.pkl",
+      "sha256": "bf9d62134dae99b84b4345825e734eec94855fe72bd69d603bfaade585420703",
+      "size": 346450,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/buckler_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "category_segment_stats.json",
+      "sha256": "be8a76c7fe4552ba66ce123f0c10af61f07a60713cae61dca9fcd66f044b1e9c",
+      "size": 133987,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/category_segment_stats.json"
+    },
+    {
+      "name": "super_models",
+      "path": "diamond_xgb_model.pkl",
+      "sha256": "5947ddd111368ba644ca4d932202018a426bf3fd8a692e076331fb9e9379304c",
+      "size": 332012,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/diamond_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "emerald_xgb_model.pkl",
+      "sha256": "95bd84d677c678a17807d35cc90fbecb24dcbd335ce75630e37f0bc4797a2fc0",
+      "size": 338267,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/emerald_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "feature_importances_index.json",
+      "sha256": "c7fb24d2eef2671b8b0e43eb031ed04d14480267b9eedf64e83029367a45daa1",
+      "size": 344186,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/feature_importances_index.json"
+    },
+    {
+      "name": "super_models",
+      "path": "focus_es_only_price_dists.png",
+      "sha256": "4d8b53d0fdc837fe5a870f8833e14151a2f26f5b0fab2d517abedd81f1165632",
+      "size": 36737,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/focus_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "focus_es_only_scoring.json",
+      "sha256": "d50d59ff9f5ea7423189fe2b609f6e28c3c3793cd9b6fb0effcfeb3301e03032",
+      "size": 5118283,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/focus_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "focus_es_only_xgb_model.pkl",
+      "sha256": "46c1fd524fc989dd1aa10ce2e1eb8a9815bfe243595acc5498dde8df903c191d",
+      "size": 1816360,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/focus_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_es_only_price_dists.png",
+      "sha256": "fb419f0bde82fb7ac916b89ccf22352894d1922ba50eddb606231379a471da25",
+      "size": 40529,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_es_only_scoring.json",
+      "sha256": "9122d46dfc1d2efb3f41ac2a803c866f85ef1a30b16cdd7c4907163177ff9a99",
+      "size": 3155501,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_es_only_xgb_model.pkl",
+      "sha256": "f8dbd22d046ae4a6c59d0d031d293a01d3e4615fec9a104d366eb8f7c3be4c3d",
+      "size": 1639467,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_ev_only_price_dists.png",
+      "sha256": "5fd63825389306fea2ffe1f9ed27e4827deab11c7f12c54708629ee6347920e2",
+      "size": 35015,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_ev_only_scoring.json",
+      "sha256": "fe2cec0b2b26773677d10742417bb83d3ff85ef451bbe3cb35170c6f6ec28d3d",
+      "size": 3316004,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_ev_only_xgb_model.pkl",
+      "sha256": "d1df5924138d30048a8c396ab8bf3754d651a4b63d71b942824f984f63669398",
+      "size": 1706745,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_only_price_dists.png",
+      "sha256": "9079d0b1d229bb5d5b0f899d66acc5797cb2ac24279f6d09b9d8a390ea96fc67",
+      "size": 33765,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_only_scoring.json",
+      "sha256": "9c81025e6018c3310e11033f36deca5d0ce3914802f1a3270bc8ef2a517d0255",
+      "size": 3751067,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ar_only_xgb_model.pkl",
+      "sha256": "18623ee734727808b34f78ed1da1d9669a6cf76b934d48a349323caa4304974f",
+      "size": 1721410,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_es_only_price_dists.png",
+      "sha256": "6a12280145fd395d08ced56e8346f83aa2507ec2191ff46e8f042575590f6a79",
+      "size": 37358,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_es_only_scoring.json",
+      "sha256": "a26266d2e34f73a59f714a8930af537d31daddcfa4e9e234f2da25b0b6040446",
+      "size": 4068739,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_es_only_xgb_model.pkl",
+      "sha256": "90fee02fdefa143b77f003a31a79c67e98ff297c9d5cdfe4c6ad35cb425d56e3",
+      "size": 1593596,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_es_only_price_dists.png",
+      "sha256": "f2692d9b0ddb3e6a7de754c3179901e42cce0554ef4117af9add5eeb1e54de4d",
+      "size": 34379,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_es_only_scoring.json",
+      "sha256": "d5b893d4b764cdcd92df805e2937b2992ae9396bb487fd3f6b20e9d94ad5cd87",
+      "size": 3502142,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_es_only_xgb_model.pkl",
+      "sha256": "92351027cf6df696838a2bb56f4a4fbe2218e2e448c8bd7892edf6f139b021cd",
+      "size": 1627844,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_only_price_dists.png",
+      "sha256": "87c6c609c5359605e56d964a2a2610a5b47a8d5f2c8afe2af3dba287f8ef6186",
+      "size": 33654,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_only_scoring.json",
+      "sha256": "5e907bf376df85e046d07995feb40c3c49ed1552d2692c3156af4c2e2421e42d",
+      "size": 4133199,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "gloves_ev_only_xgb_model.pkl",
+      "sha256": "31652accf955ad47388f32d7e3d0754e7da098f5f6be2ff2bdb74f1ce0549d1a",
+      "size": 1782432,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_es_only_price_dists.png",
+      "sha256": "c21ed8d2c7f2f2ba50c1c505e35f37ac14cd9bc37ba2740b4f8967f7487be67a",
+      "size": 35482,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_es_only_scoring.json",
+      "sha256": "610ad78c1cbf0dada335b85ac1ab19eb388712dc11c9fb0e41163812b476688e",
+      "size": 3360345,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_es_only_xgb_model.pkl",
+      "sha256": "60f7dac3a005d023c71751cbbe6b5916eb0e060c4b8d8bc62a38ba4d58719808",
+      "size": 3629536,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_ev_only_price_dists.png",
+      "sha256": "cfabb59cb40f58784c5fbb1f34c2e0c3ffcbac53cfef68bda5bb3d5678c12fce",
+      "size": 32226,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_ev_only_scoring.json",
+      "sha256": "3c9b3da5652241c46346edf673ff85788842a12054f33daf9943bafe11217145",
+      "size": 3402787,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_ev_only_xgb_model.pkl",
+      "sha256": "f753fc1f07db1ff0b5233bfc8683e73dc32fce656753661387d169ee78862c02",
+      "size": 1685569,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_only_price_dists.png",
+      "sha256": "56ce58a0472a0c069d8c634f1a4b18eb692b02cf79beca4e484356ca63f0ae07",
+      "size": 35347,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_only_scoring.json",
+      "sha256": "888861d90b0da602ef5c1287caa5e9730a449f0a9aec90c46a167a1d74f900b2",
+      "size": 3951322,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ar_only_xgb_model.pkl",
+      "sha256": "6c5f5114765671684a833289fcff7eaeb36bfd895435d3150551bf893fa25c2d",
+      "size": 1674291,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_es_only_price_dists.png",
+      "sha256": "23b102bc2560f70ce3f6b8dce12328fd065051eb84f0601fc6f8fcb664d37ab3",
+      "size": 33213,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_es_only_scoring.json",
+      "sha256": "3ff018264d2e3d5c350d49f29b2601addbc5e3ed6bf56c650dcef77bcf957ab0",
+      "size": 4778068,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_es_only_xgb_model.pkl",
+      "sha256": "e584f84851549336d5ed09c855b7f3678fc27d0fb21e34e06db27a48b2274bc5",
+      "size": 1517027,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_es_only_price_dists.png",
+      "sha256": "4e12ca39cae111d93757199c069a1574ae6f95917ddf8f514eedb56679759a5d",
+      "size": 33207,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_es_only_scoring.json",
+      "sha256": "16d88949489f89c5ff902ece8308fd703a15a910a0638ae4cd438f7d62c62455",
+      "size": 3774947,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_es_only_xgb_model.pkl",
+      "sha256": "bac5b1201bc2aed6f54da207b79fa2c96cef73a0ab577eece7934dcc2c28f777",
+      "size": 3774993,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_only_price_dists.png",
+      "sha256": "9cd6d452d3faad832d1db36e6684d38214fb5e844bab9af0201661db69a88b37",
+      "size": 33872,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_only_scoring.json",
+      "sha256": "90a95dc1788649614e9a38e25538906e7dfea3e9b4fca46223c3239e50610c70",
+      "size": 4324341,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "helmet_ev_only_xgb_model.pkl",
+      "sha256": "58b17a0b3903ff6978cf1e46c85e2949c9baef5011acf9e151dfa2f0d35f6f98",
+      "size": 1530375,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "quiver_price_dists.png",
+      "sha256": "f699dd13fb311ea55aa7a7c102aea58a19d801cc81fdbb068ef60cc533aeef7d",
+      "size": 36751,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/quiver_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "quiver_scoring.json",
+      "sha256": "7d0847587c7725f8b7f630c97a8960d23b0088b1bdec5af5326dc4ba8842016e",
+      "size": 5964942,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/quiver_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "quiver_xgb_model.pkl",
+      "sha256": "4c13a97e9aa41b2a38e8ad865bd9982f788e0bf1cc762a9a09ae6f7661d55ebc",
+      "size": 1572909,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/quiver_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "ring_price_dists.png",
+      "sha256": "f6c381b9d0066b2dbeee9381306058d371662caad6ac3c7b133ded1108646a26",
+      "size": 31900,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "ring_scoring.json",
+      "sha256": "8915d76a4ebc789617b09241c3a82fb07d01796996a964844423f718979a72ca",
+      "size": 9746190,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "ring_xgb_model.pkl",
+      "sha256": "4e6d6e2a7311928a78a48c9c0f2df27990d5b64dfa07daf100272315865fdd3d",
+      "size": 3639984,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "ruby_xgb_model.pkl",
+      "sha256": "b3b93d4bec35f66a5ba345a31ce5d08f05d26a671b69a8f091884d8d8f96a078",
+      "size": 1736462,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ruby_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "sapphire_xgb_model.pkl",
+      "sha256": "a438c8718389c211138f12fa6884f5940841c11fc08e256412112bb7c695927a",
+      "size": 621268,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sapphire_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "sceptre_price_dists.png",
+      "sha256": "9af5f4bf14dafc6d2c76a36a78499ae3763d7608485474a8c1afec4a22bcc747",
+      "size": 34815,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sceptre_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "sceptre_scoring.json",
+      "sha256": "b795a4cace354aae3d5032973cd51baac6d3bf4d5889d12e743ea18943d23ec7",
+      "size": 4813370,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sceptre_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "sceptre_xgb_model.pkl",
+      "sha256": "54b271c20bb5dc9a950d8beda8f080897c6981291a0f5a8a868faa9371cbde25",
+      "size": 1912905,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sceptre_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_es_only_price_dists.png",
+      "sha256": "4b0fce76383d8dd0ed1a64b326b212692bde6dd7d29dbab334907bab4e4d9130",
+      "size": 32684,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_es_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_es_only_scoring.json",
+      "sha256": "8505b1833b791281160148ccfb919808aaec81fc274fa3a180efcf4e1e79ed93",
+      "size": 2344645,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_es_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_es_only_xgb_model.pkl",
+      "sha256": "e91556dda73afa45c79c7d8a8fdf85ea147a0cd628bc446c7689e6e5d1fa115b",
+      "size": 346901,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_es_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_ev_only_price_dists.png",
+      "sha256": "ebc0cfe619dacc7adbea5b4e3a68b01ca319ff5f58427dc6818d11498ef0a934",
+      "size": 29989,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_ev_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_ev_only_scoring.json",
+      "sha256": "ebcb17c92ec1867778ad5e2cabc55cecfaf3fa5429a8ce4bf4a24d1e0a26ea70",
+      "size": 2024719,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_ev_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_ev_only_xgb_model.pkl",
+      "sha256": "ca9ba76b37d066b60abca11dede6cee2d9638bcd2a784fcb4f28626cf82f8b2a",
+      "size": 349346,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_ev_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_only_price_dists.png",
+      "sha256": "36cd40eadb3e494b8fe3ba0d2d0818ccee9d495160afa6f72187fa76d48a1b25",
+      "size": 35382,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_only_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_only_scoring.json",
+      "sha256": "1a19798433a26a8f8582d89471ae571bbda80184b883b911b3a56d491abfc9a2",
+      "size": 2763827,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_only_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "shield_ar_only_xgb_model.pkl",
+      "sha256": "0f914a543c3759e781d379407c8f51d5c88081a6ea97b4e178eb1f1d120b6126",
+      "size": 1729635,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_only_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "time-lost_diamond_xgb_model.pkl",
+      "sha256": "a0e3b8c2d86d71a12b3c0d70138fd479463e6f2552b9a917749471737166286e",
+      "size": 729929,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_diamond_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "time-lost_emerald_xgb_model.pkl",
+      "sha256": "a4a0d76695556fd60a168ffc68a01e790758e9475a0cef6f1c58b4e25b9fa3bd",
+      "size": 915961,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_emerald_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "time-lost_ruby_xgb_model.pkl",
+      "sha256": "49609ab1eb72f71e0886fa2a1999bb6ab45c50a14f7e6b80798c9a5e475520a1",
+      "size": 1067575,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_ruby_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "time-lost_sapphire_xgb_model.pkl",
+      "sha256": "139f60a93a796de1d81a5a0e2f73b20ba3ec11ee7ab19e32de904cfd095283c5",
+      "size": 955786,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_sapphire_xgb_model.pkl"
+    },
+    {
+      "name": "super_models",
+      "path": "wand_price_dists.png",
+      "sha256": "c7afaae3fddcbf067da2a85f99da13eb3d583544c04f65e45c64b38e8a01ee9b",
+      "size": 34029,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/wand_price_dists.png"
+    },
+    {
+      "name": "super_models",
+      "path": "wand_scoring.json",
+      "sha256": "c16e449a68201d08856194f41b447ffaa72c77872f28b9833d5142d5ec62a9da",
+      "size": 6473970,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/wand_scoring.json"
+    },
+    {
+      "name": "super_models",
+      "path": "wand_xgb_model.pkl",
+      "sha256": "3505766668443154d93f41fd02b8351d69a76c303e2c416c53db453d4249a879",
+      "size": 1980035,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/wand_xgb_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "amulet_knn_model.pkl",
+      "sha256": "6ce9bbf421a3a276f058470d835b3a78db8430978908ea93f93b62a6ba2bdc37",
+      "size": 87027404,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/amulet_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "belt_knn_model.pkl",
+      "sha256": "8620f4b10700ad76ab0ae57de44730aac5b3e74652da398bcbf99c1e8c646b0e",
+      "size": 43632798,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/belt_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_all_three_knn_model.pkl",
+      "sha256": "72bad6d3da9de2d416879047f44265de099fb5ea57655b9b64b25ac294dcf215",
+      "size": 4520024,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_all_three_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_ar_es_only_knn_model.pkl",
+      "sha256": "605b605610d8c9654bbdd77f112afc93a134bfe2c19158a75183cfd00864d853",
+      "size": 24937666,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_ar_ev_only_knn_model.pkl",
+      "sha256": "429a6b430ffce13bbce13d912f393a18159dce05547607747573d319bddf174f",
+      "size": 25934738,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_ar_only_knn_model.pkl",
+      "sha256": "ce100720b6abce1e1427096f9c798d8e9a4ddb31e3d2c0e177f6a45f1d2d797b",
+      "size": 26453694,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ar_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_es_only_knn_model.pkl",
+      "sha256": "78993da9cd266379420dd060c5e7f47cf372b5fcc88126f5c8d548bb0d472b68",
+      "size": 26669890,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_ev_es_only_knn_model.pkl",
+      "sha256": "f46f90f585a55627d96f6b2f58088b6677b5afdc4eff05013a7cf5a9bb2dd9ee",
+      "size": 27644316,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "body_armour_ev_only_knn_model.pkl",
+      "sha256": "a44593f62eb24edd8fbcc6694dbaeec550875bbd37b9146a8e748b87be624c6b",
+      "size": 28717263,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/body_armour_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_ar_es_only_knn_model.pkl",
+      "sha256": "df96355150a12e62ca22cb794536872af8aa0691e626ab3ec19d15abddfe0776",
+      "size": 13913560,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_ar_ev_only_knn_model.pkl",
+      "sha256": "e95477fafade1db45a246ea56fed4baa29b85baf9b7afb75130605237a6ae643",
+      "size": 14469253,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_ar_only_knn_model.pkl",
+      "sha256": "98ab42d9ff83e591705afe9db1c4ae080d88e3ebdda555fb595478ce95aa515d",
+      "size": 16115489,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ar_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_es_only_knn_model.pkl",
+      "sha256": "a45649f6e034208c404d5e6129e36e2af4bed18bd1ea31bb7222576c7f7d53f0",
+      "size": 18509346,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_ev_es_only_knn_model.pkl",
+      "sha256": "b6ac056b5340bffa0352d27b1fbd1233f874aa4ce70ddbea8d9f28165fddb36f",
+      "size": 16137130,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "boots_ev_only_knn_model.pkl",
+      "sha256": "3308b882ebe2f748e08ce8b752f552aff793498966783de8a35c51e6b1b68346",
+      "size": 17952213,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/boots_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "bow_knn_model.pkl",
+      "sha256": "7f852a396fb70295a32d599fc30d80a6174bb878dbfafb3bedd5a6c1f3dcfe7e",
+      "size": 41236033,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/bow_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "buckler_ev_only_knn_model.pkl",
+      "sha256": "66dd9f4f38c185c2fea45049ff7de3e2bc9ab6d67e46803978cb4990d6edfdd9",
+      "size": 8622735,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/buckler_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "diamond_knn_model.pkl",
+      "sha256": "f3cbf7d99d5ba0f3a206092b1c42f30617f18d609c3b68ac114261f0302aecaa",
+      "size": 8157211,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/diamond_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "emerald_knn_model.pkl",
+      "sha256": "df81d35936a39b3d0e542eb642fc9d09c3e69e17beb0db4c9bbc80ac272043d3",
+      "size": 4790323,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/emerald_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "focus_es_only_knn_model.pkl",
+      "sha256": "eef97486b8a41bfe12bd6da3e43e421f183ad63fc28f5f372805e0378287e4bb",
+      "size": 21381351,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/focus_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_ar_es_only_knn_model.pkl",
+      "sha256": "210806f20572347f7c76af208ccc82f63a39563eae9e12d72dd1194e93959342",
+      "size": 22997395,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_ar_ev_only_knn_model.pkl",
+      "sha256": "3b6032c2d64885098b0b77ad3d13dab55ce3c4b9ad244669ec8a4b26dad9adac",
+      "size": 23932643,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_ar_only_knn_model.pkl",
+      "sha256": "05b6aaccd92a5191ee8b192ae6ced9a247a38670d0c76991f60b4c889d7171f8",
+      "size": 26514791,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ar_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_es_only_knn_model.pkl",
+      "sha256": "93d3243766b26fda71d4fd21da4c5080adade17f8abc0a07df509378bc550ddf",
+      "size": 29104640,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_ev_es_only_knn_model.pkl",
+      "sha256": "a63eb48c60f92558dec3bdb01ec681b3d21eaf5cce1bb9af908585d071dae11b",
+      "size": 25498731,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "gloves_ev_only_knn_model.pkl",
+      "sha256": "9362e80d1d1fd45a0a3998bdc33a5ca1e6966ddcf37e716e2dbd05fe992bbc45",
+      "size": 29171402,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/gloves_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_ar_es_only_knn_model.pkl",
+      "sha256": "7abac354e9a53183d53844c78b7a37f653d2451b112bb827cd9ad509508d587f",
+      "size": 19540789,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_ar_ev_only_knn_model.pkl",
+      "sha256": "eef9acbc1c223b872cb3c29d3f69dadf5c1bf258c73f1e8cf0f79864e3a9bded",
+      "size": 19596772,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_ar_only_knn_model.pkl",
+      "sha256": "6852f3e02d882faf8f60daecde64524ff9de42cfe8d806e70deca5e8a624d80f",
+      "size": 22810012,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ar_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_es_only_knn_model.pkl",
+      "sha256": "83dc1f4a8ef81eefd584ee3ccf9bf2e95d929c444a3efc2d537665c68eb53462",
+      "size": 26992885,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_ev_es_only_knn_model.pkl",
+      "sha256": "acd18e2d00e87f6c512202441aebe58cb5572266388da8f087ccfdc86712ae7a",
+      "size": 21150843,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "helmet_ev_only_knn_model.pkl",
+      "sha256": "fce110c3f86a264c821911a705764b1e216b40101b8f9f31276dfa189d2fc314",
+      "size": 24106973,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/helmet_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "quiver_knn_model.pkl",
+      "sha256": "6c2c56d7a97a1ccaa6a9a93277045d8dd1808eefe2743791ce705460af5805aa",
+      "size": 17615783,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/quiver_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "ring_knn_model.pkl",
+      "sha256": "13105cd4b996ddecb00dedd57a18ff512a566399a2c827979fe1cb84bf032c55",
+      "size": 69860365,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "ruby_knn_model.pkl",
+      "sha256": "656e711c608ad3f55c24d3e389950f2500cf26f43d8756e81698fa3da73f3e9a",
+      "size": 3489153,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ruby_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "sapphire_knn_model.pkl",
+      "sha256": "642a0802d3f5ed57327e62fc2aceefb5780e9b725a643c31549bad930bda6cee",
+      "size": 4086935,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sapphire_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "sceptre_knn_model.pkl",
+      "sha256": "1d41c507b2838c2e6f3d6a71302cb32d3946eaff09c527dc74d8399b3792467b",
+      "size": 15544994,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/sceptre_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "shield_ar_es_only_knn_model.pkl",
+      "sha256": "e2623b92aef80bb168f7a08389e473432bdb2098bb721cd6c7a52658940dc93b",
+      "size": 11611039,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_es_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "shield_ar_ev_only_knn_model.pkl",
+      "sha256": "a824073b76fe90dcdcad30f56abe7143e92bd9acf8000c8acf21c10f5aa1b73c",
+      "size": 10010773,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_ev_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "shield_ar_only_knn_model.pkl",
+      "sha256": "ab82860d287d1457dbe417f69f807a7c57864908c7e2fc2095b92aa8a5be7add",
+      "size": 13260581,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/shield_ar_only_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "time-lost_diamond_knn_model.pkl",
+      "sha256": "73091be12827a56938e9b1269691e18b3ccb31aec190953c1973cab40fcb63ca",
+      "size": 3827085,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_diamond_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "time-lost_emerald_knn_model.pkl",
+      "sha256": "3a8f115bf0282fec7fe75db12affa9903eba5a79dc0c3881fb7e4519976dedda",
+      "size": 3678404,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_emerald_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "time-lost_ruby_knn_model.pkl",
+      "sha256": "e4f564ac635c138b2fe37c7471818a9045ba4ba36fe78ee04d7b2b84e1edc38c",
+      "size": 3144013,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_ruby_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "time-lost_sapphire_knn_model.pkl",
+      "sha256": "509a4f9ddc0ad5e76e2d77edb4b954b3e64a0ec614bb54abec57442f1fb191c6",
+      "size": 2867719,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/time-lost_sapphire_knn_model.pkl"
+    },
+    {
+      "name": "unsuper_models",
+      "path": "wand_knn_model.pkl",
+      "sha256": "b7f5e2c9a90fe1f549e3ae204a1385d8425a8fdf9a8d595b13a6b88b928502b4",
+      "size": 31573246,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/wand_knn_model.pkl"
+    },
+    {
+      "name": "files",
+      "path": "base_images.json",
+      "sha256": "08d389bded7dca77e04c166510ef05185be621333e4f65eee810c69999707a75",
+      "size": 137072,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/base_images.json"
+    },
+    {
+      "name": "files",
+      "path": "ring_amulet_quality_lookup.json",
+      "sha256": "c8aee0bac9eed76eb7d62f3e42997cdbe96bab2b9cc4a7936476bedb0aa1ae8a",
+      "size": 2214,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_amulet_quality_lookup.json"
+    },
+    {
+      "name": "files",
+      "path": "ring_amulet_quality_lookup.xlsx",
+      "sha256": "20eed4ee3effcf3360e320906b4b7901a7b31ef8f5fe99f2c2c47799b2671665",
+      "size": 15255,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/ring_amulet_quality_lookup.xlsx"
+    }
+  ],
+  "platforms": {
+    "linux": {
+      "kind": "browser-download",
+      "sha256": "1839a6fdfd96591acdbc446fe0408c8cb4c50f2ba151ea9444c3b4393e098da0",
+      "size": 1759549573,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/StashSageLinux.zip"
+    },
+    "windows": {
+      "kind": "portable-zip",
+      "sha256": "9146a91f03fe14c01362ef0b0786369ffb32acc5ea2f606b4eb3c18425ffcc0e",
+      "size": 851578513,
+      "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.9/StashSageWindows.zip"
+    }
+  },
+  "schema_version": 1
+}
