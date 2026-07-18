@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-07-18 09:06:45
+Target: C:\Users\Roland\repos\poe2trade\dist\StashSage
+Total: 17.50 GB
+
+Top-level directories
+    17.48 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+   129.00 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+   104.91 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    91.77 MB  _internal\poe2trade\db\files\Wand\Dueling_Wand.json
+    85.50 MB  _internal\poe2trade\db\files\Bow\Obliterator_Bow.json
+    84.21 MB  _internal\poe2trade\db\files\Wand\Galvanic_Wand.json
+    82.18 MB  _internal\poe2trade\db\files\Wand\Siphoning_Wand.json
+    78.12 MB  _internal\poe2trade\db\files\Sceptre\Rattling_Sceptre.json
+    77.61 MB  _internal\poe2trade\db\files\Wand\Withered_Wand.json
+    76.11 MB  _internal\poe2trade\db\files\Wand\Attuned_Wand.json
+    73.44 MB  _internal\poe2trade\db\files\Sceptre\Omen_Sceptre.json
+    72.77 MB  _internal\poe2trade\db\files\Body_Armour\Sleek_Jacket.json
+    69.29 MB  _internal\poe2trade\db\files\Sceptre\Shrine_Sceptre.json
+    68.70 MB  _internal\poe2trade\db\files\Wand\Bone_Wand.json
+    68.48 MB  _internal\poe2trade\db\files\Bow\Warmonger_Bow.json
+    68.02 MB  _internal\poe2trade\db\files\Body_Armour\Falconer's_Jacket.json
+    67.61 MB  _internal\poe2trade\db\files\Sceptre\Stoic_Sceptre.json
+    66.11 MB  _internal\poe2trade\db\files\Wand\Volatile_Wand.json
+    65.40 MB  _internal\poe2trade\db\files\Sceptre\Wrath_Sceptre.json
+    64.08 MB  _internal\poe2trade\db\unsuper_models\belt_knn_model.pkl
+    63.83 MB  _internal\poe2trade\db\files\Bow\Gemini_Bow.json
+    63.74 MB  _internal\poe2trade\db\files\Body_Armour\Vile_Robe.json
+    63.40 MB  _internal\poe2trade\db\files\Body_Armour\Slipstrike_Vest.json
+    62.03 MB  _internal\poe2trade\db\files\Body_Armour\Rambler_Jacket.json
+    58.82 MB  _internal\poe2trade\db\files\Body_Armour\Sacramental_Robe.json
+    58.06 MB  _internal\poe2trade\db\files\Body_Armour\Corsair_Coat.json
+    57.28 MB  _internal\poe2trade\db\files\Helmet\Ancestral_Tiara.json
+    55.46 MB  _internal\poe2trade\db\unsuper_models\bow_knn_model.pkl
+    55.36 MB  _internal\poe2trade\db\files\Body_Armour\Dastard_Armour.json
+    55.18 MB  _internal\poe2trade\db\files\Body_Armour\Flowing_Raiment.json
