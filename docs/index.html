@@ -459,9 +459,11 @@
       <summary><h2>Discussion</h2></summary>
       <div class="section-body">
       <ol>
-        <li>Models based on <strong>current (unsold) offers</strong>; data is noisy; reasonably-priced items do not always sell.</li>
-        <li>Models #1 (xgb) and #2 (knn) may not agree on predictions, but both approaches are equally valid.</li>
-        <li>Model #1 visualization shows how an item's prediction compares to all others in same category.</li>
+        <li>Models are trained on <strong>current, unsold listings</strong>, so the data can be noisy. Even reasonably priced items may not sell.</li>
+        <li>Models #1 (<strong>XGBoost</strong>) and #2 (<strong>KNN</strong>) use different approaches, so their predictions may sometimes disagree. Both provide useful perspectives on an item's potential value.</li>
+        <li>The Model #1 visualization shows how an item's predicted value compares with other items in the same category.</li>
+        <li><strong>XGBoost</strong> is a tree-based model that evaluates the value of each modifier and how modifiers interact with one another. It uses patterns from all items in the dataset—their modifiers and listed prices—to estimate how the target item's complete set of stats may affect its value.</li>
+        <li><strong>KNN</strong> uses XGBoost's modifier weighting to identify the items in the dataset most similar to the target item. These “nearest” items do not need to match perfectly; they can still provide useful comparisons even when some modifiers differ. The mean and median prices of these comparable items are then used to estimate the target item's value.</li>
         <li>Careful when using Model #2 (knn) to price items with less than 6-mods, comparing to 6-m items can be tricky. Ask yourself, is a 4-m item more similar to (a) a 4-m item with the same 4-m but very different values, or (b) a 5-m item with 3 of the exact same mods and values, and 2 non-overlapping mods?</li>
         <li><i>Models trained to price <strong>rare</strong> items, not <strong>magic</strong> (forthcoming) or <strong>unique</strong>.</i></li>
         <li><i>Overlay is optimized for Windowed Fullscreen only.</i></li>
