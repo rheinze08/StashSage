@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-07-22 12:14:46
+Target: C:\Users\Roland\repos\poe2trade\dist\StashSage
+Total: 1.90 GB
+
+Top-level directories
+     1.87 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    81.59 MB  _internal\poe2trade\db\unsuper_models\amulet_knn_model.pkl
+    69.93 MB  _internal\poe2trade\db\unsuper_models\ring_knn_model.pkl
+    39.83 MB  _internal\poe2trade\db\unsuper_models\belt_knn_model.pkl
+    33.91 MB  _internal\poe2trade\db\unsuper_models\talisman_knn_model.pkl
+    32.86 MB  _internal\poe2trade\db\unsuper_models\quarterstaff_knn_model.pkl
+    31.31 MB  _internal\poe2trade\db\unsuper_models\crossbow_knn_model.pkl
+    30.79 MB  _internal\poe2trade\db\unsuper_models\spear_knn_model.pkl
+    29.75 MB  _internal\poe2trade\db\unsuper_models\bow_knn_model.pkl
+    27.97 MB  StashSage.exe
+    26.79 MB  _internal\poe2trade\db\unsuper_models\staff_knn_model.pkl
+    26.45 MB  _internal\poe2trade\db\unsuper_models\gloves_es_only_knn_model.pkl
+    25.61 MB  _internal\poe2trade\db\unsuper_models\gloves_ev_only_knn_model.pkl
+    25.12 MB  _internal\poe2trade\db\unsuper_models\body_armour_es_only_knn_model.pkl
+    24.98 MB  _internal\poe2trade\db\unsuper_models\body_armour_ev_only_knn_model.pkl
+    24.34 MB  _internal\poe2trade\db\unsuper_models\body_armour_ev_es_only_knn_model.pkl
+    23.28 MB  _internal\poe2trade\db\unsuper_models\helmet_es_only_knn_model.pkl
+    23.14 MB  _internal\poe2trade\db\unsuper_models\body_armour_ar_only_knn_model.pkl
+    22.91 MB  _internal\poe2trade\db\unsuper_models\gloves_ar_only_knn_model.pkl
+    22.56 MB  _internal\poe2trade\db\unsuper_models\gloves_ev_es_only_knn_model.pkl
+    22.52 MB  _internal\poe2trade\db\unsuper_models\body_armour_ar_ev_only_knn_model.pkl
+    21.72 MB  _internal\poe2trade\db\unsuper_models\body_armour_ar_es_only_knn_model.pkl
+    21.53 MB  _internal\poe2trade\db\unsuper_models\mace_two_hand_mace_knn_model.pkl
+    21.27 MB  _internal\poe2trade\db\unsuper_models\wand_knn_model.pkl
+    21.10 MB  _internal\pyarrow\arrow.dll
+    20.70 MB  _internal\poe2trade\db\unsuper_models\gloves_ar_ev_only_knn_model.pkl
+    20.17 MB  _internal\poe2trade\db\unsuper_models\helmet_ev_only_knn_model.pkl
+    19.94 MB  _internal\poe2trade\db\unsuper_models\gloves_ar_es_only_knn_model.pkl
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
+    19.22 MB  _internal\scipy.libs\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll
