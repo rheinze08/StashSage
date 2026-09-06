@@ -1,0 +1,32 @@
+# StashSage
+
+> StashSage is a free Path of Exile 2 item price checker and trade overlay for Windows and Linux.
+
+Canonical website: https://rheinze08.github.io/StashSage/
+Current version: 0.5.15
+Source and releases: https://github.com/rheinze08/StashSage
+
+## Main capabilities
+
+- Estimates the value of rare Path of Exile 2 items with an XGBoost model.
+- Shows comparable listings with a nearest-neighbor model.
+- Identifies modifiers that influence model predictions.
+- Supports prediction history and stash pricing data exports.
+- Performs normal desktop prediction operations locally.
+- Also serves the same pricing engine through a Discord bot and an invite-only HTTP API.
+
+## Limitations
+
+- Estimates are pricing starting points, not guaranteed sale prices.
+- Models learn from current unsold public listings, which may be noisy.
+- Pricing models target rare items rather than magic or unique items.
+- Category support depends on available training data.
+
+## Documentation sections
+
+- Top modifiers: https://rheinze08.github.io/StashSage/#feature-importances
+- Why StashSage: https://rheinze08.github.io/StashSage/#why-stashsage
+- Feature guides: https://rheinze08.github.io/StashSage/#using-app
+- Frequently asked questions (includes model behaviour and limitations): https://rheinze08.github.io/StashSage/#faq
+- API access (Discord bot and HTTP API): https://rheinze08.github.io/StashSage/#api-docs
+- Privacy and terms: https://rheinze08.github.io/StashSage/#policies
