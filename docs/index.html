@@ -99,7 +99,7 @@
             "Stash pricing data export",
             "Local desktop processing"
           ],
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "releaseNotes": "https://github.com/rheinze08/StashSage/releases/tag/v0.5.15",
           "sameAs": "https://github.com/rheinze08/StashSage",
           "downloadUrl": ["https://github.com/rheinze08/StashSage/releases/download/v0.5.15/StashSageWindows.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.15/StashSageLinux.zip"],
@@ -131,7 +131,7 @@
           "url": "https://rheinze08.github.io/StashSage/",
           "name": "POE2 Item Price Checker \u0026 Trade Overlay | StashSage",
           "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
-          "dateModified": "2026-09-05",
+          "dateModified": "2026-09-08",
           "isPartOf": { "@id": "https://rheinze08.github.io/StashSage/#website" },
           "mainEntity": { "@id": "https://rheinze08.github.io/StashSage/#software" },
           "inLanguage": "en-US"
@@ -274,7 +274,7 @@
       <img src="stashsage_logo.png" alt="Logo" class="logo">
     </h1>
 
-    <p><strong>v0.5.15 (<span id="build-date">09/05/2026</span>)</strong></p>
+    <p><strong>v0.5.15 (<span id="build-date">09/08/2026</span>)</strong></p>
     <p class="muted">Machine Learning by Budodude</p>
     <p class="muted">Web Scraping by NocKtuRn4L</p>
 
@@ -287,7 +287,7 @@
       <a class="btn secondary" href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join Discord</a>
     </div>
     <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
-    <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.6 GB of disk space on Windows.</em></p>
+    <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 1.5 GB of disk space on Windows.</em></p>
     <p class="trust"><strong><em>No data is ever shared with StashSage; all operations are local to your desktop.</em></strong></p>
     <div class="hero-shot">
       <img src="stashsage_prediction_gui.png" alt="StashSage prediction overlay showing price estimates and comparable Path of Exile 2 items">
@@ -567,7 +567,7 @@
           <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Notes</th></tr></thead>
           <tbody>
             <tr><td><code>item_text</code></td><td>string</td><td>Yes</td><td>The full copied item text, exactly as pasted from the game (<code>CTRL+C</code> while hovering it).</td></tr>
-            <tr><td><code>source</code></td><td>string</td><td>No</td><td>Free-form label for your own usage tracking; does not affect the response.</td></tr>
+            <tr><td><code>source</code></td><td>string</td><td>No</td><td>Free-form label for your own usage tracking; does not affect the response. Use a short, stable slug for your client (for example <code>poe2-companion</code>).</td></tr>
             <tr><td><code>channel_id</code></td><td>string</td><td>No</td><td>Discord channel id, if calling from a Discord context.</td></tr>
             <tr><td><code>guild_id</code></td><td>string</td><td>No</td><td>Discord server (guild) id, if applicable; omit for DMs.</td></tr>
           </tbody>
@@ -583,8 +583,15 @@
         <p class="muted">Trimmed; real responses include full modifier and neighbor detail.</p>
         <pre><code>{
   "request_id": "18a02c64be4a4b2f9927430956515957",
-  "release": { "api_version": "0.5.15", "model_version": "0.5.15", "build_date": "2026-09-04" },
-  "currency_conversions": { "divine_to_exalt": 180, "chaos_to_exalt": 1 },
+  "release": {
+    "api_version": "0.5.15", "model_version": "0.5.15", "build_date": "2026-09-04",
+    "training_data_as_of": "2026-09-03T14:06:02+00:00",
+    "model_trained_at": "2026-09-03T14:32:16+00:00"
+  },
+  "currency_conversions": {
+    "divine_to_exalt": 394, "chaos_to_exalt": 40, "annul_to_exalt": 361,
+    "display": "1d = 394e,  1c = 40e,  1a = 361e"
+  },
   "xgb": {
     "predictions": { "xgb": 3235.6 },
     "bucket": "High", "bucket_low": 1576.0, "bucket_high": 47280.0
@@ -595,12 +602,75 @@
   },
   "knn": {
     "summary": { "count": 3, "median": 3100.0, "mean": 3180.5 },
-    "neighbors": [ { "item_name": "...", "price_display": "3100e / 17d", "mods": [ "..." ] } ]
+    "neighbors": [
+      {
+        "item_name": "Ghoul Wrap",
+        "price_exalts": 3100.0, "price_display": "3100e/78c/8d/9a", "price_simple": "3100e",
+        "mods": [ { "pattern": "+# to maximum Life", "value": 42, "display": "+42 to maximum Life" } ]
+      }
+    ]
   }
 }</code></pre>
 
+        <h4>Response fields</h4>
+        <p>The example above is trimmed. These are the blocks every <code>200</code> response carries. Fields may be added over time, so ignore keys you don't recognise rather than treating them as errors.</p>
+        <table>
+          <thead><tr><th>Field</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><code>request_id</code></td><td>Opaque id for this call. Include it when reporting a problem.</td></tr>
+            <tr><td><code>release.api_version</code></td><td>Version of the StashSage release serving the request. It tracks the overall release &mdash; today it mirrors <code>model_version</code> &mdash; and is <strong>not</strong> an independent response-contract version, so a bump does not by itself mean the schema changed.</td></tr>
+            <tr><td><code>release.model_version</code></td><td>Version of the published model bundle the server has loaded.</td></tr>
+            <tr><td><code>release.build_date</code></td><td>Date that release was built. This is the build date of the API and model bundle, <strong>not</strong> the cutoff of the market data behind the models &mdash; see <a href="#api-freshness">model and data freshness</a>.</td></tr>
+            <tr><td><code>release.training_data_as_of</code></td><td>When the market data behind <em>this</em> prediction was assembled, ISO&nbsp;8601 UTC. This is the freshness signal to display &mdash; see <a href="#api-freshness">model and data freshness</a>. <code>null</code> when the model that answered has no usable timestamp.</td></tr>
+            <tr><td><code>release.model_trained_at</code></td><td>When that model was trained, ISO&nbsp;8601 UTC. Usually minutes after <code>training_data_as_of</code>; the gap is training time, not data age. <code>null</code> when unknown.</td></tr>
+            <tr><td><code>release.build_commit</code>, <code>release.git_sha</code></td><td>Optional build identifiers, present only when the running deployment has them. Handy when reporting a problem; don't depend on them.</td></tr>
+            <tr><td><code>currency_conversions</code></td><td>The rates this response's display strings were rendered with: <code>divine_to_exalt</code>, <code>chaos_to_exalt</code>, <code>annul_to_exalt</code> (each a whole number of exalts), and a preformatted <code>display</code> line. Read <a href="#api-currency">currency conversions</a> before using them for anything but display.</td></tr>
+            <tr><td><code>xgb.predictions.xgb</code></td><td>Model&nbsp;#1 point estimate, in exalts.</td></tr>
+            <tr><td><code>xgb.bucket</code>, <code>xgb.bucket_low</code>, <code>xgb.bucket_high</code></td><td>Value band the estimate falls into, with band edges in exalts. <code>bucket_high</code> is <code>null</code> for the open-ended top band.</td></tr>
+            <tr><td><code>target_item</code></td><td>The server's own parse of the item you submitted &mdash; name, matched modifier patterns with their values, and computed DPS for weapons. Worth checking when a prediction looks wrong: it shows exactly what the models saw.</td></tr>
+            <tr><td><code>knn.summary</code></td><td><code>count</code> of comparable listings found, plus the <code>median</code> and <code>mean</code> of their prices, in exalts. <code>median</code> and <code>mean</code> are <strong>omitted</strong> &mdash; not <code>null</code> &mdash; when no neighbor had a readable price, so <code>count</code> is the only key guaranteed to be present.</td></tr>
+            <tr><td><code>knn.neighbors</code></td><td>The comparable listings themselves, nearest first (ascending distance from your item). See <a href="#api-neighbors">neighbor objects</a> for the per-neighbor fields.</td></tr>
+            <tr><td><code>xgb_visual</code></td><td>Presentation-shaped copy of the estimate for the desktop overlay and Discord embeds: the same <code>prediction</code>, a bucket label prefixed with a colour block, and <code>color_square</code>. Mirrored to the top level as <code>xgb_bucket</code>, <code>xgb_color_hex</code>, and <code>xgb_color_square</code>. Read <code>xgb</code> instead &mdash; these are display sugar and change with the UI.</td></tr>
+            <tr><td><code>updates</code></td><td>Desktop-updater block, attached only when the deployment has an update manifest configured. Not part of the pricing contract; ignore it.</td></tr>
+          </tbody>
+        </table>
+
+        <h4 id="api-neighbors">Neighbor objects</h4>
+        <p>Each entry of <code>knn.neighbors</code> is one comparable listing. <code>/predict</code> and <code>/predict-gui</code> build neighbors with the same serializer, so these fields are identical on both endpoints.</p>
+        <table>
+          <thead><tr><th>Field</th><th>Always present</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><code>item_name</code></td><td>Yes</td><td>The listing's item name; an empty string when the source row carried no name.</td></tr>
+            <tr><td><code>price_exalts</code></td><td>Yes</td><td>The listing's price in exalts, as a number. <code>null</code> when the row had no readable price. This is the field to compute on.</td></tr>
+            <tr><td><code>price_display</code></td><td>Yes</td><td>The same price preformatted across all four currencies, <code>"&lt;exalt&gt;e/&lt;chaos&gt;c/&lt;divine&gt;d/&lt;annul&gt;a"</code> (for example <code>3100e/78c/8d/9a</code>), each rounded to a whole number using <code>currency_conversions</code>. <code>null</code> when the price is unreadable.</td></tr>
+            <tr><td><code>price_simple</code></td><td>Yes</td><td>Short form in whichever currency the listing was posted in, e.g. <code>8d</code> or <code>3100e</code>. <code>null</code> when the price is unreadable.</td></tr>
+            <tr><td><code>mods</code></td><td>Yes</td><td>The modifiers the neighbor was matched on: <code>pattern</code> (the normalized mod text, with <code>#</code> standing in for the value), <code>value</code>, and a rendered <code>display</code>. May be empty. Entries also carry a comparison against the same mod on your item when your item has it.</td></tr>
+            <tr><td><code>base_type</code>, <code>icon_url</code>, <code>base_category</code></td><td>No</td><td>Present only when the item name resolves to a known base in the icon manifest. Absent &mdash; not <code>null</code> &mdash; otherwise, so test for the key.</td></tr>
+            <tr><td><code>dps</code></td><td>No</td><td>Weapons only: the computed DPS figures for that neighbor.</td></tr>
+            <tr><td><code>stash_name</code></td><td>No</td><td>Present only when the source listing carried one.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Units</h4>
+        <p>Every price and estimate in the response is a plain number of <strong>exalts</strong> (Exalted Orbs): <code>xgb.predictions.xgb</code>, the bucket edges, <code>knn.summary.median</code>, <code>knn.summary.mean</code>, and neighbor prices alike. Listings posted in divine or chaos are converted to exalts before training and comparison, so exalts are the single canonical unit throughout &mdash; there is no per-field currency to inspect. Use <a href="#api-currency"><code>currency_conversions</code></a> to render a value in another currency.</p>
+
+        <h4 id="api-currency">Currency conversions</h4>
+        <p>The rates in <code>currency_conversions</code> are <strong>fixed for the release</strong> rather than a live market feed: they are the conversion constants the deployed build was published with, and they only move when a new release ships. They are exactly what every <code>price_display</code> and <code>price_simple</code> string in the response was rendered with, which is why those strings are always internally consistent. If you need a current divine or chaos price, take it from a live source and apply it to the exalt numbers yourself.</p>
+
+        <h4 id="api-freshness">Model and data freshness</h4>
+        <p>Listings are re-scraped and models retrained every few days, per category, and published with a StashSage release. Two timestamps in the <code>release</code> block describe the answer you just got:</p>
+        <ul>
+          <li><code>training_data_as_of</code> &mdash; when the feature matrix behind this prediction was assembled from scraped listings. <strong>This is the one to show users.</strong></li>
+          <li><code>model_trained_at</code> &mdash; when the model itself was fitted on that matrix, normally minutes later.</li>
+        </ul>
+        <p>Both are <strong>per model</strong>, not per release: categories retrain independently, so an amulet and a bow answered by the same deployment can legitimately report different dates. Both are also <strong>upper bounds</strong> &mdash; scraping precedes the matrix build, so the newest listing in the training data is somewhat older than the stamp. Neither is an exact market cutoff, and neither should be presented as one.</p>
+        <p>Either can be <code>null</code> when the model that answered carries no usable timestamp; treat that as "unknown" and fall back to <code>release.build_date</code>, which remains a coarse upper bound on the age of everything in the release. The keys are always present, so <code>null</code> means unknown rather than unsupported.</p>
+
+        <h4>Versioning and change notice</h4>
+        <p>Because <code>api_version</code> follows the release rather than the response contract, don't use it to gate on schema changes. Build your client to tolerate added fields, and <a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">ask in Discord</a> if you want notice ahead of a contract change &mdash; the API is best-effort, but we would rather warn integrators than break them.</p>
+
         <h4>Errors</h4>
-        <p>Every error response is <code>{"error": {"code", "message", "details"}, "release": {...}}</code>.</p>
+        <p>Every error response is <code>{"error": {"code", "message", "details"}, "release": {...}}</code>. <code>details</code> is omitted when there is nothing to add; on the codes below it carries <code>request_id</code>.</p>
         <table>
           <thead><tr><th>Status</th><th><code>error.code</code></th><th>Meaning</th></tr></thead>
           <tbody>
@@ -608,7 +678,8 @@
             <tr><td>401</td><td><code>unauthorized</code></td><td>API key is missing, invalid, or revoked.</td></tr>
             <tr><td>404</td><td><code>no_model</code></td><td>The item's category has no trained pricing model yet.</td></tr>
             <tr><td>429</td><td><code>rate_limited</code></td><td>Too many requests for this key in the current window; see <code>retry_after_seconds</code>.</td></tr>
-            <tr><td>500</td><td><code>inference_failed</code></td><td>Server-side failure; include <code>request_id</code> when reporting it.</td></tr>
+            <tr><td>500</td><td><code>inference_failed</code></td><td>Prediction failed inside the model; include <code>request_id</code> when reporting it.</td></tr>
+            <tr><td>500</td><td><code>internal_error</code></td><td>Unhandled server-side failure. Carries no <code>details</code>, so quote the <code>X-Request-Id</code> header you sent when reporting it.</td></tr>
           </tbody>
         </table>
       </div>

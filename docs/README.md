@@ -21,6 +21,13 @@ Start with the repository [README](../README.md) for setup and common commands.
 - [Update-Release Optimization Review](../update_release_optimize_20260903.md) —
   measured release-pipeline bottlenecks, installer-size safeguards, and the
   recommended speed-to-risk implementation order.
+- [Inference Improvement Plan](INFERENCE_IMPROVEMENT_PLAN.md) — prioritized
+  prediction speed and accuracy options that preserve the payload contract and
+  overlay format, with the call sites behind each one.
+- [API Integrator Feedback Follow-up](API_INTEGRATOR_FEEDBACK_FOLLOWUP.md) —
+  what the public API docs now state and why, plus the open `StashSage_Serve`
+  work (training-data timestamp, full KNN neighbor schema) and the unanswered
+  request-retention question.
 
 ## Release Operations
 
