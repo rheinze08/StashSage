@@ -12,8 +12,7 @@
       "id": "runes-of-aldur",
       "label": "Runes of Aldur",
       "league": "Runes of Aldur",
-      "manifest": "runes-of-aldur/feature_importances_index.json",
-      "note": "The training owner confirmed this is the live Runes of Aldur league. Incorrect Standard labels in pricing and training metadata were corrected; recorded training conversions and model artifacts are unchanged."
+      "manifest": "runes-of-aldur/feature_importances_index.json"
     }
   ]
 }
