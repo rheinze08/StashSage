@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Refresh stash data</title>
+  <desc id="desc">A stash chest surrounded by two refresh arrows.</desc>
+  <!-- Move, recolor, or hide these named groups independently in an SVG editor. -->
+  <g id="refresh-arrows" fill="none" stroke="#4B83D1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path id="refresh-arrow-top" d="M16 24a20 20 0 0 1 31-5" />
+    <path id="refresh-arrow-top-head" d="m43 12 5 7-8 1" fill="#4B83D1" stroke="none" />
+    <path id="refresh-arrow-bottom" d="M48 40a20 20 0 0 1-31 5" />
+    <path id="refresh-arrow-bottom-head" d="m21 52-5-7 8-1" fill="#4B83D1" stroke="none" />
+  </g>
+  <g id="stash-chest" stroke="#C9CED4" stroke-width="3" stroke-linejoin="round">
+    <path id="chest-body" d="M19 31h26v17H19z" fill="#182633" />
+    <path id="chest-lid" d="M19 31v-5c0-4 3-7 7-7h12c4 0 7 3 7 7v5z" fill="#24394A" />
+    <path id="chest-band" d="M19 34h26" fill="none" />
+    <path id="chest-lock" d="M29 31h6v7h-6z" fill="#2E4960" />
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+﻿StashSage build size report
+Generated: 2026-09-13 22:51:03
+Target: dist\StashSage
+Total: 2.09 GB
+
+Top-level directories
+     2.06 GB  _internal
+
+Largest files
+   201.37 MB  _internal\xgboost\lib\xgboost.dll
+    62.19 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\amulet_knn_model.pkl
+    52.97 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\ring_knn_model.pkl
+    36.08 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\amulet_knn_model.pkl
+    32.83 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\ring_knn_model.pkl
+    29.73 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\belt_knn_model.pkl
+    28.21 MB  StashSage.exe
+    21.10 MB  _internal\pyarrow\arrow.dll
+    19.59 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\staff_knn_model.pkl
+    19.37 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\quarterstaff_knn_model.pkl
+    19.36 MB  _internal\numpy.libs\libscipy_openblas64_-43e11ff0749b8cbe0a615c9cf6737e0e.dll
+    19.22 MB  _internal\scipy.libs\libscipy_openblas-f07f5a5d207a3a47104dca54d6d0c86a.dll
+    18.45 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\talisman_knn_model.pkl
+    17.36 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\crossbow_knn_model.pkl
+    17.16 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\belt_knn_model.pkl
+    17.11 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\gloves_es_only_knn_model.pkl
+    16.92 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\gloves_es_only_knn_model.pkl
+    16.83 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\spear_knn_model.pkl
+    16.53 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\crossbow_knn_model.pkl
+    15.87 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\gloves_ev_only_knn_model.pkl
+    15.28 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\helmet_es_only_knn_model.pkl
+    15.07 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\staff_knn_model.pkl
+    15.05 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\body_armour_es_only_knn_model.pkl
+    15.04 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\gloves_ev_only_knn_model.pkl
+    14.98 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\bow_knn_model.pkl
+    14.92 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\gloves_ev_es_only_knn_model.pkl
+    14.92 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\helmet_es_only_knn_model.pkl
+    14.81 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\wand_knn_model.pkl
+    13.73 MB  _internal\poe2trade\db\model_sets\runes-of-aldur\unsuper_models\body_armour_ev_only_knn_model.pkl
+    13.72 MB  _internal\poe2trade\db\model_sets\forbidden-rites\unsuper_models\gloves_ar_only_knn_model.pkl
