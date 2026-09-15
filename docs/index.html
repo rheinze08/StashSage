@@ -1,0 +1,984 @@
+<!--
+  =========================
+  StashSage site template (index.html.j2)
+  This whole block is an HTML comment so it NEVER shows in the browser
+  even if the file is opened without Jinja rendering.
+  =========================
+  You can override any of these from Python/CI:
+    - Python: env.get_template("index.html.j2").render(version="1.2", ...)
+    - CLI:    jinja2 index.html.j2 -D version=1.2 > index.html
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFMHCLVQ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <title>POE2 Item Price Checker &amp; Trade Overlay | StashSage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.">
+  <meta name="keywords" content="Path of Exile 2, POE2, StashSage, item price prediction, trade overlay, stash scrape, Discord API">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Budodude">
+  <meta name="application-name" content="StashSage">
+  <meta name="theme-color" content="#0078d4">
+  <link rel="canonical" href="https://rheinze08.github.io/StashSage/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="StashSage">
+  <meta property="og:title" content="POE2 Item Price Checker &amp; Trade Overlay | StashSage">
+  <meta property="og:description" content="Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.">
+  <meta property="og:url" content="https://rheinze08.github.io/StashSage/">
+  <meta property="og:image" content="https://rheinze08.github.io/StashSage/stashsage_logo.png">
+  <meta property="og:image:alt" content="StashSage logo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="POE2 Item Price Checker &amp; Trade Overlay | StashSage">
+  <meta name="twitter:description" content="Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.">
+  <meta name="twitter:image" content="https://rheinze08.github.io/StashSage/stashsage_logo.png">
+  <meta name="twitter:image:alt" content="StashSage logo">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://rheinze08.github.io/StashSage/#software",
+          "name": "StashSage",
+          "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "Windows, Linux",
+          "softwareVersion": "0.5.20",
+          "url": "https://rheinze08.github.io/StashSage/",
+          "isAccessibleForFree": true,
+          "softwareRequirements": "Windows or Linux; Path of Exile 2",
+          "featureList": [
+            "POE2 rare-item price predictions",
+            "Comparable listing analysis",
+            "Modifier importance insights",
+            "Stash pricing data export",
+            "Local desktop processing"
+          ],
+          "dateModified": "2026-09-14",
+          "releaseNotes": "https://github.com/rheinze08/StashSage/releases/tag/v0.5.20",
+          "sameAs": "https://github.com/rheinze08/StashSage",
+          "downloadUrl": ["https://github.com/rheinze08/StashSage/releases/download/v0.5.20/StashSageWindows.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.20/StashSageLinux.zip"],
+          "author": {
+            "@type": "Person",
+            "name": "Budodude"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Data WiseGuys, LLC."
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://rheinze08.github.io/StashSage/#website",
+          "name": "StashSage for Path of Exile 2",
+          "url": "https://rheinze08.github.io/StashSage/",
+          "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://rheinze08.github.io/StashSage/#webpage",
+          "url": "https://rheinze08.github.io/StashSage/",
+          "name": "POE2 Item Price Checker \u0026 Trade Overlay | StashSage",
+          "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
+          "dateModified": "2026-09-14",
+          "isPartOf": { "@id": "https://rheinze08.github.io/StashSage/#website" },
+          "mainEntity": { "@id": "https://rheinze08.github.io/StashSage/#software" },
+          "inLanguage": "en-US"
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root{--blue:#0078d4;--blue-dark:#005a9e;--blue-deep:#17324d;--bg:#f5f8fc;--card:#ffffff;--ink:#1d2a38;--ink-soft:#3a4a60;--ink-muted:#5d6c7f;--line:#e3eaf3;--line-strong:#cfdcea;--radius:14px;--shadow-sm:0 1px 2px rgba(16,35,57,.05),0 2px 6px rgba(16,35,57,.05);--shadow:0 2px 6px rgba(16,35,57,.05),0 12px 28px rgba(16,35,57,.08)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:100%}
+    @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+    body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background-color:var(--bg);background-image:linear-gradient(180deg,#e9f1fa,var(--bg) 480px);background-repeat:no-repeat;color:#2e3b4b;line-height:1.65}
+    ::selection{background:#cce5fa;color:#10283f}
+    header{text-align:center;padding:48px 20px 28px}
+    .logo{height:40px;vertical-align:middle;margin:0 10px}
+    header h1{font-size:clamp(2rem,4vw + .9rem,2.6rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.45em;color:var(--ink);display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
+    header h1 + p strong{display:inline-block;padding:4px 14px;border:1px solid #c4dcf3;border-radius:999px;background:#eaf4ff;color:#0f4f86;font-size:.92rem}
+    header p{max-width:760px;margin:0 auto 10px;font-size:1.12rem}
+    header p a{color:var(--blue);text-decoration:none;font-weight:600}
+    header p a:hover{color:var(--blue-dark);text-decoration:underline}
+    .donate{font-size:1rem;margin-top:10px}
+    .donate a{color:var(--blue);text-decoration:none;font-weight:600}
+    .donate a:hover{color:var(--blue-dark)}
+    .header-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-block;padding:14px 30px;font-size:1.05rem;font-weight:600;color:#fff;background:linear-gradient(180deg,#1486e2,var(--blue));border-radius:10px;text-decoration:none;box-shadow:0 6px 16px rgba(0,120,212,.22),inset 0 1px 0 rgba(255,255,255,.18);transition:background .2s,box-shadow .2s,transform .2s}
+    .btn:hover{background:linear-gradient(180deg,#0d76cf,var(--blue-dark));transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,90,158,.28),inset 0 1px 0 rgba(255,255,255,.18)}
+    .btn:active{transform:translateY(0);box-shadow:0 4px 10px rgba(0,90,158,.25)}
+    .btn:focus-visible{outline:3px solid rgba(0,120,212,.45);outline-offset:2px}
+    .btn.secondary{background:linear-gradient(180deg,#27496a,#1f3c55);box-shadow:0 6px 16px rgba(31,60,85,.25),inset 0 1px 0 rgba(255,255,255,.12)}
+    .btn.secondary:hover{background:linear-gradient(180deg,#20405e,#17324d)}
+    .install-note{max-width:760px;margin:16px auto 8px;color:var(--ink-muted);font-size:.95rem;line-height:1.55}
+    .install-note strong{color:#38516b}
+    .hero-shot{max-width:980px;margin:30px auto 0;padding:0 12px}
+    .hero-shot img{width:100%;border-radius:var(--radius);box-shadow:0 18px 44px rgba(17,34,56,.18);border:1px solid var(--line-strong);display:block}
+    .trust{font-size:.9rem;color:var(--ink-muted);margin-top:12px}
+    .page-nav{max-width:980px;margin:0 auto;padding:0 20px}
+    .page-nav ul{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;list-style:none}
+    .page-nav a{display:block;padding:8px 13px;border:1px solid var(--line-strong);border-radius:999px;background:#fff;color:var(--blue-deep);font-size:.9rem;font-weight:600;text-decoration:none;box-shadow:var(--shadow-sm)}
+    .page-nav a:hover,.page-nav a:focus-visible{border-color:#9fc4e6;background:#edf6ff;color:var(--blue-dark)}
+    main{max-width:980px;margin:40px auto;padding:0 20px;display:flex;flex-direction:column;gap:28px}
+    main a{color:var(--blue)}
+    main a:hover{color:var(--blue-dark)}
+    details.section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    details.section > summary{list-style:none;cursor:pointer;padding:24px 56px 24px 28px;position:relative;transition:background .15s}
+    details.section > summary:hover{background:#f7fafd}
+    details.section > summary::-webkit-details-marker{display:none}
+    details.section > summary h2{font-size:1.4rem;font-weight:600;letter-spacing:-.01em;margin:0;color:var(--ink)}
+    details.section[open] > summary{border-bottom:1px solid var(--line)}
+    details.section > .section-body{padding:4px 28px 28px}
+    details.section > summary::after{content:'';position:absolute;right:26px;top:50%;width:9px;height:9px;border-right:2px solid #51637a;border-bottom:2px solid #51637a;transform:translateY(-70%) rotate(45deg);transition:transform .2s ease}
+    details.section[open] > summary::after{transform:translateY(-35%) rotate(-135deg)}
+    ol{margin-left:20px}
+    ol li{margin-bottom:10px;font-size:1rem}
+    main li::marker{color:var(--blue)}
+    code{background:#edf3fc;border:1px solid #dbe6f4;color:#17486f;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;font-size:.92em;padding:2px 6px;border-radius:6px}
+    pre{margin:14px 0 0;padding:16px 18px;background:#0f2137;color:#dbe6f4;border-radius:10px;overflow-x:auto;font-size:.86rem;line-height:1.55}
+    pre code{background:none;border:0;color:inherit;padding:0;font-size:inherit}
+    .api-method{display:inline-block;background:#21885a;color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.05em;padding:3px 8px;border-radius:6px;margin-right:8px;vertical-align:middle}
+    h4{margin:22px 0 4px;font-size:1rem;color:#1f3c55}
+    .gallery{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px -8px 0}
+    .gallery a{display:block;flex:1 1 260px;max-width:300px;padding:8px;border-radius:12px}
+    .gallery a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+    .gallery img{width:100%;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow-sm);transition:transform .2s,box-shadow .2s;cursor:pointer;display:block}
+    .gallery a:hover img,.gallery a:focus-visible img{transform:translateY(-3px);box-shadow:0 10px 24px rgba(17,34,56,.16)}
+    footer{text-align:center;margin:56px 0 0;padding:26px 20px 30px;font-size:.9rem;color:var(--ink-muted);border-top:1px solid var(--line)}
+    footer a{color:var(--blue);text-decoration:none;font-weight:600}
+    footer a:hover{color:var(--blue-dark);text-decoration:underline}
+    footer .disclaimer{margin-top:8px;font-size:.85rem;color:#93a1b3}
+    .accordion{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+    .accordion summary{list-style:none;cursor:pointer;padding:14px 44px 14px 16px;background:#f3f7fc;font-weight:600;color:#29445f;position:relative;transition:background .15s}
+    .accordion summary:hover{background:#ecf3fa}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion summary::after{content:'';position:absolute;right:18px;top:50%;width:7px;height:7px;border-right:2px solid #6b7d92;border-bottom:2px solid #6b7d92;transform:translateY(-70%) rotate(45deg);transition:transform .2s ease}
+    .accordion[open] summary::after{transform:translateY(-35%) rotate(-135deg)}
+    .accordion .content{padding:16px}
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+    .row label{display:flex;flex-direction:column;gap:6px;font-size:.85rem;font-weight:600;color:#51637a}
+    .dwg-project{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:8px}
+    .dwg-link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;color:var(--blue)}
+    .dwg-link:hover{color:var(--blue-dark)}
+    .dwg-logo{height:28px;width:auto}
+    .dwg-desc{color:var(--ink-soft)}
+    select{padding:8px 12px;border:1px solid var(--line-strong);border-radius:8px;background:#fff;font:inherit;font-size:.95rem;color:#2e3b4b;transition:border-color .15s,box-shadow .15s}
+    select:hover{border-color:#b3c8dd}
+    select:focus-visible{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,120,212,.18)}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+    th{background:#f3f7fc;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#51637a}
+    tbody tr:nth-child(even){background:#fafcfe}
+    tbody tr:hover{background:#f2f7fd}
+    tbody tr:last-child td{border-bottom:0}
+    .muted{color:var(--ink-muted);font-size:.95rem}
+    .philosophy-grid{display:grid;gap:18px;margin-top:18px}
+    @media (min-width: 780px){.philosophy-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .philosophy-card{background:#f6f9fd;border:1px solid var(--line);padding:20px;border-radius:12px;box-shadow:var(--shadow-sm)}
+    .philosophy-card h3{font-size:1.08rem;margin-bottom:8px;color:#1f3c55}
+    .philosophy-card p{margin-bottom:10px;color:var(--ink-soft)}
+    .philosophy-card ul{margin-left:16px;margin-top:8px}
+    .philosophy-card li{margin-bottom:6px}
+    .callout{margin-top:20px;padding:18px 20px;border-radius:12px;background:#eaf4ff;border:1px solid #cde2f7;border-left:4px solid var(--blue);color:var(--blue-deep)}
+    .faq-list{display:grid;gap:14px}
+    .faq-item{padding:16px 18px;border:1px solid var(--line);border-radius:10px;background:#f8fbff}
+    .faq-item h3{font-size:1.02rem;color:#1f3c55;margin-bottom:5px}
+    .tabbed-section{margin-top:4px}
+    .tabs-nav{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+    .tab-button{appearance:none;border:1px solid #d8e2ef;background:#f5f8fc;color:#29445f;padding:10px 16px;border-radius:999px;font:inherit;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s,color .2s,box-shadow .2s}
+    .tab-button:hover{background:#edf4fb;border-color:#c7d8ea}
+    .tab-button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+    .tab-button[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 4px 12px rgba(0,120,212,.28)}
+    .tab-panel{padding-top:18px}
+    .tab-panel h3{font-size:1.1rem;margin-bottom:10px;color:#1f3c55}
+    .tab-panel .gallery{margin-top:12px}
+    /* Legal section */
+    .section.legal{background:#fff}
+    .section.legal h3{font-size:1.1rem;margin-top:16px;color:#1f3c55}
+    .section.legal p, .section.legal li{color:var(--ink-soft)}
+    @media (max-width:560px){
+      header{padding:36px 16px 24px}
+      .header-actions{margin-top:18px}
+      .header-actions .btn{flex:1 1 100%;max-width:340px;text-align:center}
+      main{margin-top:32px;gap:22px}
+      details.section > summary{padding:20px 48px 20px 20px}
+      details.section > .section-body{padding:4px 20px 22px}
+      details.section > summary::after{right:20px}
+    }
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFMHCLVQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <h1>
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+      StashSage for POE2
+      <img src="stashsage_logo.png" alt="Logo" class="logo">
+    </h1>
+
+    <p><strong>v0.5.20 (<span id="build-date">09/14/2026</span>)</strong></p>
+    <p class="muted">Machine Learning by Budodude</p>
+    <p class="muted">Web Scraping by NocKtuRn4L</p>
+
+    <p>Free Path of Exile 2 price-check overlay. Machine-learning valuations for rare items, from live trade data.</p>
+
+    <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join our Discord to use the free API!</a></p>
+    <div class="header-actions">
+      <a id="download-windows" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.20/StashSageWindows.zip">Download for Windows (.zip)</a>
+      <a id="download-linux" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.20/StashSageLinux.zip">Download for Linux (.zip)</a>
+      <a class="btn secondary" href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join Discord</a>
+    </div>
+    <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
+    <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.2 GB of disk space on Windows.</em></p>
+    <p class="trust"><strong><em>No data is ever shared with StashSage; all operations are local to your desktop.</em></strong></p>
+    <div class="hero-shot">
+      <img src="stashsage_prediction_gui.png" alt="StashSage prediction overlay showing price estimates and comparable Path of Exile 2 items">
+    </div>
+  </header>
+
+  <nav class="page-nav" aria-label="StashSage page sections">
+    <ul>
+      <li><a href="#feature-importances">Top Mods</a></li>
+      <li><a href="#why-stashsage">Why StashSage</a></li>
+      <li><a href="#using-app">Features</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#api-docs">API</a></li>
+      <li><a href="#policies">Privacy &amp; Legal</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- 2a-2. Model Feature Importances -->
+    <details class="section" id="feature-importances" open>
+      <summary><h2>Top 10 Mods for Item Value</h2></summary>
+      <div class="section-body">
+      <details class="accordion" id="fi-accordion">
+        <summary>Browse trained models (collapsed by default)</summary>
+        <div class="content">
+          <div class="row">
+            <label id="fi-league-field" style="display:none">
+              League
+              <select id="fi-league"></select>
+            </label>
+            <label>
+              Category
+              <select id="fi-category"></select>
+            </label>
+            <label>
+              Segment
+              <select id="fi-segment"></select>
+            </label>
+          </div>
+          <div class="muted">Importances are normalized per model. Values shown as percentages.</div>
+          <div class="muted" id="fi-league-note" style="display:none"></div>
+          <table id="fi-table" style="display:none">
+            <thead><tr><th>#</th><th>Feature</th><th>Importance</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </details>
+      </div>
+    </details>
+
+    <details class="section" id="why-stashsage" open>
+      <summary><h2>Why StashSage</h2></summary>
+      <div class="section-body">
+      <p><strong>Does this sound like you?</strong></p>
+      <ul style="margin:12px 0 0 20px">
+        <li>You pick up items that could be good, but aren't quite sure</li>
+        <li>Your stash fills up with "I'll price this later" items</li>
+        <li>Pricing through the in-game trade UI feels tedious, so you avoid it</li>
+        <li>Typing mods, comparing rolls, and overthinking prices takes more effort than it's worth</li>
+        <li>You don't need a perfect price - you just want a smart starting point</li>
+        <li>One hotkey, instant comparable items, list it, and get back to mapping</li>
+      </ul>
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <h3>No Single Ground Truth</h3>
+          <p>
+            There is no single "right" answer for an item's price. Demand changes with every league and patch,
+            so yesterday's completed sales may not represent today's market.
+          </p>
+        </div>
+        <div class="philosophy-card">
+          <h3>Trading Reality</h3>
+          <p>
+            The data we see is from items that haven't yet sold. Expensive listings linger while good deals disappear,
+            so raw trade results are noisy and unreliable on their own. If anything, they may represent a price ceiling.
+          </p>
+        </div>
+        <div class="philosophy-card">
+          <h3>How We Measure Value</h3>
+          <p>
+            StashSage focuses on practical shortcuts instead of perfect accuracy. We look for tools that help you:
+          </p>
+          <ul>
+            <li>Judge a reasonable listing price in seconds.</li>
+            <li>Track and encode market dynamics.</li>
+            <li>Avoid obvious price trolls or stale posts.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>Bottom line:</strong> our goal is faster choices. If you spend less time scrolling trade listings and
+        more time playing, the system is doing its job, even if some items never sell.
+      </div>
+      
+      </div>
+    </details>
+
+    <!-- 2a. Feature Explorer Tabs -->
+    <details class="section" id="using-app" open>
+      <summary><h2>Explore Features</h2></summary>
+      <div class="section-body">
+      <div class="tabbed-section" data-tabset>
+        <div class="tabs-nav" role="tablist" aria-label="Feature guides">
+          <button
+            type="button"
+            class="tab-button"
+            role="tab"
+            id="tab-discord-api"
+            aria-selected="true"
+            aria-controls="feature-discord-api"
+            data-tab-target="feature-discord-api"
+          >
+            API
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            role="tab"
+            id="tab-using-stashsage"
+            aria-selected="false"
+            aria-controls="using-stashsage-guide"
+            data-tab-target="using-stashsage-guide"
+          >
+            Overlay
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            role="tab"
+            id="tab-prediction-history"
+            aria-selected="false"
+            aria-controls="feature-prediction-history"
+            data-tab-target="feature-prediction-history"
+          >
+            History
+          </button>
+          <button
+            type="button"
+            class="tab-button"
+            role="tab"
+            id="tab-using-stash-scrape"
+            aria-selected="false"
+            aria-controls="using-stash-scrape"
+            data-tab-target="using-stash-scrape"
+          >
+            StashScrape
+          </button>
+        </div>
+
+        <section class="tab-panel" id="feature-discord-api" role="tabpanel" aria-labelledby="tab-discord-api">
+          <h3>Discord API</h3>
+          <ol>
+            <li>Select or hover over the item in game for which you'd like to see price predictions.</li>
+            <li>Press <code>CTRL+C</code> to copy the item's in-game description.</li>
+            <li>Paste the description to StashSage Serve bot in our Discord channel to receive your predictions.</li>
+            <li>Note: some features such as mod value filtering and visualizations not available on Discord API</li>
+          </ol>
+
+          <p style="margin-top:14px;">The bot prices against multiple leagues &mdash; Forbidden Rites and Runes of Aldur. Every prediction reply shows which league answered, and you can switch with:</p>
+          <ul>
+            <li><code>!league</code> &mdash; check which league you're currently priced against.</li>
+            <li><code>!league list</code> &mdash; see every league currently installed.</li>
+            <li><code>!league set &lt;league&gt;</code> &mdash; save your preference, e.g. <code>!league set forbidden-rites</code> or <code>!league set runes-of-aldur</code>.</li>
+          </ul>
+          <p>Your choice is saved per Discord user and follows you across servers and DMs.</p>
+
+          <p style="margin-top:14px;">Want this in your own Discord server? <a href="https://discord.com/oauth2/authorize?client_id=1466818671488925791&amp;permissions=117760&amp;integration_type=0&amp;scope=bot+applications.commands" target="_blank" rel="noopener">Invite the StashSage bot</a> &mdash; no setup on your end, just @mention it or paste an item in any channel.</p>
+
+          <div class="gallery">
+            <a href="stashsage_discord_item_price_prediction_api_amulet.png" target="_blank" rel="noopener"><img src="stashsage_discord_item_price_prediction_api_amulet.png" alt="Discord API item price prediction example for an amulet"></a>
+            <a href="stashsage_discord_item_price_prediction_api_belt.png" target="_blank" rel="noopener"><img src="stashsage_discord_item_price_prediction_api_belt.png" alt="Discord API item price prediction example for a belt"></a>
+            <a href="stashsage_discord_item_price_prediction_api_body_armour.png" target="_blank" rel="noopener"><img src="stashsage_discord_item_price_prediction_api_body_armour.png" alt="Discord API item price prediction example for body armour"></a>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="using-stashsage-guide" role="tabpanel" aria-labelledby="tab-using-stashsage" hidden>
+          <h3>Prediction Overlay</h3>
+          <ol>
+            <li>Select or hover over the item in game for which you'd like to see price predictions.</li>
+            <li>Press <code>CTRL+1</code> (or custom hotkey) to bring up the (unfiltered) prediction overlay.</li>
+            <li>Press <code>CTRL+2</code> (or custom hotkey) to bring up the mod filters and filtered prediction overlay.</li>
+            <li>Review the predictions (#1 = xgboost, #2 = knn) and compare to similar items.</li>
+          </ol>
+
+          <div class="gallery">
+            <a href="stashsage_prediction_filtering.png" target="_blank" rel="noopener"><img src="stashsage_prediction_filtering.png" alt="StashSage prediction UI with mod filtering overlay"></a>
+            <a href="stashsage_prediction_gui.png" target="_blank" rel="noopener"><img src="stashsage_prediction_gui.png" alt="StashSage prediction UI overlay with item price estimates"></a>
+            <a href="stashsage_prediction_nearest_neighbors.png" target="_blank" rel="noopener"><img src="stashsage_prediction_nearest_neighbors.png" alt="StashSage nearest-neighbors comparable items view"></a>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="feature-prediction-history" role="tabpanel" aria-labelledby="tab-prediction-history" hidden>
+          <h3>Prediction History</h3>
+          <ul style="margin:12px 0 0 20px">
+            <li>Press <code>CTRL + 3</code> (or custom hotkey) to bring up the prediction history overlay.</li>
+            <li>Review snapshots of previous item predictions, including the item descriptions.</li>
+            <li>Compare to selling history in your Merchant tabs to assess quality of predictions.</li>
+          </ul>
+          <div class="gallery">
+            <a href="stashsage_prediction_history_gui_1.png" target="_blank" rel="noopener"><img src="stashsage_prediction_history_gui_1.png" alt="Prediction History GUI screenshot 1"></a>
+            <a href="stashsage_prediction_history_gui_2.png" target="_blank" rel="noopener"><img src="stashsage_prediction_history_gui_2.png" alt="Prediction History GUI screenshot 2"></a>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="using-stash-scrape" role="tabpanel" aria-labelledby="tab-using-stash-scrape" hidden>
+          <h3>Using StashScrape</h3>
+          <ol>
+            <li>Select <strong>StashScrape</strong> from the main menu.</li>
+            <li>Enter your Trade API username and a target directory in which to save output files.</li>
+            <li>Enter <strong>Seconds Between Searches</strong>; we suggest at least <code>300</code>s to minimize rate limiting.</li>
+            <li>Select the listing type (All Listings = public premium stash tabs + merchant tabs).</li>
+            <li>Select the categories to scrape; each necessitates a separate search as in step 3.</li>
+            <li>Upon pipeline completion, fetch the output file from the target directory.</li>
+          </ol>
+
+          <div class="gallery">
+            <a href="stashsage_stash_scrape_menu.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_menu.png" alt="StashSage StashScrape menu selection"></a>
+            <a href="stashsage_stash_scrape_workflow.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_workflow.png" alt="StashSage StashScrape workflow progress window"></a>
+            <a href="stashsage_stash_scrape_output.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_output.png" alt="StashSage StashScrape output files directory"></a>
+          </div>
+        </section>
+      </div>
+      </div>
+    </details>
+
+    <details class="section" id="faq" open>
+      <summary><h2>StashSage FAQ</h2></summary>
+      <div class="section-body faq-list">
+        <div class="faq-item">
+          <h3>What is StashSage?</h3>
+          <p>StashSage is a free desktop price-checking and trade utility for Path of Exile 2. It estimates rare-item value, shows comparable listings, highlights influential modifiers, and supports stash pricing workflows.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does StashSage estimate POE2 item prices?</h3>
+          <p>StashSage runs two models side by side. Model&nbsp;#1 is an <strong>XGBoost</strong> regressor &mdash; a tree-based model that weighs each modifier and how modifiers interact, learned from the modifiers and listed prices of every item in the dataset. Model&nbsp;#2 is a <strong>nearest-neighbor (KNN)</strong> comparison that reuses XGBoost's modifier weighting to find the most similar listed items and takes their mean and median price. Both learn from <strong>current, unsold listings</strong>, so estimates are practical starting points, not guaranteed sale prices &mdash; even a fairly priced item may not sell.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Why do the two estimates sometimes disagree?</h3>
+          <p>Model&nbsp;#1 (XGBoost) and Model&nbsp;#2 (KNN) take different approaches, so their numbers can diverge &mdash; treat them as two perspectives on the same item rather than one right answer. The Model&nbsp;#1 visualization also shows where an item's predicted value sits relative to other items in its category.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How should I read the comparison (Model&nbsp;#2) estimate?</h3>
+          <p>KNN's neighbors don't have to match perfectly &mdash; a partial overlap on mods and values can still be a useful comparison. Be careful pricing items with fewer than six modifiers against six-mod items: ask whether your four-mod item is really closer to another four-mod item with the same mods at very different values, or to a five-mod item that shares three exact mods and adds two you don't have.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which items are supported?</h3>
+          <p>The pricing models are designed for <strong>rare</strong> Path of Exile 2 items. Magic and unique items are not the intended prediction targets, and support varies by item category and available training data.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does StashSage upload my item or account data?</h3>
+          <p>The desktop application performs its normal pricing operations locally. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Which operating systems are supported?</h3>
+          <p>Portable downloads are available for Windows and Linux. Windows users extract the complete ZIP and keep <code>StashSage.exe</code> beside its <code>_internal</code> directory.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What display mode should Path of Exile 2 run in?</h3>
+          <p>The prediction overlay is optimized for <strong>Windowed Fullscreen</strong>. Other display modes may not render the overlay correctly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How current are the pricing models?</h3>
+          <p>New models are trained every few days and posted for download with StashSage releases. The version and build date at the top of this page identify the currently published application.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="section" id="api-docs">
+      <summary><h2>API Access</h2></summary>
+      <div class="section-body">
+        <p>The same pricing engine behind the Discord bot is available as a small HTTP API for your own tools and scripts. Send it copied item text, get back a value estimate, comparable listings, and the modifiers driving the price &mdash; the same payload the desktop app renders.</p>
+
+        <div class="callout">
+          <strong>Invite-only, best-effort.</strong> This is a small unpaid service, not a general-purpose developer platform. There is no uptime or stability guarantee, and the contract may change or pause without notice. Fine for personal tools and Discord bots; don't build anything load-bearing on it.
+        </div>
+
+        <h4>Getting access</h4>
+        <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Ask in Discord</a> and we'll issue you an API key and the base URL. Keys are per-consumer &mdash; one can be revoked without affecting anyone else.</p>
+
+        <h4>Authentication</h4>
+        <p>Send your key on every request as an <code>X-API-Key</code> header, or as <code>Authorization: Bearer &lt;key&gt;</code>.</p>
+
+        <h4>Rate limits</h4>
+        <p>30 requests per 60&nbsp;seconds per key (<code>/predict</code> and <code>/predict-gui</code> combined). Over the limit returns <code>429</code> with a <code>retry_after_seconds</code> field.</p>
+
+        <h4><span class="api-method">POST</span><code>/predict</code></h4>
+        <p>JSON request body:</p>
+        <table>
+          <thead><tr><th>Field</th><th>Type</th><th>Required</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><code>item_text</code></td><td>string</td><td>Yes</td><td>The full copied item text, exactly as pasted from the game (<code>CTRL+C</code> while hovering it).</td></tr>
+            <tr><td><code>league</code></td><td>string</td><td>No</td><td>Installed league ID or exact name (case-insensitive), e.g. <code>forbidden-rites</code> or <code>runes-of-aldur</code> &mdash; see <a href="#api-leagues"><code>GET /leagues</code></a> for what's currently installed. Omitting it uses the server's configured default league. An explicit value that isn't installed is rejected rather than silently falling back &mdash; see <a href="#api-errors">errors</a>.</td></tr>
+            <tr><td><code>source</code></td><td>string</td><td>No</td><td>Free-form label for your own usage tracking; does not affect the response. Use a short, stable slug for your client (for example <code>poe2-companion</code>).</td></tr>
+            <tr><td><code>channel_id</code></td><td>string</td><td>No</td><td>Discord channel id, if calling from a Discord context.</td></tr>
+            <tr><td><code>guild_id</code></td><td>string</td><td>No</td><td>Discord server (guild) id, if applicable; omit for DMs.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Example request</h4>
+        <pre><code>curl -X POST "$STASHSAGE_API_URL/predict" \
+  -H "X-API-Key: $STASHSAGE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"item_text": "Item Class: Amulets\nRarity: Rare\n...", "league": "forbidden-rites", "source": "my-tool"}'</code></pre>
+
+        <h4>Example response &mdash; <code>200 OK</code></h4>
+        <p class="muted">Trimmed; real responses include full modifier and neighbor detail.</p>
+        <pre><code>{
+  "request_id": "18a02c64be4a4b2f9927430956515957",
+  "release": {
+    "api_version": "0.5.15", "model_version": "0.5.15", "build_date": "2026-09-04",
+    "training_data_as_of": "2026-09-03T14:06:02+00:00",
+    "model_trained_at": "2026-09-03T14:32:16+00:00"
+  },
+  "league": { "id": "forbidden-rites", "label": "Forbidden Rites", "defaulted": false },
+  "currency_conversions": {
+    "divine_to_exalt": 394, "chaos_to_exalt": 40,
+    "display": "1d = 394e,  1c = 40e"
+  },
+  "xgb": {
+    "predictions": { "xgb": 3235.6 },
+    "bucket": "High", "bucket_low": 1576.0, "bucket_high": 47280.0
+  },
+  "target_item": {
+    "item_name": "Ghoul Touch",
+    "mods": [ { "pattern": "+# to maximum Life", "value": 45, "display": "+45 to maximum Life" } ]
+  },
+  "knn": {
+    "summary": { "count": 3, "median": 3100.0, "mean": 3180.5 },
+    "neighbors": [
+      {
+        "item_name": "Ghoul Wrap",
+        "price_exalts": 3100.0, "price_display": "3100e/78c/8d", "price_simple": "3100e",
+        "mods": [ { "pattern": "+# to maximum Life", "value": 42, "display": "+42 to maximum Life" } ]
+      }
+    ]
+  }
+}</code></pre>
+
+        <h4>Response fields</h4>
+        <p>The example above is trimmed. These are the blocks every <code>200</code> response carries. Fields may be added over time, so ignore keys you don't recognise rather than treating them as errors.</p>
+        <table>
+          <thead><tr><th>Field</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><code>request_id</code></td><td>Opaque id for this call. Include it when reporting a problem.</td></tr>
+            <tr><td><code>release.api_version</code></td><td>Version of the StashSage release serving the request. It tracks the overall release &mdash; today it mirrors <code>model_version</code> &mdash; and is <strong>not</strong> an independent response-contract version, so a bump does not by itself mean the schema changed.</td></tr>
+            <tr><td><code>release.model_version</code></td><td>Version of the published model bundle the server has loaded.</td></tr>
+            <tr><td><code>release.build_date</code></td><td>Date that release was built. This is the build date of the API and model bundle, <strong>not</strong> the cutoff of the market data behind the models &mdash; see <a href="#api-freshness">model and data freshness</a>.</td></tr>
+            <tr><td><code>release.training_data_as_of</code></td><td>When the market data behind <em>this</em> prediction was assembled, ISO&nbsp;8601 UTC. This is the freshness signal to display &mdash; see <a href="#api-freshness">model and data freshness</a>. <code>null</code> when the model that answered has no usable timestamp.</td></tr>
+            <tr><td><code>release.model_trained_at</code></td><td>When that model was trained, ISO&nbsp;8601 UTC. Usually minutes after <code>training_data_as_of</code>; the gap is training time, not data age. <code>null</code> when unknown.</td></tr>
+            <tr><td><code>release.build_commit</code>, <code>release.git_sha</code></td><td>Optional build identifiers, present only when the running deployment has them. Handy when reporting a problem; don't depend on them.</td></tr>
+            <tr><td><code>league</code></td><td><code>{"id", "label", "defaulted"}</code> &mdash; the league this prediction was priced against. <code>defaulted</code> is <code>true</code> when the request omitted <code>league</code> and the server's configured default was used. See <a href="#api-leagues"><code>GET /leagues</code></a> for the installed set.</td></tr>
+            <tr><td><code>currency_conversions</code></td><td>The rates this response's display strings were rendered with: <code>divine_to_exalt</code>, <code>chaos_to_exalt</code> (each a whole number of exalts), and a preformatted <code>display</code> line. Read <a href="#api-currency">currency conversions</a> before using them for anything but display.</td></tr>
+            <tr><td><code>xgb.predictions.xgb</code></td><td>Model&nbsp;#1 point estimate, in exalts.</td></tr>
+            <tr><td><code>xgb.bucket</code>, <code>xgb.bucket_low</code>, <code>xgb.bucket_high</code></td><td>Value band the estimate falls into, with band edges in exalts. <code>bucket_high</code> is <code>null</code> for the open-ended top band.</td></tr>
+            <tr><td><code>target_item</code></td><td>The server's own parse of the item you submitted &mdash; name, matched modifier patterns with their values, and computed DPS for weapons. Worth checking when a prediction looks wrong: it shows exactly what the models saw.</td></tr>
+            <tr><td><code>knn.summary</code></td><td><code>count</code> of comparable listings found, plus the <code>median</code> and <code>mean</code> of their prices, in exalts. <code>median</code> and <code>mean</code> are <strong>omitted</strong> &mdash; not <code>null</code> &mdash; when no neighbor had a readable price, so <code>count</code> is the only key guaranteed to be present.</td></tr>
+            <tr><td><code>knn.neighbors</code></td><td>The comparable listings themselves, nearest first (ascending distance from your item). See <a href="#api-neighbors">neighbor objects</a> for the per-neighbor fields.</td></tr>
+            <tr><td><code>xgb_visual</code></td><td>Presentation-shaped copy of the estimate for the desktop overlay and Discord embeds: the same <code>prediction</code>, a bucket label prefixed with a colour block, and <code>color_square</code>. Mirrored to the top level as <code>xgb_bucket</code>, <code>xgb_color_hex</code>, and <code>xgb_color_square</code>. Read <code>xgb</code> instead &mdash; these are display sugar and change with the UI.</td></tr>
+            <tr><td><code>updates</code></td><td>Desktop-updater block, attached only when the deployment has an update manifest configured. Not part of the pricing contract; ignore it.</td></tr>
+          </tbody>
+        </table>
+
+        <h4 id="api-leagues"><span class="api-method">GET</span><code>/leagues</code></h4>
+        <p>Lists the installed leagues you can pass to <code>/predict</code>/<code>/predict-gui</code>, and which one is the default. Same <code>X-API-Key</code> authentication as <code>/predict</code>; no request body.</p>
+        <pre><code>{
+  "default_league": "forbidden-rites",
+  "leagues": [
+    { "id": "forbidden-rites", "label": "Forbidden Rites" },
+    { "id": "runes-of-aldur", "label": "Runes of Aldur" }
+  ],
+  "release": { "api_version": "0.5.17", "model_version": "0.5.17", "build_date": "2026-09-13" }
+}</code></pre>
+        <p class="muted">Only usable, fully-loaded leagues are listed &mdash; check here rather than hardcoding an id, since which leagues are installed (and which is default) can change between releases.</p>
+
+        <h4 id="api-neighbors">Neighbor objects</h4>
+        <p>Each entry of <code>knn.neighbors</code> is one comparable listing. <code>/predict</code> and <code>/predict-gui</code> build neighbors with the same serializer, so these fields are identical on both endpoints.</p>
+        <table>
+          <thead><tr><th>Field</th><th>Always present</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><code>item_name</code></td><td>Yes</td><td>The listing's item name; an empty string when the source row carried no name.</td></tr>
+            <tr><td><code>price_exalts</code></td><td>Yes</td><td>The listing's price in exalts, as a number. <code>null</code> when the row had no readable price. This is the field to compute on.</td></tr>
+            <tr><td><code>price_display</code></td><td>Yes</td><td>The same price preformatted across all three currencies, <code>"&lt;exalt&gt;e/&lt;chaos&gt;c/&lt;divine&gt;d"</code> (for example <code>3100e/78c/8d</code>), each rounded to a whole number using <code>currency_conversions</code>. <code>null</code> when the price is unreadable.</td></tr>
+            <tr><td><code>price_simple</code></td><td>Yes</td><td>Short form in whichever currency the listing was posted in, e.g. <code>8d</code> or <code>3100e</code>. <code>null</code> when the price is unreadable.</td></tr>
+            <tr><td><code>mods</code></td><td>Yes</td><td>The modifiers the neighbor was matched on: <code>pattern</code> (the normalized mod text, with <code>#</code> standing in for the value), <code>value</code>, and a rendered <code>display</code>. May be empty. Entries also carry a comparison against the same mod on your item when your item has it.</td></tr>
+            <tr><td><code>base_type</code>, <code>icon_url</code>, <code>base_category</code></td><td>No</td><td>Present only when the item name resolves to a known base in the icon manifest. Absent &mdash; not <code>null</code> &mdash; otherwise, so test for the key.</td></tr>
+            <tr><td><code>dps</code></td><td>No</td><td>Weapons only: the computed DPS figures for that neighbor.</td></tr>
+            <tr><td><code>stash_name</code></td><td>No</td><td>Present only when the source listing carried one.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>Units</h4>
+        <p>Every price and estimate in the response is a plain number of <strong>exalts</strong> (Exalted Orbs): <code>xgb.predictions.xgb</code>, the bucket edges, <code>knn.summary.median</code>, <code>knn.summary.mean</code>, and neighbor prices alike. Listings posted in divine or chaos are converted to exalts before training and comparison, so exalts are the single canonical unit throughout &mdash; there is no per-field currency to inspect. Use <a href="#api-currency"><code>currency_conversions</code></a> to render a value in another currency.</p>
+
+        <h4 id="api-currency">Currency conversions</h4>
+        <p>The rates in <code>currency_conversions</code> come from the training-time sidecar of whichever league's model answered your request &mdash; they are <strong>not a live market feed</strong>, and they only move when that league is retrained and a new release ships. Because each installed league trains independently, <strong>the same item can convert at different rates in different leagues</strong> &mdash; always read <code>currency_conversions</code> from the response you got rather than caching a rate across leagues. They are exactly what every <code>price_display</code> and <code>price_simple</code> string in that same response was rendered with, which is why those strings are always internally consistent with each other. If you need a current divine or chaos price, take it from a live source and apply it to the exalt numbers yourself.</p>
+
+        <h4 id="api-freshness">Model and data freshness</h4>
+        <p>Listings are re-scraped and models retrained every few days, per category, and published with a StashSage release. Two timestamps in the <code>release</code> block describe the answer you just got:</p>
+        <ul>
+          <li><code>training_data_as_of</code> &mdash; when the feature matrix behind this prediction was assembled from scraped listings. <strong>This is the one to show users.</strong></li>
+          <li><code>model_trained_at</code> &mdash; when the model itself was fitted on that matrix, normally minutes later.</li>
+        </ul>
+        <p>Both are <strong>per model</strong>, not per release: categories retrain independently, so an amulet and a bow answered by the same deployment can legitimately report different dates. Both are also <strong>upper bounds</strong> &mdash; scraping precedes the matrix build, so the newest listing in the training data is somewhat older than the stamp. Neither is an exact market cutoff, and neither should be presented as one.</p>
+        <p>Either can be <code>null</code> when the model that answered carries no usable timestamp; treat that as "unknown" and fall back to <code>release.build_date</code>, which remains a coarse upper bound on the age of everything in the release. The keys are always present, so <code>null</code> means unknown rather than unsupported.</p>
+
+        <h4>Versioning and change notice</h4>
+        <p>Because <code>api_version</code> follows the release rather than the response contract, don't use it to gate on schema changes. Build your client to tolerate added fields, and <a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">ask in Discord</a> if you want notice ahead of a contract change &mdash; the API is best-effort, but we would rather warn integrators than break them.</p>
+
+        <h4 id="api-errors">Errors</h4>
+        <p>Every error response is <code>{"error": {"code", "message", "details"}, "release": {...}}</code>. <code>details</code> is omitted when there is nothing to add; on the codes below it carries <code>request_id</code>. <code>/predict-gui</code> shares <code>/predict</code>'s league selection, authentication, and rate limits, so the same codes apply to both.</p>
+        <table>
+          <thead><tr><th>Status</th><th><code>error.code</code></th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td>400</td><td><code>bad_request</code></td><td><code>item_text</code> is missing, empty, or could not be parsed as a valid item.</td></tr>
+            <tr><td>400</td><td><code>invalid_league</code></td><td>An explicit <code>league</code> value isn't installed, is retired, or is malformed &mdash; it never silently falls back to the default. Check <a href="#api-leagues"><code>GET /leagues</code></a> for valid ids.</td></tr>
+            <tr><td>401</td><td><code>unauthorized</code></td><td>API key is missing, invalid, or revoked.</td></tr>
+            <tr><td>404</td><td><code>no_model</code></td><td>The item's category has no trained pricing model yet.</td></tr>
+            <tr><td>429</td><td><code>rate_limited</code></td><td>Too many requests for this key in the current window; see <code>retry_after_seconds</code>.</td></tr>
+            <tr><td>500</td><td><code>inference_failed</code></td><td>Prediction failed inside the model; include <code>request_id</code> when reporting it.</td></tr>
+            <tr><td>500</td><td><code>internal_error</code></td><td>Unhandled server-side failure. Carries no <code>details</code>, so quote the <code>X-Request-Id</code> header you sent when reporting it.</td></tr>
+            <tr><td>503</td><td><code>league_unavailable</code></td><td><code>league</code> was omitted and the server has no valid default league configured (for example, multiple leagues installed with none chosen as default). Pass an explicit <code>league</code> from <a href="#api-leagues"><code>GET /leagues</code></a>.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- ===== Legal / Policies (single-page anchors for TikTok form) ===== -->
+    <details class="section legal" id="policies">
+      <summary><h2>Legal</h2></summary>
+      <div class="section-body">
+
+      <h3 id="terms">Terms of Service</h3>
+      <p>
+        By downloading or using StashSage, you agree to these terms. This software is provided
+        "as is," without warranties of any kind. You are responsible for how you use the app and for
+        compliance with the terms of any third-party services you access. We may update or discontinue
+        features at any time. To the maximum extent permitted by law, we are not liable for indirect,
+        incidental, or consequential damages arising from use of the app.
+      </p>
+      <p>Contact: <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a></p>
+
+      <h3 id="privacy">Privacy Policy</h3>
+      <p>
+        StashSage is designed for local operation. <strong>We do not collect, store, or sell personal
+        data.</strong> Any data processed by the app (e.g., configuration, model inputs/outputs) stays on
+        your device. If the app calls third-party APIs you authorize, the data is transmitted only as
+        required to perform the requested operation and is not retained by us. Crash logs or analytics are
+        not sent to our servers.
+      </p>
+      <p>
+        If this policy changes in the future, we will update this page and the app's release notes.
+        For questions or requests, email <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a>.
+      </p>
+
+      <p class="muted" style="margin-top:8px">
+        Quick links: <a href="#terms">Terms of Service</a> - <a href="#privacy">Privacy Policy</a>
+      </p>
+    </div>
+    </details>
+    <!-- ===== /Legal ===== -->
+
+    <details class="section" id="datawiseguys">
+      <summary><h2>Explore DataWiseGuys</h2></summary>
+      <div class="section-body">
+      <p>Interested in learning more about other DataWiseGuys projects? Check them out below.</p>
+      <div class="dwg-project">
+        <a class="dwg-link" href="https://rheinze08.github.io/SocialSync_Public/" target="_blank" rel="noopener">
+          <img class="dwg-logo" src="socialsync_logo.png" alt="SocialSync logo">
+          <span>SocialSync</span>
+        </a>
+        <span class="dwg-desc">- Seen us posting on X or Instagram? That was probably SocialSync, our social media automation app, doing the work. Check it out!</span>
+      </div>
+      <p>Want to brainstorm developing your own app with analytics or machine learning? <a href="mailto:datawiseguysllc@gmail.com">Reach out to us</a>.</p>
+      </div>
+    </details>
+
+  </main>
+
+  <footer>
+    <p>
+      Version 0.5.20 &bull; &copy; Data WiseGuys, LLC. &bull;
+      <a href="https://github.com/rheinze08/StashSage" target="_blank" rel="noopener">GitHub Source Code</a>
+      &bull; <a href="#terms">Terms</a> &bull; <a href="#privacy">Privacy</a>
+    </p>
+    <div class="disclaimer">
+      This product isn't affiliated with or endorsed by Grinding Gear Games in any way.
+    </div>
+  </footer>
+
+  <script>
+    // If BUILD_DATE wasn't injected by Jinja, fill it in on the client.
+    (function () {
+      var el = document.getElementById('build-date');
+      if (el && !el.textContent.trim()) {
+        var now = new Date();
+        el.textContent = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'numeric'});
+      }
+    })();
+
+    // Tabbed usage guides (StashSage / StashScrape)
+    (function () {
+      const tabsets = document.querySelectorAll('[data-tabset]');
+      if (!tabsets.length) { return; }
+
+      function activate(tabset, nextTab, focusTab) {
+        const tabs = Array.from(tabset.querySelectorAll('[role="tab"]'));
+        const panels = Array.from(tabset.querySelectorAll('[role="tabpanel"]'));
+        const targetId = nextTab.dataset.tabTarget;
+
+        tabs.forEach((tab) => {
+          const isActive = (tab === nextTab);
+          tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          tab.tabIndex = isActive ? 0 : -1;
+        });
+
+        panels.forEach((panel) => {
+          panel.hidden = (panel.id !== targetId);
+        });
+
+        if (focusTab) {
+          nextTab.focus();
+        }
+      }
+
+      function wireTabset(tabset) {
+        const tabs = Array.from(tabset.querySelectorAll('[role="tab"]'));
+        if (!tabs.length) { return; }
+
+        tabs.forEach((tab, idx) => {
+          tab.addEventListener('click', function () {
+            activate(tabset, tab, false);
+          });
+
+          tab.addEventListener('keydown', function (event) {
+            let nextIdx = null;
+            if (event.key === 'ArrowRight') nextIdx = (idx + 1) % tabs.length;
+            if (event.key === 'ArrowLeft') nextIdx = (idx - 1 + tabs.length) % tabs.length;
+            if (event.key === 'Home') nextIdx = 0;
+            if (event.key === 'End') nextIdx = tabs.length - 1;
+            if (nextIdx === null) { return; }
+
+            event.preventDefault();
+            activate(tabset, tabs[nextIdx], true);
+          });
+        });
+
+        const hashId = window.location.hash ? window.location.hash.slice(1) : '';
+        const hashMatch = tabs.find((tab) => tab.dataset.tabTarget === hashId);
+        const selected = hashMatch || tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+        activate(tabset, selected, false);
+      }
+
+      tabsets.forEach(wireTabset);
+    })();
+
+    // Dynamic Feature Importances Section
+    (function(){
+      // Each trained league keeps its own weights; the flat super_models tree
+      // is only ever a copy of whichever league trained last. Prefer the
+      // published per-league sets and fall back to the flat manifest so a
+      // deploy made before the sets were published still renders.
+      const setsIndexUrl = 'poe2trade/db/model_sets/index.json';
+      const setsBase     = 'poe2trade/db/model_sets/';
+      const leagueField = document.getElementById('fi-league-field');
+      const leagueSel   = document.getElementById('fi-league');
+      const noteEl      = document.getElementById('fi-league-note');
+      const catSel = document.getElementById('fi-category');
+      const segSel = document.getElementById('fi-segment');
+      const table  = document.getElementById('fi-table');
+      const tbody  = table.querySelector('tbody');
+      const acc    = document.getElementById('fi-accordion');
+
+      function uniq(arr){ return Array.from(new Set(arr)); }
+      function percent(x){ return (x*100).toFixed(2) + '%'; }
+      const FEATURE_LABELS = { ar_norm: 'armour', ev_norm: 'evasion', es_norm: 'energy shield' };
+      const NONE = '__NONE__';
+
+      function renderRows(features){
+        tbody.innerHTML='';
+        const sorted=[...features].sort((a,b)=>b.importance-a.importance);
+        const top = sorted.slice(0, 10);
+        top.forEach((f,i)=>{
+          const tr=document.createElement('tr');
+          const name = FEATURE_LABELS[f.name] || f.name;
+          tr.innerHTML = `<td>${i+1}</td><td>${name}</td><td>${percent(f.importance)}</td>`;
+          tbody.appendChild(tr);
+        });
+        table.style.display = top.length? 'table' : 'none';
+      }
+
+      function populateSegments(entries, cat){
+        const segs = uniq(entries.filter(e=>e.category===cat).map(e=>e.segment||NONE));
+        const segOpts = segs
+          .map(s => ({ value: s, label: (s===NONE ? '(none)' : s) }))
+          .sort((a,b) => {
+            if (a.value===NONE && b.value!==NONE) return -1;
+            if (a.value!==NONE && b.value===NONE) return 1;
+            return a.label.localeCompare(b.label);
+          });
+        segSel.innerHTML = segOpts.map(o=>`<option value=\"${o.value}\">${o.label}</option>`).join('');
+      }
+
+      function pickEntry(entries, cat, seg){
+        return entries.find(e=>e.category===cat && ((seg===NONE&&!e.segment) || e.segment===seg));
+      }
+
+      let entries = [];
+      let leagueRequest = 0;
+      const manifestCache = {};
+
+      function fetchJson(url){
+        return fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
+      }
+
+      function loadManifest(url){
+        if (manifestCache[url]) { return Promise.resolve(manifestCache[url]); }
+        return fetchJson(url).then(data => {
+          const rows = Array.isArray(data) ? data : [];
+          manifestCache[url] = rows;
+          return rows;
+        });
+      }
+
+      function populateCategories(){
+        const prevCat = catSel.value;
+        const cats = uniq(entries.map(e=>e.category));
+        const catOpts = cats
+          .map(c => ({ value: c, label: c.replace(/_/g,' ').toUpperCase() }))
+          .sort((a,b) => a.label.localeCompare(b.label));
+        catSel.innerHTML = catOpts.map(o=>`<option value="${o.value}">${o.label}</option>`).join('');
+        // Keep the reader on the category they were reading when the league
+        // changes; a league that never trained it falls back to the first.
+        if (catOpts.some(o => o.value === prevCat)) { catSel.value = prevCat; }
+      }
+
+      function refresh(){
+        const cat = catSel.value;
+        const prevSeg = segSel.value || NONE;
+        populateSegments(entries, cat);
+        let seg = prevSeg;
+        if (Array.from(segSel.options).some(o => o.value === prevSeg)) {
+          segSel.value = prevSeg;
+        } else {
+          seg = segSel.value || NONE;
+        }
+        const entry = pickEntry(entries, cat, seg);
+        let feats = entry? entry.features: [];
+        const isShieldLike = cat === 'shield' || cat === 'buckler';
+        feats = feats.filter(f => {
+          const name = String(f.name).trim().toLowerCase();
+          if (isShieldLike) return name !== '#% increased block chance';
+          return !name.includes('block');
+        });
+        renderRows(feats);
+        if(entry){ acc.open = true; }
+      }
+
+      function showLeague(sets){
+        const request = ++leagueRequest;
+        entries = [];
+        renderRows([]);
+        const set = sets.filter(s => s.id === leagueSel.value)[0] || null;
+        const note = (set && set.note) ? set.note : '';
+        noteEl.textContent = note;
+        noteEl.style.display = note ? '' : 'none';
+        return (set ? loadManifest(setsBase + set.manifest) : Promise.resolve([])).then(rows => {
+          if (request !== leagueRequest) return;
+          entries = rows;
+          populateCategories();
+          refresh();
+        });
+      }
+
+      fetchJson(setsIndexUrl).then(index => {
+        const sets = (index && Array.isArray(index.sets)) ? index.sets : [];
+        if (sets.length) {
+          leagueSel.innerHTML = sets.map(s=>`<option value="${s.id}">${s.label}</option>`).join('');
+          // Open on the published default league, so the page and the
+          // desktop app agree on which set is the default.
+          if (index.default && sets.some(s => s.id === index.default)) {
+            leagueSel.value = index.default;
+          }
+          leagueField.style.display = '';
+          leagueSel.addEventListener('change', function(){ showLeague(sets); });
+        }
+        catSel.addEventListener('change', refresh);
+        segSel.addEventListener('change', refresh);
+        showLeague(sets);
+      });
+    })();
+  </script>
+</body>
+</html>
