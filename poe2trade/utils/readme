@@ -1,0 +1,91 @@
+# poe2trade.utils Submodule
+
+## Overview
+
+The `poe2trade.utils` package contains the shared helpers used by the offline
+data pipeline and the StashSage desktop overlays. It covers chart generation,
+clipboard/item parsing, feature engineering, model inference, scraping helpers,
+icon generation, and release artifact utilities.
+
+Use the Python versions supported by the root package: Python 3.11, 3.12, or
+3.13. Python 3.14 is not supported yet because some pinned native wheels are
+not published for it.
+
+## Key Modules
+
+1) `chart_utils.py`
+   - Renders overlay charts and tables for supervised predictions.
+   - Generates bucket-confidence and distribution-profile visuals.
+   - Used by `poe2trade/app/gui_tk.py`.
+
+2) `gui_utils.py`
+   - Parses copied item text, normalizes quality/defence values, flattens
+     rolled mod patterns, and builds feature DataFrames.
+   - Exposes `main(text, key)` and prepared-call helpers used by the overlays.
+   - Defines defence-pattern constants used to hide raw AR/EV/ES modifiers in
+     the UI while keeping normalized defence features.
+
+3) `log_utils.py`
+   - Reverse-scans and parses Path of Exile client logs into trade rows.
+   - Deduplicates offers by buyer, item name, amount, and currency.
+
+4) `matrix_utils.py`
+   - Builds overlay and model feature matrices from parsed parquet files.
+   - Handles armour defence normalization, jewellery quality deflation, and
+     belt charm-slot feature collapse.
+   - Used by `poe2trade/db/matrix_cat.py`.
+
+5) `ml_super_utils.py`
+   - Loads supervised regressors, aligns runtime features to trained models,
+     predicts prices, aggregates model outputs, and applies bucket statistics.
+   - Used by the supervised overlay and scoring pipeline.
+
+6) `ml_unsuper_utils.py`
+   - Loads KNN bundles and returns nearest-neighbor comparisons after applying
+     the runtime price filter.
+   - Used by the Price Mirror overlay.
+
+7) `parse_utils.py`
+   - Flattens trade API JSON and copied item text into normalized item fields,
+     mod patterns, prices, quality, and defences.
+   - Shared by parsing, matrix generation, and runtime clipboard handling.
+
+8) `score_super_utils.py`
+   - Scores feature matrices with trained supervised models.
+   - Writes scoring sidecars and `category_segment_stats.json`, including the
+     distribution profiles consumed by the runtime overlay.
+
+9) `train_utils.py`
+   - Trains supervised and unsupervised model artifacts.
+   - Writes model readmes and feature-importance manifests when available.
+
+10) Legacy scraper helpers
+   - Browser-driven and direct-request scraping helpers live under
+     `poe2trade/db/legacy_scrapers/`.
+   - Used by the offline data acquisition flow.
+
+11) `get_icon_utils.py`
+   - Rebuilds `db/files/base_images.json` and downloads base-type icons into
+     `db/base_icons/`.
+
+12) `super_artifact_utils.py`
+   - Promotes generated supervised scoring sidecars into `db/super_models/` so
+     release validation and downstream sync use the same artifacts that runtime
+     code will load.
+
+## Data Flow
+
+1. Scrape JSON into `poe2trade/db/files/<Category>/`.
+2. Parse JSON into aggregated tables.
+3. Build overlay and model matrices.
+4. Train supervised and unsupervised models.
+5. Score supervised models and promote scoring sidecars.
+6. The app loads generated per-user assets first, falling back to bundled
+   package assets when no generated copy exists.
+
+## Related Documentation
+
+- Documentation index: `docs/README.md`
+- Root setup, release, and downstream sync: `README.md`
+- Offline pipeline layout: `poe2trade/db/readme`
+- Current implementation backlog: `docs/IMPLEMENTATION_NOTES.md`
