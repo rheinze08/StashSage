@@ -616,6 +616,7 @@ def parse_item_json(
     category: str | None = None,  # kept for backwards compat; ignored
     output_excel_file: str | None = None,
     affix_observer: Callable[[Mapping[str, Any]], None] | None = None,
+    include_lineage: bool = False,
 ) -> pd.DataFrame:
     """
     Read a PoE trade-API JSON dump and return a tidy DataFrame.
@@ -680,7 +681,8 @@ def parse_item_json(
     }
 
     rows: List[Dict] = []
-    for e in entries:
+    exclusions = []
+    for source_record, e in enumerate(entries):
         try:
             itm = e.get("item", e)
             listing = (e.get("listing") or {}) if isinstance(e, Mapping) else {}
@@ -690,6 +692,8 @@ def parse_item_json(
                 "name":     itm.get("name"),
                 "base":     itm.get("baseType") or itm.get("base"),
             }
+            if include_lineage:
+                rec["_research_source_record"] = source_record
             if category_norm == "waystone":
                 for candidate in (rec.get("base"), rec.get("name"), itm.get("baseType")):
                     tier_match = re.search(r"(?i)\bWaystone\s*\(\s*Tier\s*(\d+)\s*\)", str(candidate or ""))
@@ -713,6 +717,7 @@ def parse_item_json(
             if buyout_only:
                 ltype = listing.get("price", {}).get("type")
                 if not (isinstance(ltype, str) and ltype.startswith("~b/o")):
+                    exclusions.append({"record": source_record, "reason": "buyout_filter"})
                     continue
 
             # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ write per-slot groups (no merging) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -885,6 +890,9 @@ def parse_item_json(
                 | s.apply(lambda c: c.str.contains(r"bears", case=False, regex=True))  # abyssal lord
                 | s.apply(lambda c: c.str.contains(r"on corruption", case=False, regex=True))
             ).any(axis=1)
+            if include_lineage:
+                exclusions.extend({"record": int(i), "reason": "modifier_filter"}
+                                  for i in df.loc[bad, "_research_source_record"])
             df = df[~bad]
 
     # drop helper-only columns that should never be emitted
@@ -903,6 +911,15 @@ def parse_item_json(
     existing_front = [c for c in front if c in df.columns]
     others = [c for c in df.columns if c not in existing_front]
     df = df[existing_front + others]
+
+    # Source positions must never become numeric training features.
+    if include_lineage:
+        records = df.pop("_research_source_record").astype(int).tolist() if "_research_source_record" in df else []
+        df.attrs["source_records"] = records
+        accepted = set(records)
+        excluded = {e["record"]: e for e in exclusions}
+        df.attrs["excluded_records"] = [excluded.get(i, {"record": i, "reason": "category_filter_or_parse_error"})
+                                        for i in range(len(entries)) if i not in accepted]
 
     if df.empty:
         print("âš ï¸  parse_item_json produced an EMPTY DataFrame.")
