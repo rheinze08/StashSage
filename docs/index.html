@@ -292,8 +292,8 @@
     </div>
     <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
     <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.4 GB of disk space on Windows.</em></p>
-    <p class="install-note"><strong>Android v0.5.22 (latest signed APK):</strong> Desktop downloads above are v0.5.23. For Android, open the APK on an Android 8+ phone and allow your browser to install apps when asked. It needs a StashSage API key &mdash; <a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">ask in Discord</a>.</p>
-    <p class="trust"><strong><em>The desktop app prices items locally; no item or account data is sent to StashSage. The Android StashScrape sends your public trade listings to the StashSage server to price them.</em></strong></p>
+    <p class="install-note"><strong>Android v0.5.22 (latest signed APK):</strong> Desktop downloads above are v0.5.23. For Android, open the APK on an Android 8+ phone and allow your browser to install apps when asked. No API key is required; pricing runs on your phone using models bundled with the app.</p>
+    <p class="trust"><strong><em>The desktop and Android apps price items locally; no item or account data is sent to StashSage for pricing.</em></strong></p>
     <div class="hero-shot">
       <img src="stashsage_prediction_gui.png" alt="StashSage prediction overlay showing price estimates and comparable Path of Exile 2 items">
     </div>
@@ -510,13 +510,13 @@
           </ol>
           
           <h3>StashScrape on Android</h3>
-          <p>The <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.22/StashSageAndroid.apk">Android app</a> runs the same StashScrape from your phone, on your phone's connection, and the StashSage server prices the listings with the newest models.</p>
+          <p>The <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.22/StashSageAndroid.apk">Android app</a> runs the same StashScrape from your phone, on your phone's connection, and prices listings locally using models bundled with the app. No API key is required.</p>
           <ol>
             <li>Enter your Trade API username, pick the league, and set <strong>Wait Between Searches</strong> (120&ndash;300&nbsp;s is safest).</li>
             <li>Choose <strong>All Listings</strong> or <strong>Merchant Only</strong> and the categories to scrape.</li>
-            <li>Under <strong>Server and API key</strong>, enter your StashSage API key (ask in Discord) and tap <strong>Test connection</strong>.</li>
+            <li>Models are bundled with the app and installed automatically on first use. Install a newer APK to update the models.</li>
             <li>Tap <strong>Run StashScrape</strong>. It keeps running in the background with a progress notification and a Stop button.</li>
-            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see what sold since your last run. <strong>Re-price</strong> prices a saved run again with newer models.</li>
+            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see what sold since your last run. <strong>Re-price</strong> prices a saved run again with the models installed on your phone.</li>
           </ol>
           <p>Each run is saved in the desktop's StashScrape folder layout: share it, or pick a folder to save copies to, and the desktop's StashScrape viewer opens it.</p>
 
@@ -556,7 +556,7 @@
         </div>
         <div class="faq-item">
           <h3>Does StashSage upload my item or account data?</h3>
-          <p>The desktop application performs its normal pricing operations locally. The Android StashScrape is the exception by design: it sends your public trade listings to the StashSage server so the server can price them. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
+          <p>The desktop application performs its normal pricing operations locally. Android StashScrape also prices listings locally using bundled models and requires no API key. It fetches public listings from the Path of Exile trade site using your phone's connection. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
         </div>
         <div class="faq-item">
           <h3>Which operating systems are supported?</h3>
@@ -757,11 +757,10 @@
       </p>
       <p>
         The StashSage Android app (StashScrape) searches the Path of Exile trade site for the public
-        listings of the account you enter, from your phone, and sends those listings as the trade site
-        returns them to the StashSage server to be priced. The server answers the request and does not
-        keep the listings; like every API call, the request is counted against your API key. Your account
-        name, API key and saved runs stay on your phone, and the app fetches live currency rates from
-        poe2scout and poe.ninja.
+        listings of the account you enter using your phone's connection. It prices those listings locally
+        using models bundled with the APK; no listings are sent to StashSage for pricing and no API key
+        is required. Your account name and saved runs stay on your phone. The app fetches live currency
+        rates from poe2scout and poe.ninja and checks the StashSage server for app updates.
       </p>
       <p>
         If this policy changes in the future, we will update this page and the app's release notes.
