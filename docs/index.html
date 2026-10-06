@@ -89,22 +89,23 @@
           "name": "StashSage",
           "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
           "applicationCategory": "UtilitiesApplication",
-          "operatingSystem": "Windows, Linux",
+          "operatingSystem": "Windows, Linux, Android",
           "softwareVersion": "0.5.23",
           "url": "https://rheinze08.github.io/StashSage/",
           "isAccessibleForFree": true,
-          "softwareRequirements": "Windows or Linux; Path of Exile 2",
+          "softwareRequirements": "Windows or Linux (desktop), Android 8+ (StashScrape); Path of Exile 2",
           "featureList": [
             "POE2 rare-item price predictions",
             "Comparable listing analysis",
             "Modifier importance insights",
             "Stash pricing data export",
-            "Local desktop processing"
+            "Local desktop processing",
+            "Android stash scrape companion"
           ],
           "dateModified": "2026-10-05",
           "releaseNotes": "https://github.com/rheinze08/StashSage/releases/tag/v0.5.23",
           "sameAs": "https://github.com/rheinze08/StashSage",
-          "downloadUrl": ["https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageWindows.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageLinux.zip"],
+          "downloadUrl": ["https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageWindows.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageLinux.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.22/StashSageAndroid.apk"],
           "author": {
             "@type": "Person",
             "name": "Budodude"
@@ -286,13 +287,13 @@
     <div class="header-actions">
       <a id="download-windows" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageWindows.zip">Download for Windows (.zip)</a>
       <a id="download-linux" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.23/StashSageLinux.zip">Download for Linux (.zip)</a>
-      
+      <a id="download-android" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.22/StashSageAndroid.apk">Download for Android v0.5.22 (.apk)</a>
       <a class="btn secondary" href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join Discord</a>
     </div>
     <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
     <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.4 GB of disk space on Windows.</em></p>
-    
-    <p class="trust"><strong><em>The desktop app prices items locally; no item or account data is sent to StashSage.</em></strong></p>
+    <p class="install-note"><strong>Android v0.5.22 (latest signed APK):</strong> Desktop downloads above are v0.5.23. For Android, open the APK on an Android 8+ phone and allow your browser to install apps when asked. It needs a StashSage API key &mdash; <a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">ask in Discord</a>.</p>
+    <p class="trust"><strong><em>The desktop app prices items locally; no item or account data is sent to StashSage. The Android StashScrape sends your public trade listings to the StashSage server to price them.</em></strong></p>
     <div class="hero-shot">
       <img src="stashsage_prediction_gui.png" alt="StashSage prediction overlay showing price estimates and comparable Path of Exile 2 items">
     </div>
@@ -508,6 +509,17 @@
             <li>Upon pipeline completion, fetch the output file from the target directory.</li>
           </ol>
           
+          <h3>StashScrape on Android</h3>
+          <p>The <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.22/StashSageAndroid.apk">Android app</a> runs the same StashScrape from your phone, on your phone's connection, and the StashSage server prices the listings with the newest models.</p>
+          <ol>
+            <li>Enter your Trade API username, pick the league, and set <strong>Wait Between Searches</strong> (120&ndash;300&nbsp;s is safest).</li>
+            <li>Choose <strong>All Listings</strong> or <strong>Merchant Only</strong> and the categories to scrape.</li>
+            <li>Under <strong>Server and API key</strong>, enter your StashSage API key (ask in Discord) and tap <strong>Test connection</strong>.</li>
+            <li>Tap <strong>Run StashScrape</strong>. It keeps running in the background with a progress notification and a Stop button.</li>
+            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see what sold since your last run. <strong>Re-price</strong> prices a saved run again with newer models.</li>
+          </ol>
+          <p>Each run is saved in the desktop's StashScrape folder layout: share it, or pick a folder to save copies to, and the desktop's StashScrape viewer opens it.</p>
+
 
           <div class="gallery">
             <a href="stashsage_stash_scrape_menu.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_menu.png" alt="StashSage StashScrape menu selection"></a>
@@ -544,11 +556,11 @@
         </div>
         <div class="faq-item">
           <h3>Does StashSage upload my item or account data?</h3>
-          <p>The desktop application performs its normal pricing operations locally. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
+          <p>The desktop application performs its normal pricing operations locally. The Android StashScrape is the exception by design: it sends your public trade listings to the StashSage server so the server can price them. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
         </div>
         <div class="faq-item">
           <h3>Which operating systems are supported?</h3>
-          <p>Portable downloads are available for Windows and Linux. Windows users extract the complete ZIP and keep <code>StashSage.exe</code> beside its <code>_internal</code> directory.</p>
+          <p>Portable downloads are available for Windows and Linux. Windows users extract the complete ZIP and keep <code>StashSage.exe</code> beside its <code>_internal</code> directory. StashScrape is also available as an Android app (Android 8 or later).</p>
         </div>
         <div class="faq-item">
           <h3>What display mode should Path of Exile 2 run in?</h3>
