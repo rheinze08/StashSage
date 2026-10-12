@@ -35,6 +35,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -248,6 +250,8 @@
     .tab-panel{padding-top:18px}
     .tab-panel h3{font-size:1.1rem;margin-bottom:10px;color:#1f3c55}
     .tab-panel .gallery{margin-top:12px}
+    #using-stashwatch .table-wrap{overflow-x:auto}
+    #using-stashwatch p, #using-stashwatch li{overflow-wrap:anywhere}
     /* Legal section */
     .section.legal{background:#fff}
     .section.legal h3{font-size:1.1rem;margin-top:16px;color:#1f3c55}
@@ -441,6 +445,17 @@
           >
             StashScrape
           </button>
+          <button
+            type="button"
+            class="tab-button"
+            role="tab"
+            id="tab-stashwatch"
+            aria-selected="false"
+            aria-controls="using-stashwatch"
+            data-tab-target="using-stashwatch"
+          >
+            StashWatch
+          </button>
         </div>
 
         <section class="tab-panel" id="feature-discord-api" role="tabpanel" aria-labelledby="tab-discord-api">
@@ -527,6 +542,60 @@
             <a href="stashsage_stash_scrape_output.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_output.png" alt="StashSage StashScrape output files directory"></a>
           </div>
         </section>
+
+        <section class="tab-panel" id="using-stashwatch" role="tabpanel" aria-labelledby="tab-stashwatch" hidden>
+          <h3>StashWatch &mdash; follow your listings over time</h3>
+          <div class="callout"><strong>Coming in the next desktop release.</strong> The current v0.5.23 downloads predate StashWatch. This guide describes the new workflow.</div>
+          <p>StashWatch periodically checks the trade site for your public listings and keeps a local history of new listings, price changes, disappearances and items that appear again. Use its own <strong>StashWatch</strong> tab in the desktop sidebar to set up and review a watch.</p>
+
+          <h3 style="margin-top:20px;">Set up a watch</h3>
+          <ol>
+            <li>Enter your account name and choose the trade league.</li>
+            <li>Choose <strong>Merchant</strong> or <strong>All public listings</strong>, then watch all categories or select individual categories.</li>
+            <li>Set <strong>Check every</strong> to <strong>15 minutes</strong>, <strong>30 minutes</strong>, <strong>1 hour</strong>, <strong>2 hours</strong>, or a <strong>Custom</strong> number of minutes. The default is 30 minutes.</li>
+            <li>Press <strong>Start watching</strong>. <strong>Pause</strong> stops the timer and cancels a running check; <strong>Check now</strong> requests a manual check, including while paused.</li>
+            <li>Review <strong>Last checked</strong>, <strong>Next check</strong>, and whether the latest check was complete. Browse <strong>Current Listings</strong> and <strong>Activity</strong>, or export listings to CSV.</li>
+          </ol>
+          <p>Your saved watches and history survive app restarts. Enabled watches resume when the app starts again. Checks run one at a time and respect trade-site rate limits; the next scheduled check follows the previous check's completion.</p>
+
+          <h3 style="margin-top:20px;">Read the activity</h3>
+          <div class="table-wrap"><table aria-label="StashWatch activity types">
+            <thead><tr><th>Activity</th><th>What was observed</th></tr></thead>
+            <tbody>
+              <tr><td>Listed</td><td>A listing appeared for the first time.</td></tr>
+              <tr><td>Price changed</td><td>The same listing had a different price amount or currency.</td></tr>
+              <tr><td>No longer observed</td><td>A previously seen listing was absent from a complete, comparable check.</td></tr>
+              <tr><td>Appeared again</td><td>A missing listing became visible again.</td></tr>
+            </tbody>
+          </table></div>
+          <div class="callout"><strong>A disappearance does not confirm a sale.</strong> The item may have sold, been delisted, or moved out of public visibility. StashWatch records when it was last seen and when its absence was observed. Incomplete or capped checks retain unseen listings instead of recording disappearances.</div>
+          <p>Changing the account, league, listing type or categories starts a fresh comparison baseline and preserves the earlier history. StashWatch observes public listings and their listed prices; it does not inspect private inventory or change your prices.</p>
+
+          <h3 style="margin-top:20px;">Use it from your phone or an agent</h3>
+          <p>The optional phone web view works in a browser on iPhone, iPad or Android. Scraping and history stay on your desktop, so StashSage must remain running and the computer must stay awake. Minimizing the app to the tray keeps checks active, even if your phone disconnects.</p>
+          <ol>
+            <li>In the desktop StashWatch tab, enable <strong>HTTP access for phones and agents</strong>. Access is off by default. The default local port is <code>5006</code>.</li>
+            <li>Use <strong>Copy API token</strong> to copy your private access token. <strong>Open phone view</strong> lets you try the page on your desktop.</li>
+            <li>With Tailscale installed and connected on your desktop and phone, expose the local service privately using <a href="https://tailscale.com/docs/features/tailscale-serve" target="_blank" rel="noopener">Tailscale Serve</a>:</li>
+          </ol>
+          <pre><code>tailscale serve --bg --https=10000 http://127.0.0.1:5006</code></pre>
+          <p>Open the HTTPS address reported by Tailscale on your phone and enter your token. The phone view offers the same settings, controls, listings and activity as the desktop. An agent's tool runner needs access to the same Tailscale network and your token to connect.</p>
+          <details style="margin-top:16px;">
+            <summary><strong>HTTP API for agents and integrations</strong></summary>
+            <p>Send <code>Authorization: Bearer &lt;token&gt;</code> or <code>X-API-Key: &lt;token&gt;</code> with every API request to your own desktop service.</p>
+            <ul>
+              <li><code>GET /stash/catalog</code> &mdash; list categories and known leagues.</li>
+              <li><code>GET /stash/watches</code> and <code>POST /stash/watches</code> &mdash; read or save watches.</li>
+              <li><code>PATCH /stash/watches/{id}</code> &mdash; edit settings while no check is running.</li>
+              <li><code>POST /stash/watches/{id}/start</code>, <code>/pause</code> or <code>/check</code> &mdash; control a watch. A manual check returns a job ID.</li>
+              <li><code>GET /stash/runs/{id}</code> &mdash; read a job's status.</li>
+              <li><code>GET /stash/watches/{id}/listings</code> &mdash; read last-known listings; append <code>?format=csv</code> to download CSV.</li>
+              <li><code>GET /stash/watches/{id}/events?after=0</code> &mdash; read chronological activity. Save the returned <code>next_cursor</code> and use it as the next <code>after</code> value to avoid logging events twice.</li>
+            </ul>
+            <p>This local monitoring API is separate from the hosted item-pricing API. Watches are created paused; start one or request a manual check after saving its account, league, listing type, categories and interval.</p>
+          </details>
+          <p>To stop monitoring, press <strong>Pause</strong>. To stop HTTP access, disable its option or exit StashSage. Remove this Tailscale proxy with <code>tailscale serve --https=10000 off</code>.</p>
+        </section>
       </div>
       </div>
     </details>
@@ -557,6 +626,7 @@
         <div class="faq-item">
           <h3>Does StashSage upload my item or account data?</h3>
           <p>The desktop application performs its normal pricing operations locally. Android StashScrape also prices listings locally using bundled models and requires no API key. It fetches public listings from the Path of Exile trade site using your phone's connection. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
+          <p>StashWatch saves your account settings and listing history locally on your desktop. Its optional phone and agent access shares that history through the authenticated service you enable on your own computer.</p>
         </div>
         <div class="faq-item">
           <h3>Which operating systems are supported?</h3>
@@ -763,6 +833,13 @@
         rates from poe2scout and poe.ninja and checks the StashSage server for app updates.
       </p>
       <p>
+        StashWatch stores watch settings, listing observations and activity history on your desktop.
+        Its optional HTTP service is disabled by default and requires your private access token.
+        If you enable phone or agent access, those clients can read and control your watches through
+        your own connection. An agent provider's handling of information you share is governed by
+        that provider's policies.
+      </p>
+      <p>
         If this policy changes in the future, we will update this page and the app's release notes.
         For questions or requests, email <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a>.
       </p>
@@ -812,7 +889,7 @@
       }
     })();
 
-    // Tabbed usage guides (StashSage / StashScrape)
+    // Feature guides share click, keyboard and direct-link navigation.
     (function () {
       const tabsets = document.querySelectorAll('[data-tabset]');
       if (!tabsets.length) { return; }
