@@ -526,7 +526,7 @@
             <li>Upon pipeline completion, fetch the output file from the target directory.</li>
           </ol>
           <h3>Agent access to listing snapshots</h3>
-          <p>An agent on your Tailscale network can request a one-off snapshot of your public listings through the desktop's authenticated StashWatch service. Enable <strong>HTTP access for phones and agents</strong> in StashWatch, then give the agent your private service address and token.</p>
+          <p>An agent on your Tailscale network can request a one-off snapshot of your public listings through the desktop's authenticated StashWatch service. Follow <strong>StashWatch &rarr; Use it from your phone or an agent</strong> below to connect Tailscale and obtain the HTTPS phone link and desktop access token. Put them into the agent's secure connection settings.</p>
           <p>Save a watch with your account, league, listing type and categories, leave it paused, and request <strong>Check now</strong>. The agent can follow the job's progress and retrieve the observed listings and asking prices as JSON or CSV. See <strong>StashWatch &rarr; Use it from your phone or an agent</strong> for setup and API calls.</p>
           <p>The current HTTP API returns listing snapshots and activity history. Model valuations and the full StashScrape output are available by running StashScrape on your desktop or Android device.</p>
           
@@ -537,7 +537,7 @@
             <li>Choose <strong>All Listings</strong> or <strong>Merchant Only</strong> and the categories to scrape.</li>
             <li>Models are bundled with the app and installed automatically on first use. Install a newer APK to update the models.</li>
             <li>Tap <strong>Run StashScrape</strong>. It keeps running in the background with a progress notification and a Stop button.</li>
-            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see what sold since your last run. <strong>Re-price</strong> prices a saved run again with the models installed on your phone.</li>
+            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see which listings disappeared since your last run (a sale is not confirmed). <strong>Re-price</strong> prices a saved run again with the models installed on your phone.</li>
           </ol>
           <p>Each run is saved in the desktop's StashScrape folder layout: share it, or pick a folder to save copies to, and the desktop's StashScrape viewer opens it.</p>
 
@@ -578,14 +578,29 @@
           <p>Changing the account, league, listing type or categories starts a fresh comparison baseline and preserves the earlier history. StashWatch observes public listings and their listed prices; it does not inspect private inventory or change your prices.</p>
 
           <h3 style="margin-top:20px;">Use it from your phone or an agent</h3>
-          <p>The optional phone web view works in a browser on iPhone, iPad or Android. Scraping and history stay on your desktop, so StashSage must remain running and the computer must stay awake. Minimizing the app to the tray keeps checks active, even if your phone disconnects.</p>
+          <p>Choose where the checks run before setting up a connection:</p>
+          <div class="table-wrap"><table aria-label="Phone and desktop connection choices"><thead><tr><th>How you use StashSage</th><th>Where checks run</th><th>What you need</th></tr></thead><tbody>
+            <tr><td>Desktop StashScrape or StashWatch</td><td>Your PC</td><td>StashSage on the PC. No Tailscale or token.</td></tr>
+            <tr><td>Android StashScrape, or StashWatch &rarr; This phone</td><td>Your Android phone</td><td>The Android app. No PC, Tailscale or token. StashScrape prices locally with bundled models.</td></tr>
+            <tr><td>Phone browser (iPhone, iPad or Android), Android &rarr; Desktop via Tailscale, or agent</td><td>Your PC</td><td>StashSage running on an awake PC, Tailscale on both devices, the phone link and desktop access token.</td></tr>
+          </tbody></table></div>
+          <h4>Connect your phone to your PC</h4>
           <ol>
-            <li>In the desktop StashWatch tab, enable <strong>HTTP access for phones and agents</strong>. Access is off by default. The default local port is <code>5006</code>.</li>
-            <li>Use <strong>Copy API token</strong> to copy your private access token. <strong>Open phone view</strong> lets you try the page on your desktop.</li>
-            <li>With Tailscale installed and connected on your desktop and phone, expose the local service privately using <a href="https://tailscale.com/docs/features/tailscale-serve" target="_blank" rel="noopener">Tailscale Serve</a>:</li>
+            <li><strong>On the PC:</strong> open StashWatch and enable <strong>Allow phones and agents to connect</strong> (<strong>Enable HTTP access for phones and agents</strong> in v0.5.24). Leave the service port at <strong>5006 (recommended)</strong>. You do not need to choose a port.</li>
+            <li><strong>On both devices:</strong> <a href="https://tailscale.com/download" target="_blank" rel="noopener">install Tailscale</a>, sign in with the same Tailscale account, and connect.</li>
+            <li><strong>On the PC:</strong> open PowerShell (Windows) or Terminal (Linux) and paste the command below. If asked to enable HTTPS, follow the link Tailscale prints, then run the command again. See the <a href="https://tailscale.com/docs/features/tailscale-serve" target="_blank" rel="noopener">official Tailscale Serve instructions</a> for help.</li>
           </ol>
           <pre><code>tailscale serve --bg --https=10000 http://127.0.0.1:5006</code></pre>
-          <p>Open the HTTPS address reported by Tailscale on your phone and enter your token. The phone view offers the same settings, controls, listings and activity as the desktop. An agent's tool runner needs access to the same Tailscale network and your token to connect.</p>
+          <ol start="4">
+            <li><strong>Get the phone link:</strong> copy the HTTPS address Tailscale prints, including <code>:10000</code>, for example <code>https://your-pc.your-tailnet.ts.net:10000/</code>. New desktop builds also offer <strong>Copy phone link</strong> after setup. Transfer that link to your phone.</li>
+            <li><strong>Get the password:</strong> on the PC, press <strong>Copy access token</strong> (<strong>Copy API token</strong> in v0.5.24). Transfer the copied token privately to your phone.</li>
+            <li><strong>Phone browser:</strong> with Tailscale connected on your phone, open the phone link. Paste the token into <strong>Desktop access token</strong> (<strong>API token</strong> on the v0.5.24 web page), then press <strong>Connect</strong>. No Android app is needed; this works on iPhone too.</li>
+          </ol>
+          <p><strong>Android app instead of the browser:</strong> in StashWatch choose <strong>Desktop via Tailscale</strong>, then <strong>Add desktop connection</strong>. Paste the phone link into <strong>HTTPS desktop URL</strong> and the token into <strong>Desktop access token</strong> (<strong>Desktop StashWatch token</strong> in v0.5.24). Press <strong>Test and save</strong>. Choose <strong>This phone</strong> if you want checks to run independently on Android.</p>
+          <p><strong>What does Open phone view do?</strong> In v0.5.24 it opens the web page in your PC's browser at <code>http://127.0.0.1:5006/</code>, so you can preview it locally. It does not open your phone or configure Tailscale. New desktop builds label it <strong>Open web page on this PC</strong>. Your phone uses the HTTPS Tailscale link from step 4.</p>
+          <p><strong>What is the token?</strong> It is your private StashSage access password, not a Tailscale login key or a hosted pricing API key. Paste it into the connection's token field, never into a URL or public message. The browser keeps it only in the open page's memory and forgets it when the page closes.</p>
+          <p><strong>For an agent:</strong> its tool runner must be connected to your Tailscale network. Put the HTTPS phone link and token into its secure connection settings. Connecting your phone to Tailscale alone does not give a cloud agent access. Agents can request listing snapshots and activity history; the current remote API does not run the full model-valued StashScrape pipeline.</p>
+          <p>The web page and Android desktop mode control your PC's watches. Keep StashSage running and the PC awake; minimizing to the tray keeps checks active when your phone disconnects. Only change the local port in Advanced settings if 5006 is unavailable, and use that port in the command above. HTTPS port 10000 is the phone-facing address.</p>
           <details style="margin-top:16px;">
             <summary><strong>HTTP API for agents and integrations</strong></summary>
             <p>Send <code>Authorization: Bearer &lt;token&gt;</code> or <code>X-API-Key: &lt;token&gt;</code> with every API request to your own desktop service.</p>

@@ -59,6 +59,7 @@ from poe2trade.app import updater
 from poe2trade.app import prediction_worker
 from poe2trade.app import single_instance
 from poe2trade.app import stash_watch_runtime
+from poe2trade.app.remote_access_help import add_remote_access_help, show_remote_access_help
 from poe2trade.app import update_self_test
 from poe2trade.utils.chart_utils import (
     generate_bucket_confidence_plot,
@@ -1221,6 +1222,10 @@ def _open_stash_scrape_dialog() -> None:
         width=150,
         command=_open_existing_scrapes,
     ).grid(row=0, column=1, sticky="e", padx=12, pady=10)
+
+    ctk.CTkButton(header_bar, text="Phone & agent setup (Tailscale)", width=240,
+                  command=lambda: show_remote_access_help(header_bar, state.config.get("stash_watch_api_port", 5006))).grid(
+                      row=1, column=0, sticky="w", padx=12, pady=(0, 10))
 
     content = ctk.CTkScrollableFrame(dialog, fg_color="transparent")
     content.grid(row=1, column=0, sticky="nsew")
@@ -2964,7 +2969,7 @@ def _show_help_view() -> None:
 
     tabs = ctk.CTkTabview(win)
     tabs.grid(row=1, column=0, sticky="nsew", padx=14, pady=(0, 14))
-    for tab_name in ("Why StashSage", "Explore Features", "Discussion", "Notes"):
+    for tab_name in ("Why StashSage", "Explore Features", "Phones & agents", "Discussion", "Notes"):
         tab = tabs.add(tab_name)
         tab.columnconfigure(0, weight=1)
         tab.rowconfigure(0, weight=1)
@@ -2998,6 +3003,8 @@ def _show_help_view() -> None:
                 "CraftOracle estimates how eligible missing modifiers could move the XGB prediction.",
                 "Top Mods shows the ten most important trained features for each category and segment.",
             ])
+        elif tab_name == "Phones & agents":
+            add_remote_access_help(scroll, state.config.get("stash_watch_api_port", 5006))
         elif tab_name == "Discussion":
             _add_help_copy(scroll, "Model insights", [], [
                 "Models are trained on current unsold listings, so even reasonably priced items may not sell.",
@@ -5449,6 +5456,11 @@ def _show_stash_scrape_viewer(preselect: "str | os.PathLike[str] | None" = None)
     ctk.CTkLabel(header, text="View StashScrapes", font=_FONT_PAGE_TITLE).grid(
         row=0, column=0, sticky="w", padx=12, pady=(10, 0)
     )
+    ctk.CTkLabel(header, text="Android can scrape and price on the phone. Agents can request desktop listing snapshots through StashWatch.",
+                 wraplength=500, justify="left").grid(row=1, column=0, sticky="w", padx=12, pady=4)
+    ctk.CTkButton(header, text="Phone & agent setup (Tailscale)", width=240,
+                  command=lambda: show_remote_access_help(header, state.config.get("stash_watch_api_port", 5006))).grid(
+                      row=2, column=0, sticky="w", padx=12, pady=(0, 10))
     ctk.CTkButton(
         header,
         text="Run StashScrape",

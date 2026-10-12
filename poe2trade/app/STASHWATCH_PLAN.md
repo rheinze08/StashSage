@@ -65,22 +65,57 @@ exact sale time. Current Listings exports the last known visible rows to CSV.
 StashWatch observes public listings; it cannot inspect private inventory or
 change listing prices, and it does not rerun the ML scoring pipeline.
 
-HTTP access is opt-in under **Enable HTTP access for phones and agents**. The
-default port is 5006; another port can be selected while the service is off.
-**Copy API token** copies the randomly generated per-user secret. **Open phone
-view** opens the localhost page, where that token is required to connect.
+### Phones and agents: choose the right mode
 
-To expose it privately without replacing the existing 443/8443 services, run
-this on the desktop after enabling HTTP access:
+- Desktop use needs no Tailscale or token.
+- Android StashScrape prices locally with bundled models. Android StashWatch's
+  **This phone** mode checks on the phone. Both work without a PC or token.
+- A phone browser (including iPhone), Android **Desktop via Tailscale**, or an
+  agent controls the PC's StashWatch. Keep StashSage running and the PC awake.
+  Remote snapshots contain asking prices and history, not StashScrape model valuations.
+
+### Connect a phone to the PC
+
+1. On the PC, open StashWatch and turn on **Allow phones and agents to connect**.
+   Leave port **5006 (recommended)**. Advanced settings is only for a port conflict.
+2. [Install Tailscale](https://tailscale.com/download) on the PC and phone,
+   sign in with the same account, and connect both devices.
+3. On the PC, open PowerShell (Windows) or Terminal (Linux) and run:
 
 ```powershell
 tailscale serve --bg --https=10000 http://127.0.0.1:5006
 ```
 
-Open the HTTPS URL reported by Tailscale on a connected phone and enter the
-token. Agent tool runners must also have tailnet access and send either
-`Authorization: Bearer <token>` or `X-API-Key: <token>`. The page keeps its token
-only in memory. There is no public publishing or automatic Tailscale change.
+If Tailscale asks to enable HTTPS, follow its printed link and run the command
+again. See [Tailscale Serve instructions](https://tailscale.com/docs/features/tailscale-serve).
+If you changed the local port, the in-app **Copy setup command** uses that port.
+
+4. Use **Copy phone link**, or copy the HTTPS address printed by Tailscale,
+   including `:10000`, for example `https://your-pc.your-tailnet.ts.net:10000/`.
+   Transfer that link to your phone.
+5. On the PC, press **Copy access token**. Transfer the token privately to the phone.
+6. With Tailscale connected on the phone, open the phone link in its browser.
+   Paste the token into **Desktop access token**, then press **Connect**.
+   The browser forgets the token when the page closes.
+
+For the Android app instead of the browser, choose **Desktop via Tailscale**,
+then **Add desktop connection**. Paste the phone link into **HTTPS desktop URL**
+and the token into **Desktop access token**, then press **Test and save**.
+
+**Open web page on this PC** previews the page in this PC's browser; it does not
+open the phone or configure Tailscale. The token is StashSage's access password,
+not a Tailscale login key or hosted pricing API key. Never put it in a URL or
+public message. In v0.5.24, the switch is **Enable HTTP access for phones and
+agents**, the copy button is **Copy API token**, and the preview is **Open phone
+view**. The old browser field is **API token** and Android field is **Desktop
+StashWatch token**. These functions are the same.
+
+An agent's tool runner must also be connected to the Tailscale network. Put the
+HTTPS link and token into its secure connection settings; connecting only the
+phone does not give a cloud agent access. API calls send
+`Authorization: Bearer <token>` or `X-API-Key: <token>`. For a one-off listing
+snapshot, save a paused watch and request **Check now**. **Start watching**
+enables repeated checks. No Tailscale configuration is changed automatically.
 
 Example watch settings for `POST /stash/watches`:
 

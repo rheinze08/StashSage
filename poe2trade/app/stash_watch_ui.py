@@ -12,6 +12,7 @@ import customtkinter as ctk
 from poe2trade.app.stash_watch import WatchSpec
 from poe2trade.app.stash_watch_api import listings_csv
 from poe2trade.app.stash_watch_trade import catalog
+from poe2trade.app.remote_access_help import read_phone_address, show_remote_access_help
 
 
 INTERVALS = {"15 minutes": 15, "30 minutes": 30, "1 hour": 60, "2 hours": 120}
@@ -108,19 +109,27 @@ class StashWatchView(ctk.CTkScrollableFrame):
         remote = ctk.CTkFrame(self)
         remote.pack(fill="x", padx=12, pady=10)
         self.remote_enabled = tk.BooleanVar(value=runtime.server is not None)
-        ctk.CTkCheckBox(remote, text="Enable HTTP access for phones and agents", variable=self.remote_enabled,
+        ctk.CTkCheckBox(remote, text="Allow phones and agents to connect", variable=self.remote_enabled,
                         command=self._toggle_api).pack(anchor="w", padx=12, pady=10)
         self.remote_status = ctk.CTkLabel(remote, text="", anchor="w", justify="left", wraplength=650)
         self.remote_status.pack(fill="x", padx=12)
-        self.api_port = ctk.CTkEntry(remote, width=100)
+        self.advanced = ctk.CTkFrame(remote, fg_color="transparent")
+        ctk.CTkLabel(self.advanced, text="Service port (5006 recommended)").pack(side="left", padx=(0, 8))
+        self.api_port = ctk.CTkEntry(self.advanced, width=100)
         self.api_port.insert(0, str(runtime.config.get("stash_watch_api_port", 5006)))
-        self.api_port.pack(anchor="w", padx=12, pady=5)
+        self.api_port.pack(side="left")
+        ctk.CTkButton(remote, text="Advanced settings", width=140, command=self._toggle_advanced).pack(anchor="w", padx=12, pady=5)
         remote_buttons = ctk.CTkFrame(remote, fg_color="transparent")
         remote_buttons.pack(anchor="w", padx=12, pady=(0, 8))
-        ctk.CTkButton(remote_buttons, text="Open phone view", width=135, command=lambda: self._guard(self._open_web)).pack(side="left", padx=(0, 8))
-        ctk.CTkButton(remote_buttons, text="Copy API token", width=135, command=lambda: self._guard(self._copy_token)).pack(side="left")
-        ctk.CTkLabel(remote, text="For remote access, proxy this localhost port through Tailscale Serve.\n"
-                     "The app must stay running; minimizing to the tray keeps checks active.",
+        for index, (label, action) in enumerate([
+            ("Open web page on this PC", self._open_web), ("Copy access token", self._copy_token),
+            ("Phone & agent setup", lambda: show_remote_access_help(self, self.runtime.config.get("stash_watch_api_port", 5006))),
+            ("Copy phone link", self._copy_phone_link),
+        ]):
+            ctk.CTkButton(remote_buttons, text=label, width=190, command=lambda action=action: self._guard(action)).grid(
+                row=index // 2, column=index % 2, padx=(0, 8), pady=4)
+        ctk.CTkLabel(remote, text="Desktop use needs no remote setup. For a phone or agent, start with Phone & agent setup.\n"
+                     "Android can also run checks on This phone without a PC, Tailscale or token.",
                      justify="left", wraplength=650).pack(anchor="w", padx=12, pady=(0, 10))
         tabs = ctk.CTkTabview(self, height=320)
         tabs.pack(fill="both", expand=True, padx=12, pady=8)
@@ -238,8 +247,22 @@ class StashWatchView(ctk.CTkScrollableFrame):
     def _remote_status(self):
         port = self.runtime.config.get("stash_watch_api_port", 5006)
         self.api_port.configure(state="disabled" if self.runtime.server else "normal")
-        self.remote_status.configure(text=f"Listening on http://127.0.0.1:{port}/ · token required" if self.runtime.server else
-                                     (self.runtime.api_error or "HTTP access is off. Port:"))
+        self.remote_status.configure(text=f"Ready on this PC at http://127.0.0.1:{port}/. For your phone, use the Tailscale phone link." if self.runtime.server else
+                                     (self.runtime.api_error or "Remote access is off. Desktop checks work normally; enable only for a phone or agent."))
+
+    def _toggle_advanced(self):
+        if self.advanced.winfo_manager():
+            self.advanced.pack_forget()
+        else:
+            self.advanced.pack(anchor="w", padx=12, pady=5)
+
+    def _copy_phone_link(self):
+        if not self.runtime.server:
+            raise ValueError("Turn on Allow phones and agents to connect first.")
+        address = read_phone_address(self.runtime.config.get("stash_watch_api_port", 5006))
+        self.clipboard_clear()
+        self.clipboard_append(address)
+        self.message.configure(text="Phone link copied. Open it in your phone browser with Tailscale connected, or paste it into Android's HTTPS desktop URL field. Then use Copy access token to connect.")
 
     def _open_web(self):
         if not self.runtime.server:
@@ -251,7 +274,7 @@ class StashWatchView(ctk.CTkScrollableFrame):
             raise ValueError("Enable HTTP access first")
         self.clipboard_clear()
         self.clipboard_append(self.runtime.config["stash_watch_api_token"])
-        self.message.configure(text="API token copied. Paste it into the phone view or your agent's connection settings.")
+        self.message.configure(text="Access token copied. Paste into Desktop access token on the phone web page or Android desktop connection, then Connect or Test and save. For an agent, use its secure connection settings with your phone link.")
 
     def _export(self):
         if not self.watch_id:

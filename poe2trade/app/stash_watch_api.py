@@ -149,9 +149,10 @@ input,select{width:100%;margin-top:5px}button{cursor:pointer;margin:10px 8px 0 0
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.table{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}
 td,th{text-align:left;padding:9px;border-bottom:1px solid #314657;white-space:nowrap}#message{color:#f1c77b;white-space:pre-wrap}.muted{color:#a6bbcc;font-size:14px}li{margin-bottom:12px}
 </style>
-<h1>StashWatch</h1><p>Follow your public listings and their price history.</p>
-<section id="login"><label>API token<input id="token" type="password" autocomplete="off"></label><button id="connect">Connect</button>
-<p class="muted">Use the token shown in your desktop StashWatch view. It stays in this page's memory.</p></section>
+<h1>StashWatch</h1><p>This page controls StashSage on your PC. Keep the app running and the PC awake.</p>
+<section id="login"><label>Desktop access token<input id="token" type="password" autocomplete="off"></label><button id="connect">Connect</button>
+<p class="muted">On your PC, open StashWatch and press Copy access token (Copy API token in v0.5.24). Paste it above, then press Connect. This is your StashSage access password, not a Tailscale key. It stays only in this page's memory and is forgotten when the page closes.</p>
+<p class="muted">For phone access, connect <a href="https://tailscale.com/download">Tailscale</a> on both devices and use the HTTPS phone link from the desktop setup guide. The Android app can also run checks independently in This phone mode.</p></section>
 <p id="message" role="status"></p>
 <main id="main" hidden><section><label>Saved watch<select id="watch"><option value="">New watch</option></select></label>
 <div class="grid"><label>Account<input id="account" placeholder="Player#1234"></label><label>League<input id="league" list="leagues"><datalist id="leagues"></datalist></label>
