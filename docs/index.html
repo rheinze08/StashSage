@@ -525,6 +525,10 @@
             <li>Select the categories to scrape; each necessitates a separate search as in step 3.</li>
             <li>Upon pipeline completion, fetch the output file from the target directory.</li>
           </ol>
+          <h3>Agent access to listing snapshots</h3>
+          <p>An agent on your Tailscale network can request a one-off snapshot of your public listings through the desktop's authenticated StashWatch service. Enable <strong>HTTP access for phones and agents</strong> in StashWatch, then give the agent your private service address and token.</p>
+          <p>Save a watch with your account, league, listing type and categories, leave it paused, and request <strong>Check now</strong>. The agent can follow the job's progress and retrieve the observed listings and asking prices as JSON or CSV. See <strong>StashWatch &rarr; Use it from your phone or an agent</strong> for setup and API calls.</p>
+          <p>The current HTTP API returns listing snapshots and activity history. Model valuations and the full StashScrape output are available by running StashScrape on your desktop or Android device.</p>
           
           <h3>StashScrape on Android</h3>
           <p>The <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.24/StashSageAndroid.apk">Android app</a> runs the same StashScrape from your phone, on your phone's connection, and prices listings locally using models bundled with the app. No API key is required.</p>
