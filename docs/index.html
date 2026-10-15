@@ -275,14 +275,6 @@
     .setup-guide p,.setup-guide li,.setup-card{overflow-wrap:anywhere}
     .setup-guide .callout{margin-top:12px}
     .workflow-note{margin:16px 0;color:var(--ink-soft)}
-    .research-grid{display:grid;gap:14px;margin:4px 0 22px}
-    @media (min-width: 700px){.research-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    .research-card{background:#f6f9fd;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-    .research-card strong{display:block;font-size:1.45rem;color:var(--blue-deep);letter-spacing:-.02em;line-height:1.2;margin-bottom:4px}
-    .research-card span{font-size:.9rem;color:var(--ink-soft)}
-    .research-preview td:nth-child(3),.research-preview td:nth-child(4),.research-preview td:nth-child(6){text-align:right;font-variant-numeric:tabular-nums}
-    .research-preview th:nth-child(3),.research-preview th:nth-child(4),.research-preview th:nth-child(6){text-align:right}
-    .research-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
     :target{scroll-margin-top:20px}
     /* Legal section */
     .section.legal{background:#fff}
@@ -347,7 +339,6 @@
       <li><a href="#setups">Setups</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#api-docs">Public API</a></li>
-      <li><a href="#research-data">Research Data</a></li>
       <li><a href="#policies">Privacy &amp; Legal</a></li>
     </ul>
   </nav>
@@ -971,38 +962,6 @@
     </details>
 
     <!-- ===== Legal / Policies (single-page anchors for TikTok form) ===== -->
-    <details class="section" id="research-data" open>
-      <summary><h2>Research Data</h2></summary>
-      <div class="section-body">
-        <p class="feature-intro">StashSage collects hundreds of thousands of Path of Exile 2 trade listings and turns them into model-ready feature matrices. We share that data with educators, students and researchers: a real player-driven economy with rich item attributes, asking prices and a documented pipeline from JSON to Parquet.</p>
-        <div class="research-grid">
-          <div class="research-card"><strong>500,000+</strong><span>listings collected per sweep, across every item category</span></div>
-          <div class="research-card"><strong>JSON + Parquet</strong><span>source listings and the feature matrices used for model training</span></div>
-          <div class="research-card"><strong>No account</strong><span>needed for the public rings sample; no expiring links</span></div>
-        </div>
-        <h3>Try the public rings sample</h3>
-        <p>A frozen set of <strong>100 ring listings</strong> across 23 base types, with aligned source JSON and a 93-column Parquet feature matrix. Here is a taste of what each row looks like:</p>
-        <div class="table-wrap"><table class="research-preview">
-          <thead><tr><th>Base type</th><th>Item name</th><th>Item level</th><th>Mods</th><th>Asking price</th><th>Price (exalted)</th></tr></thead>
-          <tbody>
-            <tr><td>Amethyst Ring</td><td>Eagle Grip</td><td>70</td><td>5</td><td>1 exalted</td><td>1</td></tr>
-            <tr><td>Biostatic Ring</td><td>Victory Gyre</td><td>80</td><td>6</td><td>100 exalted</td><td>100</td></tr>
-            <tr><td>Breach Ring</td><td>Horror Whorl</td><td>82</td><td>5</td><td>599 exalted</td><td>599</td></tr>
-            <tr><td>Grasping Ring</td><td>Viper Gyre</td><td>66</td><td>7</td><td>15 chaos</td><td>1,034.2</td></tr>
-            <tr><td>Kinetic Ring</td><td>Hypnotic Spiral</td><td>80</td><td>6</td><td>12 exalted</td><td>12</td></tr>
-            <tr><td>Mnemonic Ring</td><td>Foe Eye</td><td>80</td><td>5</td><td>200 exalted</td><td>200</td></tr>
-          </tbody>
-        </table></div>
-        <p class="muted">Each listing also carries its full modifier list, which becomes the non-zero columns of its feature row. The sample page walks through one item end to end.</p>
-        <p class="research-actions"><a class="btn" href="https://datawiseguysllc.pythonanywhere.com/research/static/samples/rings/index.html">Explore the rings sample</a> <a class="btn secondary" href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20dataset%20enquiry">Ask about the full collection</a></p>
-        <p>The full archive of verified JSON and Parquet datasets lives in private Cloudflare R2 storage. For a course, capstone or research project, tell us what you want to study and whether you prefer JSON, Parquet or SQL.</p>
-        <p class="muted">These are asking prices, not completed sales, and the public sample is a base-balanced convenience sample rather than a picture of the whole market.</p>
-        <div class="callout" id="research-data-handling">
-          <strong>How we handle this data.</strong> Before any listing leaves our collection machine we remove seller account names and character names, whisper text, stash tab names and positions, trade item identifiers and listing notes. What remains is item attributes, modifiers and asking prices, which do not identify a player. Path of Exile 2 item names, modifier text and related material belong to Grinding Gear Games; we claim no rights in it and share this data free of charge for teaching and research only. If you believe a listing can still be tied to you, or you represent Grinding Gear Games, <a href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20data%20removal">email us</a> and we will remove it.
-        </div>
-      </div>
-    </details>
-
     <details class="section legal" id="policies">
       <summary><h2>Legal</h2></summary>
       <div class="section-body">

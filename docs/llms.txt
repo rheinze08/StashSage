@@ -14,7 +14,6 @@ Source and releases: https://github.com/rheinze08/StashSage
 - Supports prediction history and stash pricing data exports.
 - Performs normal desktop prediction operations locally.
 - Also serves the same pricing engine through a Discord bot and an invite-only public HTTP API.
-- Shares collected listing data and feature matrices with educators and researchers, starting with a public rings sample.
 
 ## Setup choices and data
 
@@ -42,5 +41,4 @@ Source and releases: https://github.com/rheinze08/StashSage
 - Private desktop monitoring API: https://rheinze08.github.io/StashSage/#desktop-api
 - Frequently asked questions (includes model behaviour and limitations): https://rheinze08.github.io/StashSage/#faq
 - Public API for single-item pricing: https://rheinze08.github.io/StashSage/#api-docs
-- Research data and the public rings dataset sample: https://rheinze08.github.io/StashSage/#research-data
 - Privacy and terms: https://rheinze08.github.io/StashSage/#policies
