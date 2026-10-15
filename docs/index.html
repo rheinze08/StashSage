@@ -981,7 +981,7 @@
           <div class="research-card"><strong>No account</strong><span>needed for the public rings sample; no expiring links</span></div>
         </div>
         <h3>Try the public rings sample</h3>
-        <p>A frozen set of <strong>100 ring listings</strong> across 23 base types, with aligned source JSON and a 94-column Parquet feature matrix. Here is a taste of what each row looks like:</p>
+        <p>A frozen set of <strong>100 ring listings</strong> across 23 base types, with aligned source JSON and a 93-column Parquet feature matrix. Here is a taste of what each row looks like:</p>
         <div class="table-wrap"><table class="research-preview">
           <thead><tr><th>Base type</th><th>Item name</th><th>Item level</th><th>Mods</th><th>Asking price</th><th>Price (exalted)</th></tr></thead>
           <tbody>
@@ -996,7 +996,10 @@
         <p class="muted">Each listing also carries its full modifier list, which becomes the non-zero columns of its feature row. The sample page walks through one item end to end.</p>
         <p class="research-actions"><a class="btn" href="https://datawiseguysllc.pythonanywhere.com/research/static/samples/rings/index.html">Explore the rings sample</a> <a class="btn secondary" href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20dataset%20enquiry">Ask about the full collection</a></p>
         <p>The full archive of verified JSON and Parquet datasets lives in private Cloudflare R2 storage. For a course, capstone or research project, tell us what you want to study and whether you prefer JSON, Parquet or SQL.</p>
-        <p class="muted">These are asking prices, not completed sales, and the public sample is a base-balanced convenience sample rather than a picture of the whole market. Identifiers, listing notes and extended metadata are removed from its JSON.</p>
+        <p class="muted">These are asking prices, not completed sales, and the public sample is a base-balanced convenience sample rather than a picture of the whole market.</p>
+        <div class="callout" id="research-data-handling">
+          <strong>How we handle this data.</strong> Before any listing leaves our collection machine we remove seller account names and character names, whisper text, stash tab names and positions, trade item identifiers and listing notes. What remains is item attributes, modifiers and asking prices, which do not identify a player. Path of Exile 2 item names, modifier text and related material belong to Grinding Gear Games; we claim no rights in it and share this data free of charge for teaching and research only. If you believe a listing can still be tied to you, or you represent Grinding Gear Games, <a href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20data%20removal">email us</a> and we will remove it.
+        </div>
       </div>
     </details>
 
@@ -1038,6 +1041,14 @@
         If you enable phone or agent access, those clients can read and control your watches through
         your own connection. An agent provider's handling of information you share is governed by
         that provider's policies.
+      </p>
+      <p id="privacy-research">
+        <strong>Research datasets.</strong> StashSage collects public trade listings to train its pricing
+        models and shares redacted copies with educators and researchers. Before a listing enters a research
+        dataset we remove seller account names and character names, whisper text, stash tab names and
+        positions, trade item identifiers and listing notes, keeping only item attributes, modifiers and
+        asking prices. Research datasets are shared free of charge for non-commercial teaching and research.
+        If you believe a published listing can still be tied to you, email us and we will remove it.
       </p>
       <p>
         If this policy changes in the future, we will update this page and the app's release notes.
