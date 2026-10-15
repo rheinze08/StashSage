@@ -275,6 +275,14 @@
     .setup-guide p,.setup-guide li,.setup-card{overflow-wrap:anywhere}
     .setup-guide .callout{margin-top:12px}
     .workflow-note{margin:16px 0;color:var(--ink-soft)}
+    .research-grid{display:grid;gap:14px;margin:4px 0 22px}
+    @media (min-width: 700px){.research-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    .research-card{background:#f6f9fd;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+    .research-card strong{display:block;font-size:1.45rem;color:var(--blue-deep);letter-spacing:-.02em;line-height:1.2;margin-bottom:4px}
+    .research-card span{font-size:.9rem;color:var(--ink-soft)}
+    .research-preview td:nth-child(3),.research-preview td:nth-child(4),.research-preview td:nth-child(6){text-align:right;font-variant-numeric:tabular-nums}
+    .research-preview th:nth-child(3),.research-preview th:nth-child(4),.research-preview th:nth-child(6){text-align:right}
+    .research-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
     :target{scroll-margin-top:20px}
     /* Legal section */
     .section.legal{background:#fff}
@@ -338,26 +346,13 @@
       <li><a href="#using-app">Features</a></li>
       <li><a href="#setups">Setups</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#api-docs">API</a></li>
+      <li><a href="#api-docs">Public API</a></li>
       <li><a href="#research-data">Research Data</a></li>
       <li><a href="#policies">Privacy &amp; Legal</a></li>
     </ul>
   </nav>
 
   <main>
-
-    <details class="section" id="research-data" open>
-      <summary><h2>Research datasets for teaching and exploration</h2></summary>
-      <div class="section-body">
-        <p>Explore a frozen Path of Exile 2 rings sample with item attributes, asking prices and the feature matrices used before model training.</p>
-        <p><strong>100 aligned records, 23 ring base types and 94 Parquet columns.</strong> Preview the records in your browser, download the Parquet and redacted source-format JSON, or inspect the schema, provenance and Python example. No account, R2 credentials or expiring links are needed.</p>
-        <p><a class="btn" href="https://datawiseguysllc.pythonanywhere.com/research/static/samples/rings/index.html">Explore the public rings sample</a></p>
-        <h3>Cloudflare R2 storage for research</h3>
-        <p>Verified JSON and Parquet datasets are archived in private Cloudflare R2 storage. This small public sampler is hosted on the website; access to larger datasets is arranged separately.</p>
-        <p>These are sampled asking prices, not completed sales. The base-balanced sample is for inspection and does not represent the whole market. Identifiers, listing notes and extended metadata are removed from its JSON.</p>
-        <p>For a course project or research enquiry, <a href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20dataset%20enquiry">contact us</a> with your institution, question and preferred data format.</p>
-      </div>
-    </details>
 
     <!-- 2a-2. Model Feature Importances -->
     <details class="section" id="feature-importances" open>
@@ -639,37 +634,37 @@
     </details>
 
     <details class="section" id="setups" open>
-      <summary><h2>Choose your StashSage setup</h2></summary>
+      <summary><h2>StashSage Setups</h2></summary>
       <div class="section-body">
-        <p class="feature-intro">Use StashSage on your desktop, independently on Android, or connect your phone or agent to your desktop through Tailscale. Your setup determines where work runs and where its history is saved.</p>
+        <p class="feature-intro">Four ways to run StashSage. Pick the one that matches your devices; each card says where the work runs and where your data stays.</p>
         <div class="setup-grid">
           <article class="setup-card" id="setup-desktop">
             <h3>Desktop</h3>
-            <p>Use the prediction overlay, prediction history, StashScrape and StashWatch on your PC.</p>
-            <dl><dt>Runs on</dt><dd>Your Windows or Linux desktop.</dd><dt>Data stays</dt><dd>On your desktop.</dd><dt>Requires</dt><dd>The desktop app.</dd></dl>
+            <p>Everything in one place: the prediction overlay, prediction history, StashScrape and StashWatch.</p>
+            <dl><dt>Runs on</dt><dd>Your Windows or Linux PC.</dd><dt>Data stays</dt><dd>On your PC.</dd><dt>Needs</dt><dd>The desktop app only.</dd></dl>
             <p class="setup-action"><a href="#setup-desktop-guide">Desktop setup</a> &middot; <a href="#using-stashsage-guide">Explore the overlay</a></p>
           </article>
           <article class="setup-card" id="setup-android">
             <h3>Android alone</h3>
-            <p>Run StashScrape with local pricing and monitor listings with StashWatch from your phone.</p>
-            <dl><dt>Runs on</dt><dd>Your Android phone.</dd><dt>Data stays</dt><dd>On your phone, separate from desktop data.</dd><dt>Requires</dt><dd>Android 8+ and the Android app.</dd></dl>
+            <p>Price your stash with StashScrape and watch listings with StashWatch on your phone, no PC involved.</p>
+            <dl><dt>Runs on</dt><dd>Your Android phone.</dd><dt>Data stays</dt><dd>On your phone, separate from desktop data.</dd><dt>Needs</dt><dd>Android 8+ and the APK.</dd></dl>
             <p class="setup-action"><a href="#setup-android-guide">Android setup and sharing</a></p>
           </article>
           <article class="setup-card" id="setup-phone">
             <h3>Phone + desktop via Tailscale</h3>
-            <p>Check and control your desktop's StashWatch from Android or a phone browser. Keep using all desktop tools on your PC.</p>
-            <dl><dt>Runs on</dt><dd>Your awake desktop with StashSage running.</dd><dt>Data stays</dt><dd>Desktop watch history; Android can cache it for offline viewing.</dd><dt>Requires</dt><dd>Tailscale on both devices and desktop access enabled.</dd></dl>
+            <p>Check and control your desktop's StashWatch from a phone browser or the Android app while the PC does the work.</p>
+            <dl><dt>Runs on</dt><dd>Your awake PC with StashSage open.</dd><dt>Data stays</dt><dd>Desktop watch history; Android can cache it offline.</dd><dt>Needs</dt><dd>Tailscale on both devices and desktop access enabled.</dd></dl>
             <p class="setup-action"><a href="#setup-phone-guide">Connect your phone</a></p>
           </article>
           <article class="setup-card" id="setup-agent">
             <h3>Agent + desktop via Tailscale</h3>
-            <p>Ask an agent, such as Muse, to check listings, control watches, or retrieve watch activity from your desktop.</p>
-            <dl><dt>Runs on</dt><dd>Your awake desktop with StashSage running.</dd><dt>Data stays</dt><dd>On your desktop; requested records are returned to your agent.</dd><dt>Requires</dt><dd>An HTTP-capable agent runner connected to your Tailscale network.</dd></dl>
+            <p>Let an agent, such as Muse, check listings, control watches and read watch activity from your desktop.</p>
+            <dl><dt>Runs on</dt><dd>Your awake PC with StashSage open.</dd><dt>Data stays</dt><dd>On your PC; only requested records go to the agent.</dd><dt>Needs</dt><dd>An HTTP-capable agent runner on your Tailscale network.</dd></dl>
             <p class="setup-action"><a href="#setup-agent-guide">Connect your agent</a></p>
           </article>
         </div>
-        <p><strong>Sharing depends on the tool.</strong> Connected StashWatch uses the desktop's watches and history. Phone-run StashScrapes and independent phone watches stay separate; Tailscale does not automatically sync those records. Export a phone StashScrape run to open it in the desktop viewer.</p>
-        <p class="workflow-note">The <a href="#feature-discord-api">Discord bot</a> and <a href="#api-docs">hosted pricing API</a> are separately available services. Neither requires the desktop app.</p>
+        <p><strong>What syncs and what does not.</strong> A connected phone or agent uses the desktop's watches and history. Phone-run StashScrapes and independent phone watches stay on the phone; Tailscale does not automatically sync them. Export a phone StashScrape run to open it in the desktop viewer.</p>
+        <p class="workflow-note">The <a href="#feature-discord-api">Discord bot</a> and the <a href="#api-docs">public API</a> are separate hosted services. Neither needs the desktop app. The step-by-step guides below cover each setup.</p>
 
         <details class="accordion setup-guide" id="setup-desktop-guide">
           <summary>Set up the desktop app</summary>
@@ -816,7 +811,7 @@
     </details>
 
     <details class="section" id="api-docs">
-      <summary><h2>Pricing API &mdash; price single items</h2></summary>
+      <summary><h2>Public API</h2></summary>
       <div class="section-body">
         <p>The same pricing engine behind the Discord bot is available as a small HTTP API for your own tools and scripts. Send it copied item text, get back a value estimate, comparable listings, and the modifiers driving the price &mdash; the same payload the desktop app renders.</p>
         <p>This hosted service works without the desktop app and uses its own API key. To control your computer's watches and read its listing history, use the <a href="#desktop-api">desktop API</a> in the setup guides.</p>
@@ -976,6 +971,35 @@
     </details>
 
     <!-- ===== Legal / Policies (single-page anchors for TikTok form) ===== -->
+    <details class="section" id="research-data" open>
+      <summary><h2>Research Data</h2></summary>
+      <div class="section-body">
+        <p class="feature-intro">StashSage collects hundreds of thousands of Path of Exile 2 trade listings and turns them into model-ready feature matrices. We share that data with educators, students and researchers: a real player-driven economy with rich item attributes, asking prices and a documented pipeline from JSON to Parquet.</p>
+        <div class="research-grid">
+          <div class="research-card"><strong>500,000+</strong><span>listings collected per sweep, across every item category</span></div>
+          <div class="research-card"><strong>JSON + Parquet</strong><span>source listings and the feature matrices used for model training</span></div>
+          <div class="research-card"><strong>No account</strong><span>needed for the public rings sample; no expiring links</span></div>
+        </div>
+        <h3>Try the public rings sample</h3>
+        <p>A frozen set of <strong>100 ring listings</strong> across 23 base types, with aligned source JSON and a 94-column Parquet feature matrix. Here is a taste of what each row looks like:</p>
+        <div class="table-wrap"><table class="research-preview">
+          <thead><tr><th>Base type</th><th>Item name</th><th>Item level</th><th>Mods</th><th>Asking price</th><th>Price (exalted)</th></tr></thead>
+          <tbody>
+            <tr><td>Amethyst Ring</td><td>Eagle Grip</td><td>70</td><td>5</td><td>1 exalted</td><td>1</td></tr>
+            <tr><td>Biostatic Ring</td><td>Victory Gyre</td><td>80</td><td>6</td><td>100 exalted</td><td>100</td></tr>
+            <tr><td>Breach Ring</td><td>Horror Whorl</td><td>82</td><td>5</td><td>599 exalted</td><td>599</td></tr>
+            <tr><td>Grasping Ring</td><td>Viper Gyre</td><td>66</td><td>7</td><td>15 chaos</td><td>1,034.2</td></tr>
+            <tr><td>Kinetic Ring</td><td>Hypnotic Spiral</td><td>80</td><td>6</td><td>12 exalted</td><td>12</td></tr>
+            <tr><td>Mnemonic Ring</td><td>Foe Eye</td><td>80</td><td>5</td><td>200 exalted</td><td>200</td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted">Each listing also carries its full modifier list, which becomes the non-zero columns of its feature row. The sample page walks through one item end to end.</p>
+        <p class="research-actions"><a class="btn" href="https://datawiseguysllc.pythonanywhere.com/research/static/samples/rings/index.html">Explore the rings sample</a> <a class="btn secondary" href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20dataset%20enquiry">Ask about the full collection</a></p>
+        <p>The full archive of verified JSON and Parquet datasets lives in private Cloudflare R2 storage. For a course, capstone or research project, tell us what you want to study and whether you prefer JSON, Parquet or SQL.</p>
+        <p class="muted">These are asking prices, not completed sales, and the public sample is a base-balanced convenience sample rather than a picture of the whole market. Identifiers, listing notes and extended metadata are removed from its JSON.</p>
+      </div>
+    </details>
+
     <details class="section legal" id="policies">
       <summary><h2>Legal</h2></summary>
       <div class="section-body">
