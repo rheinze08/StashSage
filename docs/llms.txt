@@ -15,6 +15,15 @@ Source and releases: https://github.com/rheinze08/StashSage
 - Performs normal desktop prediction operations locally.
 - Also serves the same pricing engine through a Discord bot and an invite-only HTTP API.
 
+## Setup choices and data
+
+- Desktop: prediction overlay, saved prediction history, StashScrape and StashWatch. Work and data stay on the desktop; StashWatch requires v0.5.24 or later.
+- Android alone: StashScrape prices locally with bundled models. Native StashWatch requires a signed v0.5.25 or later APK. Independent phone data stays separate from desktop data.
+- Phone plus desktop through Tailscale: control desktop StashWatch from a phone browser or compatible Android app. The awake desktop runs checks and stores history; Android can cache it locally.
+- Agent plus desktop through Tailscale: an HTTP-capable tool runner on the same private network can control watches and retrieve listing snapshots and watch activity. The current desktop API does not expose full model-valued StashScrape runs or prediction history.
+- Tailscale does not automatically sync independent phone watches or phone-run StashScrapes. Export and transfer a saved StashScrape run to open it in the desktop viewer.
+- The hosted Discord bot and pricing API use a separate service; neither requires the desktop app. Its hosted API key is separate from a desktop access token.
+
 ## Limitations
 
 - Estimates are pricing starting points, not guaranteed sale prices.
@@ -27,7 +36,9 @@ Source and releases: https://github.com/rheinze08/StashSage
 - Top modifiers: https://rheinze08.github.io/StashSage/#feature-importances
 - Why StashSage: https://rheinze08.github.io/StashSage/#why-stashsage
 - Feature guides: https://rheinze08.github.io/StashSage/#using-app
-- StashWatch listing monitor and private phone/agent access: https://rheinze08.github.io/StashSage/#using-stashwatch (new desktop feature; see the guide for release availability)
+- StashWatch listing monitor: https://rheinze08.github.io/StashSage/#using-stashwatch
+- Desktop, Android, phone and agent setup choices: https://rheinze08.github.io/StashSage/#setups
+- Private desktop monitoring API: https://rheinze08.github.io/StashSage/#desktop-api
 - Frequently asked questions (includes model behaviour and limitations): https://rheinze08.github.io/StashSage/#faq
-- API access (Discord bot and HTTP API): https://rheinze08.github.io/StashSage/#api-docs
+- Hosted single-item pricing API: https://rheinze08.github.io/StashSage/#api-docs
 - Privacy and terms: https://rheinze08.github.io/StashSage/#policies
