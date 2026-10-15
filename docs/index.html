@@ -37,6 +37,10 @@
 
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -95,7 +99,7 @@
           "softwareVersion": "0.5.25",
           "url": "https://rheinze08.github.io/StashSage/",
           "isAccessibleForFree": true,
-          "softwareRequirements": "Windows or Linux (desktop), Android 8+ (StashScrape); Path of Exile 2",
+          "softwareRequirements": "Windows or Linux (desktop), Android 8+ (StashScrape and StashWatch); Path of Exile 2",
           "featureList": [
             "POE2 rare-item price predictions",
             "Comparable listing analysis",
@@ -104,9 +108,10 @@
             "Local desktop processing",
             "Scheduled public listing monitoring",
             "Private phone and agent access",
-            "Android stash scrape companion"
+            "Android stash scrape companion",
+            "Independent Android listing monitoring"
           ],
-          "dateModified": "2026-10-12",
+          "dateModified": "2026-10-15",
           "releaseNotes": "https://github.com/rheinze08/StashSage/releases/tag/v0.5.25",
           "sameAs": "https://github.com/rheinze08/StashSage",
           "downloadUrl": ["https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageWindows.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageLinux.zip", "https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageAndroid.apk"],
@@ -138,7 +143,7 @@
           "url": "https://rheinze08.github.io/StashSage/",
           "name": "POE2 Item Price Checker \u0026 Trade Overlay | StashSage",
           "description": "Free Path of Exile 2 item price checker and trade overlay with ML estimates, comparable listings, valuable modifier insights, and stash pricing tools.",
-          "dateModified": "2026-10-12",
+          "dateModified": "2026-10-15",
           "isPartOf": { "@id": "https://rheinze08.github.io/StashSage/#website" },
           "mainEntity": { "@id": "https://rheinze08.github.io/StashSage/#software" },
           "inLanguage": "en-US"
@@ -252,13 +257,34 @@
     .tab-panel{padding-top:18px}
     .tab-panel h3{font-size:1.1rem;margin-bottom:10px;color:#1f3c55}
     .tab-panel .gallery{margin-top:12px}
-    #using-stashwatch .table-wrap{overflow-x:auto}
-    #using-stashwatch p, #using-stashwatch li{overflow-wrap:anywhere}
+    .table-wrap{overflow-x:auto}
+    .feature-intro{margin:16px 0;color:var(--ink-soft)}
+    .feature-setup-link{margin-top:18px;color:var(--ink-muted)}
+    .setup-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 24px}
+    .setup-card{padding:20px;border:1px solid var(--line-strong);border-radius:12px;background:#f8fbff;display:flex;flex-direction:column;gap:10px}
+    .setup-card h3{font-size:1.12rem;color:var(--blue-deep);line-height:1.4}
+    .setup-card p{color:var(--ink-soft)}
+    .setup-card dl{display:grid;grid-template-columns:80px minmax(0,1fr);gap:5px 10px;font-size:.92rem}
+    .setup-card dt{font-weight:600;color:var(--blue-deep)}
+    .setup-card dd{color:var(--ink-soft)}
+    .setup-card .setup-action{margin-top:auto;padding-top:8px;font-weight:600}
+    .setup-guide{margin-top:14px}
+    .setup-guide .content > p + p,.setup-guide ol,.setup-guide ul{margin-top:12px}
+    .setup-guide ul{margin-left:20px}
+    .setup-guide li{margin-bottom:8px}
+    .setup-guide p,.setup-guide li,.setup-card{overflow-wrap:anywhere}
+    .setup-guide .callout{margin-top:12px}
+    .workflow-note{margin:16px 0;color:var(--ink-soft)}
+    :target{scroll-margin-top:20px}
     /* Legal section */
     .section.legal{background:#fff}
     .section.legal h3{font-size:1.1rem;margin-top:16px;color:#1f3c55}
     .section.legal p, .section.legal li{color:var(--ink-soft)}
     @media (max-width:560px){
+      .setup-grid{grid-template-columns:minmax(0,1fr)}
+      .setup-card{padding:18px}
+      .tabs-nav{gap:6px}
+      .tab-button{padding:9px 12px;font-size:.92rem}
       header{padding:36px 16px 24px}
       .header-actions{margin-top:18px}
       .header-actions .btn{flex:1 1 100%;max-width:340px;text-align:center}
@@ -283,7 +309,7 @@
       <img src="stashsage_logo.png" alt="Logo" class="logo">
     </h1>
 
-    <p><strong>v0.5.25 (<span id="build-date">10/12/2026</span>)</strong></p>
+    <p><strong>v0.5.25 (<span id="build-date">10/15/2026</span>)</strong></p>
     <p class="muted">Machine Learning by Budodude</p>
     <p class="muted">Web Scraping by NocKtuRn4L</p>
 
@@ -298,7 +324,7 @@
     </div>
     <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
     <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.4 GB of disk space on Windows.</em></p>
-    <p class="install-note"><strong>Android (StashScrape on your phone):</strong> open the APK on an Android 8+ phone and allow your browser to install apps when asked. No API key is required; pricing runs on your phone using models bundled with the app.</p>
+    <p class="install-note"><strong>Android (StashScrape and StashWatch on your phone):</strong> open the APK on an Android 8+ phone and allow your browser to install apps when asked. StashScrape prices locally with bundled models. <a href="#setup-android-guide">Android setup</a>.</p>
     <p class="trust"><strong><em>The desktop and Android apps price items locally; no item or account data is sent to StashSage for pricing.</em></strong></p>
     <div class="hero-shot">
       <img src="stashsage_prediction_gui.png" alt="StashSage prediction overlay showing price estimates and comparable Path of Exile 2 items">
@@ -310,13 +336,28 @@
       <li><a href="#feature-importances">Top Mods</a></li>
       <li><a href="#why-stashsage">Why StashSage</a></li>
       <li><a href="#using-app">Features</a></li>
+      <li><a href="#setups">Setups</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#api-docs">API</a></li>
+      <li><a href="#research-data">Research Data</a></li>
       <li><a href="#policies">Privacy &amp; Legal</a></li>
     </ul>
   </nav>
 
   <main>
+
+    <details class="section" id="research-data" open>
+      <summary><h2>Research datasets for teaching and exploration</h2></summary>
+      <div class="section-body">
+        <p>Explore a frozen Path of Exile 2 rings sample with item attributes, asking prices and the feature matrices used before model training.</p>
+        <p><strong>100 aligned records, 23 ring base types and 94 Parquet columns.</strong> Preview the records in your browser, download the Parquet and redacted source-format JSON, or inspect the schema, provenance and Python example. No account, R2 credentials or expiring links are needed.</p>
+        <p><a class="btn" href="https://datawiseguysllc.pythonanywhere.com/research/static/samples/rings/index.html">Explore the public rings sample</a></p>
+        <h3>Cloudflare R2 storage for research</h3>
+        <p>Verified JSON and Parquet datasets are archived in private Cloudflare R2 storage. This small public sampler is hosted on the website; access to larger datasets is arranged separately.</p>
+        <p>These are sampled asking prices, not completed sales. The base-balanced sample is for inspection and does not represent the whole market. Identifiers, listing notes and extended metadata are removed from its JSON.</p>
+        <p>For a course project or research enquiry, <a href="mailto:datawiseguysllc@gmail.com?subject=StashSage%20research%20dataset%20enquiry">contact us</a> with your institution, question and preferred data format.</p>
+      </div>
+    </details>
 
     <!-- 2a-2. Model Feature Importances -->
     <details class="section" id="feature-importances" open>
@@ -401,6 +442,7 @@
     <details class="section" id="using-app" open>
       <summary><h2>Explore Features</h2></summary>
       <div class="section-body">
+      <p class="feature-intro">Price a single item, review past predictions, value your listed stash, or track listing changes over time. <a href="#setups">Choose your setup</a> to use these tools on desktop, Android, or through a connected phone or agent.</p>
       <div class="tabbed-section" data-tabset>
         <div class="tabs-nav" role="tablist" aria-label="Feature guides">
           <button
@@ -412,7 +454,7 @@
             aria-controls="feature-discord-api"
             data-tab-target="feature-discord-api"
           >
-            API
+            Discord API
           </button>
           <button
             type="button"
@@ -423,7 +465,7 @@
             aria-controls="using-stashsage-guide"
             data-tab-target="using-stashsage-guide"
           >
-            Overlay
+            Prediction Overlay
           </button>
           <button
             type="button"
@@ -434,7 +476,7 @@
             aria-controls="feature-prediction-history"
             data-tab-target="feature-prediction-history"
           >
-            History
+            Prediction History
           </button>
           <button
             type="button"
@@ -461,12 +503,13 @@
         </div>
 
         <section class="tab-panel" id="feature-discord-api" role="tabpanel" aria-labelledby="tab-discord-api">
-          <h3>Discord API</h3>
+          <h3>Discord API &mdash; price single items in Discord</h3>
+          <p>Paste an item's copied description into Discord to get a price estimate and comparable listings. The bot uses the hosted pricing service; no desktop installation is required.</p>
           <ol>
             <li>Select or hover over the item in game for which you'd like to see price predictions.</li>
             <li>Press <code>CTRL+C</code> to copy the item's in-game description.</li>
             <li>Paste the description to StashSage Serve bot in our Discord channel to receive your predictions.</li>
-            <li>Note: some features such as mod value filtering and visualizations not available on Discord API</li>
+            <li>Review the estimate and comparable items. Modifier filtering and desktop visualizations are available in the prediction overlay.</li>
           </ol>
 
           <p style="margin-top:14px;">The bot prices against multiple leagues &mdash; Forbidden Rites and Runes of Aldur. Every prediction reply shows which league answered, and you can switch with:</p>
@@ -484,10 +527,12 @@
             <a href="stashsage_discord_item_price_prediction_api_belt.png" target="_blank" rel="noopener"><img src="stashsage_discord_item_price_prediction_api_belt.png" alt="Discord API item price prediction example for a belt"></a>
             <a href="stashsage_discord_item_price_prediction_api_body_armour.png" target="_blank" rel="noopener"><img src="stashsage_discord_item_price_prediction_api_body_armour.png" alt="Discord API item price prediction example for body armour"></a>
           </div>
+          <p class="feature-setup-link">Want the desktop or phone tools too? <a href="#setups">Choose your setup</a>. For scripts, see the <a href="#api-docs">hosted pricing API</a>.</p>
         </section>
 
         <section class="tab-panel" id="using-stashsage-guide" role="tabpanel" aria-labelledby="tab-using-stashsage" hidden>
-          <h3>Prediction Overlay</h3>
+          <h3>Prediction Overlay &mdash; price single items in game</h3>
+          <p>Check an item while playing, compare it with similar listings, and filter modifiers to see how they influence its estimated value. Pricing runs locally on your desktop.</p>
           <ol>
             <li>Select or hover over the item in game for which you'd like to see price predictions.</li>
             <li>Press <code>CTRL+1</code> (or custom hotkey) to bring up the (unfiltered) prediction overlay.</li>
@@ -500,53 +545,43 @@
             <a href="stashsage_prediction_gui.png" target="_blank" rel="noopener"><img src="stashsage_prediction_gui.png" alt="StashSage prediction UI overlay with item price estimates"></a>
             <a href="stashsage_prediction_nearest_neighbors.png" target="_blank" rel="noopener"><img src="stashsage_prediction_nearest_neighbors.png" alt="StashSage nearest-neighbors comparable items view"></a>
           </div>
+          <p class="feature-setup-link">Available in the desktop app. <a href="#setup-desktop-guide">Set up StashSage on desktop</a>.</p>
         </section>
 
         <section class="tab-panel" id="feature-prediction-history" role="tabpanel" aria-labelledby="tab-prediction-history" hidden>
-          <h3>Prediction History</h3>
-          <ul style="margin:12px 0 0 20px">
-            <li>Press <code>CTRL + 3</code> (or custom hotkey) to bring up the prediction history overlay.</li>
-            <li>Review snapshots of previous item predictions, including the item descriptions.</li>
-            <li>Compare to selling history in your Merchant tabs to assess quality of predictions.</li>
-          </ul>
+          <h3>Prediction History &mdash; review your previous single-item predictions</h3>
+          <p>Return to saved item descriptions, estimates and comparable listings from your earlier desktop price checks.</p>
+          <ol>
+            <li>Open <strong>History</strong> in the desktop sidebar.</li>
+            <li>Browse saved snapshots to review an item's estimates, description and filters.</li>
+            <li>Compare your earlier estimates with your own selling records when reviewing pricing decisions.</li>
+          </ol>
           <div class="gallery">
-            <a href="stashsage_prediction_history_gui_1.png" target="_blank" rel="noopener"><img src="stashsage_prediction_history_gui_1.png" alt="Prediction History GUI screenshot 1"></a>
-            <a href="stashsage_prediction_history_gui_2.png" target="_blank" rel="noopener"><img src="stashsage_prediction_history_gui_2.png" alt="Prediction History GUI screenshot 2"></a>
+            <a href="stashsage_prediction_history_sidebar.png" target="_blank" rel="noopener"><img src="stashsage_prediction_history_sidebar.png" alt="Prediction History in the desktop sidebar showing example saved price checks" loading="lazy"></a>
           </div>
+          <p class="muted">Screenshot uses example data.</p>
+          <p class="feature-setup-link">Saved on your desktop. <a href="#setup-desktop-guide">Set up StashSage on desktop</a>.</p>
         </section>
 
         <section class="tab-panel" id="using-stash-scrape" role="tabpanel" aria-labelledby="tab-using-stash-scrape" hidden>
-          <h3>Using StashScrape</h3>
+          <h3>StashScrape &mdash; price your entire stash</h3>
+          <p>Price your <strong>public premium and merchant listings</strong> in supported categories, then compare asking prices with model estimates. StashScrape reads the trade site's public listings; private stash tabs are outside its reach.</p>
           <ol>
-            <li>Select <strong>StashScrape</strong> from the main menu.</li>
-            <li>Enter your Trade API username and a target directory in which to save output files.</li>
-            <li>Enter <strong>Seconds Between Searches</strong>; we suggest at least <code>300</code>s to minimize rate limiting.</li>
-            <li>Select the listing type (All Listings = public premium stash tabs + merchant tabs).</li>
-            <li>Select the categories to scrape; each necessitates a separate search as in step 3.</li>
-            <li>Upon pipeline completion, fetch the output file from the target directory.</li>
+            <li>Open <strong>StashScrape</strong> in the sidebar, then <strong>Run StashScrape</strong>.</li>
+            <li>Enter your trade account, choose a supported league, and select a save folder.</li>
+            <li>Choose <strong>All Listings</strong> (public premium and merchant tabs) or <strong>Merchant Only</strong>, and select the categories to price.</li>
+            <li>Set <strong>Wait Between Searches</strong>. The default is 120 seconds; allow 120&ndash;300 seconds between searches to reduce rate limiting.</li>
+            <li>Run StashScrape and follow its progress. Each selected category needs a separate trade search.</li>
+            <li>Open <strong>View StashScrapes</strong> to sort and filter results, compare estimates with asking prices, and copy searches to find items in your stash.</li>
           </ol>
-          <h3>Agent access to listing snapshots</h3>
-          <p>An agent on your Tailscale network can request a one-off snapshot of your public listings through the desktop's authenticated StashWatch service. Follow <strong>StashWatch &rarr; Use it from your phone or an agent</strong> below to connect Tailscale and obtain the HTTPS phone link and desktop access token. Put them into the agent's secure connection settings.</p>
-          <p>Save a watch with your account, league, listing type and categories, leave it paused, and request <strong>Check now</strong>. The agent can follow the job's progress and retrieve the observed listings and asking prices as JSON or CSV. See <strong>StashWatch &rarr; Use it from your phone or an agent</strong> for setup and API calls.</p>
-          <p>The current HTTP API returns listing snapshots and activity history. Model valuations and the full StashScrape output are available by running StashScrape on your desktop or Android device.</p>
-          
-          <h3>StashScrape on Android</h3>
-          <p>The <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageAndroid.apk">Android app</a> runs the same StashScrape from your phone, on your phone's connection, and prices listings locally using models bundled with the app. No API key is required.</p>
-          <ol>
-            <li>Enter your Trade API username, pick the league, and set <strong>Wait Between Searches</strong> (120&ndash;300&nbsp;s is safest).</li>
-            <li>Choose <strong>All Listings</strong> or <strong>Merchant Only</strong> and the categories to scrape.</li>
-            <li>Models are bundled with the app and installed automatically on first use. Install a newer APK to update the models.</li>
-            <li>Tap <strong>Run StashScrape</strong>. It keeps running in the background with a progress notification and a Stop button.</li>
-            <li>In <strong>View StashScrapes</strong>, sort and filter the results, switch the prediction currency, copy stash searches, and see which listings disappeared since your last run (a sale is not confirmed). <strong>Re-price</strong> prices a saved run again with the models installed on your phone.</li>
-          </ol>
-          <p>Each run is saved in the desktop's StashScrape folder layout: share it, or pick a folder to save copies to, and the desktop's StashScrape viewer opens it.</p>
-
 
           <div class="gallery">
-            <a href="stashsage_stash_scrape_menu.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_menu.png" alt="StashSage StashScrape menu selection"></a>
+            <a href="stashsage_stash_scrape_setup.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_setup.png" alt="StashSage Run StashScrape form with example account and category selections" loading="lazy"></a>
             <a href="stashsage_stash_scrape_workflow.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_workflow.png" alt="StashSage StashScrape workflow progress window"></a>
-            <a href="stashsage_stash_scrape_output.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_output.png" alt="StashSage StashScrape output files directory"></a>
+            <a href="stashsage_stash_scrape_results.png" target="_blank" rel="noopener"><img src="stashsage_stash_scrape_results.png" alt="StashSage View StashScrapes showing saved model estimates and asking prices" loading="lazy"></a>
           </div>
+          <p class="muted">Setup and results screenshots use example data.</p>
+          <p class="feature-setup-link">Available on desktop and Android. <a href="#setup-desktop-guide">Desktop setup</a> &middot; <a href="#setup-android-guide">Android setup</a>.</p>
         </section>
 
         <section class="tab-panel" id="using-stashwatch" role="tabpanel" aria-labelledby="tab-stashwatch" hidden>
@@ -554,17 +589,18 @@
           
           <p>StashWatch periodically checks the trade site for your public listings and keeps a local history of new listings, price changes, disappearances and items that appear again. Use its own <strong>StashWatch</strong> tab in the desktop sidebar to set up and review a watch.</p>
 
-          <h3 style="margin-top:20px;">Set up a watch</h3>
           <ol>
-            <li>Enter your account name and choose the trade league.</li>
+            <li>Open <strong>StashWatch</strong>, enter your account name, and choose the trade league.</li>
             <li>Choose <strong>Merchant</strong> or <strong>All public listings</strong>, then watch all categories or select individual categories.</li>
-            <li>Set <strong>Check every</strong> to <strong>15 minutes</strong>, <strong>30 minutes</strong>, <strong>1 hour</strong>, <strong>2 hours</strong>, or a <strong>Custom</strong> number of minutes. The default is 30 minutes.</li>
-            <li>Press <strong>Start watching</strong>. <strong>Pause</strong> stops the timer and cancels a running check; <strong>Check now</strong> requests a manual check, including while paused.</li>
-            <li>Review <strong>Last checked</strong>, <strong>Next check</strong>, and whether the latest check was complete. Browse <strong>Current Listings</strong> and <strong>Activity</strong>, or export listings to CSV.</li>
+            <li>Set <strong>Check every</strong> (30 minutes by default), save the settings, and press <strong>Start watching</strong>.</li>
+            <li>Browse <strong>Current Listings</strong> and <strong>Activity</strong>, check when the last complete observation occurred, or export listings to CSV.</li>
+            <li>Use <strong>Pause</strong> to stop monitoring or <strong>Check now</strong> for a one-off check, including while paused.</li>
           </ol>
-          <p>Your saved watches and history survive app restarts. Enabled watches resume when the app starts again. Checks run one at a time and respect trade-site rate limits; the next scheduled check follows the previous check's completion.</p>
 
-          <h3 style="margin-top:20px;">Read the activity</h3>
+          <p class="workflow-note"><strong>A disappearance does not confirm a sale.</strong> An item may have sold, been delisted, or moved out of public visibility. StashWatch tracks listed prices and observations, rather than model valuations.</p>
+          <details class="accordion setup-guide">
+          <summary>What the activity means</summary>
+          <div class="content">
           <div class="table-wrap"><table aria-label="StashWatch activity types">
             <thead><tr><th>Activity</th><th>What was observed</th></tr></thead>
             <tbody>
@@ -574,19 +610,101 @@
               <tr><td>Appeared again</td><td>A missing listing became visible again.</td></tr>
             </tbody>
           </table></div>
-          <div class="callout"><strong>A disappearance does not confirm a sale.</strong> The item may have sold, been delisted, or moved out of public visibility. StashWatch records when it was last seen and when its absence was observed. Incomplete or capped checks retain unseen listings instead of recording disappearances.</div>
+          <p>Incomplete or capped checks retain unseen listings instead of recording disappearances. Check the last complete observation before drawing conclusions.</p>
           <p>Changing the account, league, listing type or categories starts a fresh comparison baseline and preserves the earlier history. StashWatch observes public listings and their listed prices; it does not inspect private inventory or change your prices.</p>
+          <p>Saved desktop watches survive app restarts. Enabled watches resume when StashSage starts again. Checks run one at a time and respect trade-site rate limits; the next scheduled check follows the previous check's completion.</p>
+          </div>
+          </details>
 
-          <h3 style="margin-top:20px;">Use it from your phone or an agent</h3>
-          <p>Choose where the checks run before setting up a connection:</p>
-          <div class="table-wrap"><table aria-label="Phone and desktop connection choices"><thead><tr><th>How you use StashSage</th><th>Where checks run</th><th>What you need</th></tr></thead><tbody>
-            <tr><td>Desktop StashScrape or StashWatch</td><td>Your PC</td><td>StashSage on the PC. No Tailscale or token.</td></tr>
-            <tr><td>Android StashScrape, or StashWatch &rarr; This phone</td><td>Your Android phone</td><td>The Android app. No PC, Tailscale or token. StashScrape prices locally with bundled models.</td></tr>
-            <tr><td>Phone browser (iPhone, iPad or Android), Android &rarr; Desktop via Tailscale, or agent</td><td>Your PC</td><td>StashSage running on an awake PC, Tailscale on both devices, the phone link and desktop access token.</td></tr>
-          </tbody></table></div>
-          <h4>Connect your phone to your PC</h4>
+          <div class="gallery">
+            <a href="stashsage_stashwatch_setup.png" target="_blank" rel="noopener"><img src="stashsage_stashwatch_setup.png" alt="StashWatch desktop settings and monitoring controls with example data" loading="lazy"></a>
+            <a href="stashsage_stashwatch_activity.png" target="_blank" rel="noopener"><img src="stashsage_stashwatch_activity.png" alt="StashWatch desktop listing activity with example price changes" loading="lazy"></a>
+          </div>
+          <p class="muted">Screenshots use example data.</p>
+          <details class="accordion setup-guide" id="stashwatch-dashboard-preview">
+            <summary>Preview: the next desktop release</summary>
+            <div class="content">
+              <p>The redesigned desktop dashboard is planned for the next desktop release; the current v0.5.25 download uses the controls described above.</p>
+              <p><strong>New watch</strong> creates a paused watch. <strong>Edit watch</strong> saves settings explicitly; choose checks every <strong>15, 30, 60 or 120 minutes</strong>. An existing custom interval stays available until you choose a preset.</p>
+              <p><strong>Listings</strong> shows Still listed? (Yes, No or Unknown), previous and last listed prices, changes and stash names. Incomplete checks leave unseen listings Unknown. <strong>Checks</strong> opens earlier snapshots; <strong>Activity</strong> shows price and visibility changes. Export CSV uses the selected check and filters.</p>
+              <p>A failed or cancelled attempt keeps the preceding captured result visible. No longer observed does not confirm a sale. Start watching repeats checks, Check now captures once, and Stop check cancels a manual check.</p>
+              <div class="gallery"><a href="stashsage_stashwatch_dashboard.png" target="_blank" rel="noopener"><img src="stashsage_stashwatch_dashboard.png" alt="Next desktop release: StashWatch listings dashboard using example data" loading="lazy"></a></div>
+            </div>
+          </details>
+
+          <p class="feature-setup-link">Use it on desktop or Android, or connect a phone or agent to your desktop. <a href="#setups">Choose your setup</a>.</p>
+        </section>
+      </div>
+      </div>
+    </details>
+
+    <details class="section" id="setups" open>
+      <summary><h2>Choose your StashSage setup</h2></summary>
+      <div class="section-body">
+        <p class="feature-intro">Use StashSage on your desktop, independently on Android, or connect your phone or agent to your desktop through Tailscale. Your setup determines where work runs and where its history is saved.</p>
+        <div class="setup-grid">
+          <article class="setup-card" id="setup-desktop">
+            <h3>Desktop</h3>
+            <p>Use the prediction overlay, prediction history, StashScrape and StashWatch on your PC.</p>
+            <dl><dt>Runs on</dt><dd>Your Windows or Linux desktop.</dd><dt>Data stays</dt><dd>On your desktop.</dd><dt>Requires</dt><dd>The desktop app.</dd></dl>
+            <p class="setup-action"><a href="#setup-desktop-guide">Desktop setup</a> &middot; <a href="#using-stashsage-guide">Explore the overlay</a></p>
+          </article>
+          <article class="setup-card" id="setup-android">
+            <h3>Android alone</h3>
+            <p>Run StashScrape with local pricing and monitor listings with StashWatch from your phone.</p>
+            <dl><dt>Runs on</dt><dd>Your Android phone.</dd><dt>Data stays</dt><dd>On your phone, separate from desktop data.</dd><dt>Requires</dt><dd>Android 8+ and the Android app.</dd></dl>
+            <p class="setup-action"><a href="#setup-android-guide">Android setup and sharing</a></p>
+          </article>
+          <article class="setup-card" id="setup-phone">
+            <h3>Phone + desktop via Tailscale</h3>
+            <p>Check and control your desktop's StashWatch from Android or a phone browser. Keep using all desktop tools on your PC.</p>
+            <dl><dt>Runs on</dt><dd>Your awake desktop with StashSage running.</dd><dt>Data stays</dt><dd>Desktop watch history; Android can cache it for offline viewing.</dd><dt>Requires</dt><dd>Tailscale on both devices and desktop access enabled.</dd></dl>
+            <p class="setup-action"><a href="#setup-phone-guide">Connect your phone</a></p>
+          </article>
+          <article class="setup-card" id="setup-agent">
+            <h3>Agent + desktop via Tailscale</h3>
+            <p>Ask an agent, such as Muse, to check listings, control watches, or retrieve watch activity from your desktop.</p>
+            <dl><dt>Runs on</dt><dd>Your awake desktop with StashSage running.</dd><dt>Data stays</dt><dd>On your desktop; requested records are returned to your agent.</dd><dt>Requires</dt><dd>An HTTP-capable agent runner connected to your Tailscale network.</dd></dl>
+            <p class="setup-action"><a href="#setup-agent-guide">Connect your agent</a></p>
+          </article>
+        </div>
+        <p><strong>Sharing depends on the tool.</strong> Connected StashWatch uses the desktop's watches and history. Phone-run StashScrapes and independent phone watches stay separate; Tailscale does not automatically sync those records. Export a phone StashScrape run to open it in the desktop viewer.</p>
+        <p class="workflow-note">The <a href="#feature-discord-api">Discord bot</a> and <a href="#api-docs">hosted pricing API</a> are separately available services. Neither requires the desktop app.</p>
+
+        <details class="accordion setup-guide" id="setup-desktop-guide">
+          <summary>Set up the desktop app</summary>
+          <div class="content">
+            <ol>
+              <li>Download StashSage for <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageWindows.zip">Windows</a> or <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageLinux.zip">Linux</a> using the links at the top of this page.</li>
+              <li>Extract the complete archive. On Windows, keep <code>StashSage.exe</code> beside its <code>_internal</code> directory and launch it.</li>
+              <li>Use the overlay hotkeys for single-item predictions, and the sidebar for History, StashScrape and StashWatch.</li>
+            </ol>
+            <p>Desktop use needs no Tailscale connection or desktop access token. Use the <a href="#using-stashsage-guide">overlay guide</a>, <a href="#feature-prediction-history">history guide</a>, <a href="#using-stash-scrape">StashScrape guide</a> or <a href="#using-stashwatch">StashWatch guide</a> for the workflow.</p>
+          </div>
+        </details>
+
+        <details class="accordion setup-guide" id="setup-android-guide">
+          <summary>Use Android independently and share saved runs</summary>
+          <div class="content">
+            <p>Install the <a href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageAndroid.apk">Android APK for v0.5.25</a> on Android 8 or later. Allow installation from your browser when Android asks. No desktop, Tailscale or API key is needed; StashScrape prices locally with bundled models.</p>
+            <ol>
+              <li>In <strong>Run</strong>, enter your trade account, choose an installed league, and set <strong>Wait Between Searches</strong> (120&ndash;300 seconds).</li>
+              <li>Choose <strong>All Listings</strong> or <strong>Merchant Only</strong> and the categories to price, then tap <strong>Run StashScrape</strong>.</li>
+              <li>Follow the background progress notification. In <strong>View StashScrapes</strong>, sort and filter results, switch currencies, copy stash searches, or re-price saved listings with the installed models.</li>
+              <li>Use <strong>Share run</strong> or save copies to a chosen folder. Transfer the run folder into your desktop's StashScrape save folder to open it in the desktop viewer. Sharing a CSV exports the table; sharing a run includes the saved listings.</li>
+            </ol>
+            <p>For independent monitoring, open <strong>StashWatch</strong> and choose <strong>This phone</strong>. Checks and history stay on Android; no model pack or desktop connection is needed for monitoring. Android can delay background checks, and force-stopping the app suspends them until you reopen it.</p>
+            <p>Independent phone watches do not merge with desktop watches. A listing that disappeared since an earlier scrape is no longer observed, rather than a confirmed sale. Install a newer APK to update the phone's bundled pricing models.</p>
+          </div>
+        </details>
+
+        <details class="accordion setup-guide" id="setup-connect-desktop">
+          <summary>Connect to your desktop: shared Tailscale setup</summary>
+          <div class="content">
+
+          <p>Use this connection for a phone browser, Android desktop mode, or an agent. Keep StashSage running and the PC awake; minimizing to the tray keeps desktop checks active while clients disconnect.</p>
           <ol>
-            <li><strong>On the PC:</strong> open StashWatch and enable <strong>Allow phones and agents to connect</strong> (<strong>Enable HTTP access for phones and agents</strong> in v0.5.24). Leave the service port at <strong>5006 (recommended)</strong>. You do not need to choose a port.</li>
+            <li><strong>On the PC:</strong> in the redesigned desktop build, open <strong>Help → Setups</strong> and enable <strong>Allow phones and agents to connect</strong>. Desktop <strong>v0.5.25</strong> downloads keep these controls in <strong>StashWatch</strong>; v0.5.24 calls the switch <strong>Enable HTTP access for phones and agents</strong>. Leave the service port at <strong>5006 (recommended)</strong>. You do not need to choose a port.</li>
             <li><strong>On both devices:</strong> <a href="https://tailscale.com/download" target="_blank" rel="noopener">install Tailscale</a>, sign in with the same Tailscale account, and connect.</li>
             <li><strong>On the PC:</strong> open PowerShell (Windows) or Terminal (Linux) and paste the command below. If asked to enable HTTPS, follow the link Tailscale prints, then run the command again. See the <a href="https://tailscale.com/docs/features/tailscale-serve" target="_blank" rel="noopener">official Tailscale Serve instructions</a> for help.</li>
           </ol>
@@ -594,16 +712,50 @@
           <ol start="4">
             <li><strong>Get the phone link:</strong> copy the HTTPS address Tailscale prints, including <code>:10000</code>, for example <code>https://your-pc.your-tailnet.ts.net:10000/</code>. Desktop v0.5.25 and later also offer <strong>Copy phone link</strong> after setup. Transfer that link to your phone.</li>
             <li><strong>Get the password:</strong> on the PC, press <strong>Copy access token</strong> (<strong>Copy API token</strong> in v0.5.24). Transfer the copied token privately to your phone.</li>
-            <li><strong>Phone browser:</strong> with Tailscale connected on your phone, open the phone link. Paste the token into <strong>Desktop access token</strong> (<strong>API token</strong> on the v0.5.24 web page), then press <strong>Connect</strong>. No Android app is needed; this works on iPhone too.</li>
           </ol>
-          <p><strong>Android app instead of the browser:</strong> in StashWatch choose <strong>Desktop via Tailscale</strong>, then <strong>Add desktop connection</strong>. Paste the phone link into <strong>HTTPS desktop URL</strong> and the token into <strong>Desktop access token</strong> (<strong>Desktop StashWatch token</strong> in v0.5.24). Press <strong>Test and save</strong>. Choose <strong>This phone</strong> if you want checks to run independently on Android.</p>
-          <p><strong>What does Open web page on this PC do?</strong> It opens the web page in your PC's browser at <code>http://127.0.0.1:5006/</code>, so you can preview it locally. It does not open your phone or configure Tailscale. In v0.5.24 the button is called <strong>Open phone view</strong>. Your phone uses the HTTPS Tailscale link from step 4.</p>
-          <p><strong>What is the token?</strong> It is your private StashSage access password, not a Tailscale login key or a hosted pricing API key. Paste it into the connection's token field, never into a URL or public message. The browser keeps it only in the open page's memory and forgets it when the page closes.</p>
-          <p><strong>For an agent:</strong> its tool runner must be connected to your Tailscale network. Put the HTTPS phone link and token into its secure connection settings. Connecting your phone to Tailscale alone does not give a cloud agent access. Agents can request listing snapshots and activity history; the current remote API does not run the full model-valued StashScrape pipeline.</p>
-          <p>The web page and Android desktop mode control your PC's watches. Keep StashSage running and the PC awake; minimizing to the tray keeps checks active when your phone disconnects. Only change the local port in Advanced settings if 5006 is unavailable, and use that port in the command above. HTTPS port 10000 is the phone-facing address.</p>
-          <details style="margin-top:16px;">
-            <summary><strong>HTTP API for agents and integrations</strong></summary>
-            <p>Send <code>Authorization: Bearer &lt;token&gt;</code> or <code>X-API-Key: &lt;token&gt;</code> with every API request to your own desktop service.</p>
+          <p>Continue with the <a href="#setup-phone-guide">phone instructions</a> or <a href="#setup-agent-guide">agent instructions</a>.</p>
+
+          <details class="accordion"><summary>Preview: Help → Setups in the next desktop release</summary><div class="content"><p>Four setup choices and the shared connection controls live in Help → Setups. This preview uses example data; v0.5.25 downloads retain their existing StashWatch connection panel.</p><div class="gallery"><a href="stashsage_setups.png" target="_blank" rel="noopener"><img src="stashsage_setups.png" alt="Next desktop release: Help Setups with desktop, Android, phone and agent choices" loading="lazy"></a></div></div></details>
+
+          <h4>Connection help</h4>
+          <p><strong>Open web page on this PC</strong> previews the page locally at <code>http://127.0.0.1:5006/</code>. Your phone uses the HTTPS Tailscale link, including <code>:10000</code>. Only change the local service port in Advanced settings if 5006 is unavailable, and use the new local port in the setup command.</p>
+          <p>The <strong>desktop access token</strong> is your private StashSage access password. It is separate from a Tailscale login key and a hosted pricing API key. Paste it into the connection's token field or secure settings; keep it out of URLs and public messages.</p>
+          <p>To stop monitoring, press <strong>Pause</strong>. To stop HTTP access, disable its option or exit StashSage. Remove this Tailscale proxy with <code>tailscale serve --https=10000 off</code>.</p>
+          </div>
+        </details>
+
+        <details class="accordion setup-guide" id="setup-phone-guide">
+          <summary>Use a phone with your desktop</summary>
+          <div class="content">
+            <p>First complete the <a href="#setup-connect-desktop">shared desktop connection setup</a>. These clients control your desktop's StashWatch; the desktop owns its check schedule and history.</p>
+            <h4>Phone browser: iPhone, iPad or Android</h4>
+            <p>Connect Tailscale on your phone, open the HTTPS desktop link, paste the copied token into <strong>Desktop access token</strong>, and press <strong>Connect</strong>. The page lets you save and control watches, browse listings and activity, and download CSV. It keeps the token only in the open page's memory and forgets it when closed.</p>
+            <h4>Native Android app</h4>
+
+            <p>In <strong>StashWatch</strong>, choose <strong>Desktop via Tailscale</strong>, then <strong>Add desktop connection</strong>. Paste the HTTPS link into <strong>HTTPS desktop URL</strong> and the token into <strong>Desktop access token</strong>, then press <strong>Test and save</strong>. Import a desktop watch or save one with the native controls.</p>
+            <p>Android caches desktop watch history for offline viewing. When the phone disconnects, the awake desktop keeps monitoring. Independent <strong>This phone</strong> watches and phone-run StashScrapes stay separate; use <a href="#setup-android-guide">run sharing</a> to transfer saved StashScrape results.</p>
+            <p>The remote service returns observed listings and asking prices. Run StashScrape on desktop or Android for model valuations; the phone connection does not expose the desktop overlay or prediction history.</p>
+          </div>
+        </details>
+
+        <details class="accordion setup-guide" id="setup-agent-guide">
+          <summary>Use an agent with your desktop</summary>
+          <div class="content">
+            <p>An agent such as Muse can use the desktop HTTP API if its <strong>tool runner</strong> can make authenticated requests from your Tailscale network. This is a general HTTP connection; StashSage does not supply a dedicated Muse integration.</p>
+            <ol>
+              <li>Complete the <a href="#setup-connect-desktop">shared desktop connection setup</a> with Tailscale connected on the desktop and the agent runner. Connecting only your phone does not give a cloud agent access.</li>
+              <li>Put the HTTPS desktop link and desktop access token into the agent's secure connection settings.</li>
+              <li>Ask the agent to create or select a watch for your account, league, listing type and categories. For a one-off listing snapshot, leave it paused and request <strong>Check now</strong>. For repeated checks, start the watch.</li>
+              <li>The agent can follow the job status, retrieve observed listings as JSON or CSV, and read watch activity. See the <a href="#desktop-api">desktop API reference</a> for supported calls.</li>
+            </ol>
+            <p>Start StashSage on your desktop before connecting. The current API exposes listing snapshots and watch activity; full model-valued StashScrape runs and prediction history are not exposed to agents. Your agent provider handles any records you ask it to retrieve.</p>
+          </div>
+        </details>
+
+        <details class="accordion setup-guide" id="desktop-api">
+          <summary>Desktop API for agents and integrations</summary>
+          <div class="content">
+            <p>These calls go to your own desktop's HTTPS connection. Send <code>Authorization: Bearer &lt;token&gt;</code> or <code>X-API-Key: &lt;token&gt;</code> using its desktop access token.</p>
             <ul>
               <li><code>GET /stash/catalog</code> &mdash; list categories and known leagues.</li>
               <li><code>GET /stash/watches</code> and <code>POST /stash/watches</code> &mdash; read or save watches.</li>
@@ -613,11 +765,10 @@
               <li><code>GET /stash/watches/{id}/listings</code> &mdash; read last-known listings; append <code>?format=csv</code> to download CSV.</li>
               <li><code>GET /stash/watches/{id}/events?after=0</code> &mdash; read chronological activity. Save the returned <code>next_cursor</code> and use it as the next <code>after</code> value to avoid logging events twice.</li>
             </ul>
-            <p>This local monitoring API is separate from the hosted item-pricing API. Watches are created paused; start one or request a manual check after saving its account, league, listing type, categories and interval.</p>
-          </details>
-          <p>To stop monitoring, press <strong>Pause</strong>. To stop HTTP access, disable its option or exit StashSage. Remove this Tailscale proxy with <code>tailscale serve --https=10000 off</code>.</p>
-        </section>
-      </div>
+            <p>For reliable integrations, send a stable <code>X-Request-ID</code> when requesting a check and reconcile its returned job ID. Use the watch's <code>settings_version</code> as <code>If-Match</code> when editing. Track event <code>generation</code> and <code>head_cursor</code> alongside <code>next_cursor</code> when caching desktop history.</p>
+            <p>Watches are created paused; start one or request a manual check after saving its settings. This local monitoring API is separate from the <a href="#api-docs">hosted item-pricing API</a>, whose credentials and base URL are issued separately.</p>
+          </div>
+        </details>
       </div>
     </details>
 
@@ -647,11 +798,11 @@
         <div class="faq-item">
           <h3>Does StashSage upload my item or account data?</h3>
           <p>The desktop application performs its normal pricing operations locally. Android StashScrape also prices listings locally using bundled models and requires no API key. It fetches public listings from the Path of Exile trade site using your phone's connection. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
-          <p>StashWatch saves your account settings and listing history locally on your desktop. Its optional phone and agent access shares that history through the authenticated service you enable on your own computer.</p>
+          <p>StashWatch saves settings and listing history on the device doing the checks: desktop, or Android in This phone mode. Connected clients access your desktop's records through the authenticated service you enable on your own computer. Android can cache that desktop history locally; an agent receives the records you request. See <a href="#setups">setup choices and data sharing</a>.</p>
         </div>
         <div class="faq-item">
           <h3>Which operating systems are supported?</h3>
-          <p>Portable downloads are available for Windows and Linux. Windows users extract the complete ZIP and keep <code>StashSage.exe</code> beside its <code>_internal</code> directory. StashScrape is also available as an Android app (Android 8 or later).</p>
+          <p>Portable downloads are available for Windows and Linux. Windows users extract the complete ZIP and keep <code>StashSage.exe</code> beside its <code>_internal</code> directory. Android 8 or later supports standalone StashScrape and StashWatch. iPhone and iPad can use the <a href="#setup-phone-guide">connected StashWatch browser view</a> while the desktop stays running.</p>
         </div>
         <div class="faq-item">
           <h3>What display mode should Path of Exile 2 run in?</h3>
@@ -665,9 +816,10 @@
     </details>
 
     <details class="section" id="api-docs">
-      <summary><h2>API Access</h2></summary>
+      <summary><h2>Pricing API &mdash; price single items</h2></summary>
       <div class="section-body">
         <p>The same pricing engine behind the Discord bot is available as a small HTTP API for your own tools and scripts. Send it copied item text, get back a value estimate, comparable listings, and the modifiers driving the price &mdash; the same payload the desktop app renders.</p>
+        <p>This hosted service works without the desktop app and uses its own API key. To control your computer's watches and read its listing history, use the <a href="#desktop-api">desktop API</a> in the setup guides.</p>
 
         <div class="callout">
           <strong>Invite-only, best-effort.</strong> This is a small unpaid service, not a general-purpose developer platform. There is no uptime or stability guarantee, and the contract may change or pause without notice. Fine for personal tools and Discord bots; don't build anything load-bearing on it.
@@ -854,7 +1006,10 @@
         rates from poe2scout and poe.ninja and checks the StashSage server for app updates.
       </p>
       <p>
-        StashWatch stores watch settings, listing observations and activity history on your desktop.
+        StashWatch stores watch settings, listing observations and activity history on the device
+        performing checks: your desktop, or Android in This phone mode. Android desktop mode caches
+        watch records on your phone for offline viewing. Independent phone records remain separate
+        from desktop records; saved StashScrape runs can be exported and transferred explicitly.
         Its optional HTTP service is disabled by default and requires your private access token.
         If you enable phone or agent access, those clients can read and control your watches through
         your own connection. An agent provider's handling of information you share is governed by
@@ -910,7 +1065,7 @@
       }
     })();
 
-    // Feature guides share click, keyboard and direct-link navigation.
+    // Reveal the destination before scrolling, including links into closed guides.
     (function () {
       const tabsets = document.querySelectorAll('[data-tabset]');
       if (!tabsets.length) { return; }
@@ -942,6 +1097,7 @@
         tabs.forEach((tab, idx) => {
           tab.addEventListener('click', function () {
             activate(tabset, tab, false);
+            window.history.replaceState(null, '', '#' + tab.dataset.tabTarget);
           });
 
           tab.addEventListener('keydown', function (event) {
@@ -954,16 +1110,44 @@
 
             event.preventDefault();
             activate(tabset, tabs[nextIdx], true);
+            window.history.replaceState(null, '', '#' + tabs[nextIdx].dataset.tabTarget);
           });
         });
 
-        const hashId = window.location.hash ? window.location.hash.slice(1) : '';
-        const hashMatch = tabs.find((tab) => tab.dataset.tabTarget === hashId);
-        const selected = hashMatch || tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+        const selected = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
         activate(tabset, selected, false);
       }
 
       tabsets.forEach(wireTabset);
+
+      function reveal(hash) {
+        let id;
+        try { id = decodeURIComponent(hash.slice(1)); }
+        catch (_) { return; }
+        const target = document.getElementById(id);
+        if (!target) { return; }
+
+        const panel = target.closest('[role="tabpanel"]');
+        if (panel) {
+          const tabset = panel.closest('[data-tabset]');
+          const tab = Array.from(tabset.querySelectorAll('[role="tab"]')).find((candidate) => candidate.dataset.tabTarget === panel.id);
+          if (tab) { activate(tabset, tab, false); }
+        }
+        let ancestor = target;
+        while (ancestor) {
+          if (ancestor.tagName === 'DETAILS') { ancestor.open = true; }
+          ancestor = ancestor.parentElement;
+        }
+        window.requestAnimationFrame(function () { target.scrollIntoView({block: 'start'}); });
+      }
+
+      document.addEventListener('click', function (event) {
+        if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) { return; }
+        const link = event.target.closest('a[href^="#"]');
+        if (link) { reveal(link.getAttribute('href')); }
+      });
+      window.addEventListener('hashchange', function () { reveal(window.location.hash); });
+      reveal(window.location.hash);
     })();
 
     // Dynamic Feature Importances Section
