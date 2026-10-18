@@ -202,6 +202,7 @@
     code{background:#edf3fc;border:1px solid #dbe6f4;color:#17486f;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;font-size:.92em;padding:2px 6px;border-radius:6px}
     pre{margin:14px 0 0;padding:16px 18px;background:#0f2137;color:#dbe6f4;border-radius:10px;overflow-x:auto;font-size:.86rem;line-height:1.55}
     pre code{background:none;border:0;color:inherit;padding:0;font-size:inherit}
+    #api-access pre{white-space:pre-wrap;overflow-wrap:anywhere}
     .api-method{display:inline-block;background:#21885a;color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.05em;padding:3px 8px;border-radius:6px;margin-right:8px;vertical-align:middle}
     h4{margin:22px 0 4px;font-size:1rem;color:#1f3c55}
     .gallery{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:16px -8px 0}
@@ -315,7 +316,7 @@
 
     <p>Free Path of Exile 2 price-check overlay. Machine-learning valuations for rare items, from live trade data.</p>
 
-    <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join our Discord to use the free API!</a></p>
+    <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Price items in Discord</a> &middot; <a href="#api-access">Request API access for your own tool</a></p>
     <div class="header-actions">
       <a id="download-windows" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageWindows.zip">Download for Windows (.zip)</a>
       <a id="download-linux" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.25/StashSageLinux.zip">Download for Linux (.zip)</a>
@@ -440,7 +441,7 @@
             aria-controls="feature-discord-api"
             data-tab-target="feature-discord-api"
           >
-            Discord API
+            Discord bot
           </button>
           <button
             type="button"
@@ -489,7 +490,7 @@
         </div>
 
         <section class="tab-panel" id="feature-discord-api" role="tabpanel" aria-labelledby="tab-discord-api">
-          <h3>Discord API &mdash; price single items in Discord</h3>
+          <h3>Discord bot &mdash; price single items in Discord</h3>
           <p>Paste an item's copied description into Discord to get a price estimate and comparable listings. The bot uses the hosted pricing service; no desktop installation is required.</p>
           <ol>
             <li>Select or hover over the item in game for which you'd like to see price predictions.</li>
@@ -783,7 +784,7 @@
         </div>
         <div class="faq-item">
           <h3>Does StashSage upload my item or account data?</h3>
-          <p>The desktop application performs its normal pricing operations locally. Android StashScrape also prices listings locally using bundled models and requires no API key. It fetches public listings from the Path of Exile trade site using your phone's connection. StashSage does not collect, store, or sell personal data; requests sent to third-party services are subject to those services' behavior and policies.</p>
+          <p>The desktop application performs its normal pricing operations locally. Android StashScrape also prices listings locally using bundled models and requires no API key. It fetches public listings from the Path of Exile trade site using your phone's connection. Hosted API access requests store your Discord identity and request history as described in <a href="#privacy-api-requests">API request privacy</a>. Requests sent to third-party services are subject to those services' behavior and policies.</p>
           <p>StashWatch saves settings and listing history on the device doing the checks: desktop, or Android in This phone mode. Connected clients access your desktop's records through the authenticated service you enable on your own computer. Android can cache that desktop history locally; an agent receives the records you request. See <a href="#setups">setup choices and data sharing</a>.</p>
         </div>
         <div class="faq-item">
@@ -808,17 +809,33 @@
         <p>This hosted service works without the desktop app and uses its own API key. To control your computer's watches and read its listing history, use the <a href="#desktop-api">desktop API</a> in the setup guides.</p>
 
         <div class="callout">
-          <strong>Invite-only, best-effort.</strong> This is a small unpaid service, not a general-purpose developer platform. There is no uptime or stability guarantee, and the contract may change or pause without notice. Fine for personal tools and Discord bots; don't build anything load-bearing on it.
+          <strong>Manual approval, best-effort.</strong> This is a small unpaid service, not a general-purpose developer platform. There is no uptime or stability guarantee, and the contract may change or pause without notice. Fine for personal tools and Discord bots; don't build anything load-bearing on it.
         </div>
 
-        <h4>Getting access</h4>
-        <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Ask in Discord</a> and we'll issue you an API key and the base URL. Keys are per-consumer &mdash; one can be revoked without affecting anyone else.</p>
+        <section id="api-access" aria-labelledby="api-access-title">
+          <h3 id="api-access-title">Request an API key</h3>
+          <p>Building your own tool or integration? Request access through Discord. Every request requires administrator approval.</p>
+          <p class="callout" id="api-intake-status"><strong>Limited rollout:</strong> requests are currently limited to selected testers while final delivery checks are completed. General requests are not open yet.</p>
+          <ol>
+            <li><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join the StashSage Discord</a>.</li>
+            <li>Find <strong>StashSage Serve</strong> in the server's member list, open its profile, and choose <strong>Message</strong>. Use this private conversation with the bot, not a public server channel.</li>
+            <li>Send the following message, replacing the example with your project name and intended use. Keep the description after <code>!apikey request</code> between 10 and 300 characters.
+              <pre><code id="api-request-command">!apikey request Guild Price Helper - item price checks for our guild website</code></pre>
+            </li>
+            <li>The bot confirms your request number. Keep direct messages enabled and the bot unblocked while an administrator reviews it. Pending requests expire after seven days; approval is not automatic.</li>
+            <li>Check your request at any time by sending <code>!apikey status</code> in the same private conversation.</li>
+            <li><strong>If approved</strong>, the bot privately sends your API key, base URL, and usage instructions. Save the key as a server-side secret; never place it in browser JavaScript, public repositories, or screenshots. The bot will not reveal it again.</li>
+          </ol>
+          <p>Access is linked to your Discord account. An administrator can assign a friendly name while retaining that account link. Consumer keys support league discovery and single-item predictions; rate limits apply, and metrics and batch scoring are unavailable.</p>
+          <p>API keys are for your own integrations. Ordinary Discord bot pricing and local desktop or Android pricing do not require you to request a key. This is also separate from your computer's <a href="#desktop-api">desktop access token</a>.</p>
+          <p>If delivery fails, allow direct messages and ask an administrator to retry using your request number. If your key is lost or exposed, ask an administrator to revoke and replace it. Do not post the key when asking for help. See <a href="#privacy-api-requests">what we store for API requests</a>.</p>
+        </section>
 
         <h4>Authentication</h4>
         <p>Send your key on every request as an <code>X-API-Key</code> header, or as <code>Authorization: Bearer &lt;key&gt;</code>.</p>
 
         <h4>Rate limits</h4>
-        <p>30 requests per 60&nbsp;seconds per key (<code>/predict</code> and <code>/predict-gui</code> combined). Over the limit returns <code>429</code> with a <code>retry_after_seconds</code> field.</p>
+        <p>30 prediction requests per 60&nbsp;seconds per key (<code>/predict</code> and <code>/predict-gui</code> combined). Over the limit returns <code>429</code>; honor the <code>Retry-After</code> header. The same delay appears in <code>error.details.retry_after_seconds</code>.</p>
 
         <h4><span class="api-method">POST</span><code>/predict</code></h4>
         <p>JSON request body:</p>
@@ -978,8 +995,7 @@
 
       <h3 id="privacy">Privacy Policy</h3>
       <p>
-        The StashSage desktop app is designed for local operation. <strong>We do not collect, store, or sell personal
-        data.</strong> Any data the desktop app processes (e.g., configuration, model inputs/outputs) stays on
+        The StashSage desktop app is designed for local operation. <strong>Its normal local pricing operations do not upload your item or account data to us.</strong> Data the desktop app processes (e.g., configuration, model inputs/outputs) stays on
         your device. If the app calls third-party APIs you authorize, the data is transmitted only as
         required to perform the requested operation and is not retained by us. Crash logs or analytics are
         not sent to our servers.
@@ -1000,6 +1016,16 @@
         If you enable phone or agent access, those clients can read and control your watches through
         your own connection. An agent provider's handling of information you share is governed by
         that provider's policies.
+      </p>
+      <p id="privacy-api-requests">
+        <strong>Hosted API access requests.</strong> When you request access through Discord, we store your Discord
+        username and account ID, project description, administrator-assigned name and name changes, and request,
+        approval, delivery and credential-management history. These records let administrators review access,
+        associate a credential with its owner, resolve delivery problems and revoke access. The server stores
+        credentials to authenticate API calls and records usage for rate limits and service administration.
+        Discord also retains the messages, including the private key-delivery message. Keep passwords and other
+        secrets out of your project description. For questions about these records, contact
+        <a href="mailto:datawiseguysllc@gmail.com">datawiseguysllc@gmail.com</a>.
       </p>
       <p id="privacy-research">
         <strong>Trade listing data.</strong> StashSage collects public trade listings to train its pricing
