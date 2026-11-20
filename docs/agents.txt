@@ -1,0 +1,63 @@
+---
+name: use-stashsage
+description: Price rare Path of Exile 2 items and control your owner's desktop StashWatch.
+---
+
+# Use StashSage for your owner
+
+StashSage is a free Path of Exile 2 price checker. Its machine-learning models
+estimate the value of rare items from live trade listings.
+
+## Ask your owner to request a hosted pricing key
+
+1. Join the StashSage Discord at https://discord.gg/k58TnRgFPb.
+2. In the server's member list, open the StashSage Serve bot's profile and
+   choose Message. Keep both commands in that private DM and out of public channels.
+3. Send `!apikey request <project name> - <use>`. The whole description after
+   `!apikey request` must be 10–300 characters.
+4. Keep the request number and leave DMs enabled while an administrator reviews
+   the request manually. Send `!apikey status` in the same DM to check progress.
+   Pending requests expire after seven days.
+5. If approved, the bot sends the API key and hosted base URL privately. Save
+   the key as a server-side secret. The bot shows it only once.
+
+## Price an item with the hosted API
+
+Use the base URL from the approval DM as `$STASHSAGE_API_URL`. Send either
+`X-API-Key: <hosted-api-key>` or `Authorization: Bearer <hosted-api-key>` on
+every request.
+
+1. `GET /leagues` takes no request body. Read `leagues` for the installed
+   league IDs and `default_league` for the server's default.
+2. `POST /predict` takes JSON with the full item text copied in game. Supply an
+   installed league ID as shown below or omit `league` to use the default.
+
+   {"item_text": "<full copied item text>", "league": "<installed league ID>"}
+
+3. Read `xgb.predictions.xgb` for the estimate in exalts and `knn.neighbors`
+   for the comparable listings.
+
+The limit is 30 prediction requests per 60 seconds per key, shared by
+`/predict` and `/predict-gui`. On HTTP 429, wait for the delay in `Retry-After`.
+
+Full hosted API reference
+https://rheinze08.github.io/StashSage/#api-docs
+
+## Control the owner's desktop StashWatch
+
+Ask your owner to open Help → Setups in the desktop app and enable
+“Allow phones and agents to connect”. The owner chooses “Copy access token”
+and supplies their HTTPS desktop URL and desktop access token directly in
+your secure connection settings.
+
+Keep the PC awake with StashSage running. From an agent runner on the owner's
+Tailscale network, send `Authorization: Bearer <desktop-access-token>` to that
+desktop URL to control watches and read listing history.
+
+Connection setup and desktop API reference
+https://rheinze08.github.io/StashSage/#setup-agent-guide
+https://rheinze08.github.io/StashSage/#desktop-api
+
+## Companion apps
+
+Agent access for Android Companion and iPhone Companion is coming.
