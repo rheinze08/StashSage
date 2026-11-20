@@ -156,6 +156,8 @@
     @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
     body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background-color:var(--bg);background-image:linear-gradient(180deg,#e9f1fa,var(--bg) 480px);background-repeat:no-repeat;color:#2e3b4b;line-height:1.65}
     ::selection{background:#cce5fa;color:#10283f}
+    #agent-notice{padding:8px 16px;border-bottom:1px solid var(--line-strong);background:#eaf4ff;color:var(--blue-deep);font-size:.9rem;text-align:center}
+    #agent-notice a{color:var(--blue-dark);font-weight:600}
     header{text-align:center;padding:48px 20px 28px}
     .logo{height:40px;vertical-align:middle;margin:0 10px}
     header h1{font-size:clamp(2rem,4vw + .9rem,2.6rem);font-weight:700;letter-spacing:-.02em;margin-bottom:.45em;color:var(--ink);display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap}
@@ -300,6 +302,10 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFMHCLVQ"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <aside id="agent-notice" aria-label="AI agent guide">
+    <p><strong>Have an AI agent?</strong> Point it at <a href="agents.txt">agents.txt</a> to price your POE2 items or check your desktop StashWatch listings. <a href="#api-access">Request a pricing key</a>.</p>
+  </aside>
 
   <header>
     <h1>
