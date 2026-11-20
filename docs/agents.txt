@@ -14,7 +14,7 @@ estimate the value of rare items from live trade listings.
 2. In the server's member list, open the StashSage Serve bot's profile and
    choose Message. Keep both commands in that private DM and out of public channels.
 3. Send `!apikey request <project name> - <use>`. The whole description after
-   `!apikey request` must be 10–300 characters.
+   `!apikey request` must be 10-300 characters.
 4. Keep the request number and leave DMs enabled while an administrator reviews
    the request manually. Send `!apikey status` in the same DM to check progress.
    Pending requests expire after seven days.
@@ -45,8 +45,8 @@ https://rheinze08.github.io/StashSage/#api-docs
 
 ## Control the owner's desktop StashWatch
 
-Ask your owner to open Help → Setups in the desktop app and enable
-“Allow phones and agents to connect”. The owner chooses “Copy access token”
+Ask your owner to open Help > Setups in the desktop app and enable
+"Allow phones and agents to connect". The owner chooses "Copy access token"
 and supplies their HTTPS desktop URL and desktop access token directly in
 your secure connection settings.
 
