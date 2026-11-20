@@ -85,6 +85,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="downloads.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -169,14 +170,22 @@
     .donate a{color:var(--blue);text-decoration:none;font-weight:600}
     .donate a:hover{color:var(--blue-dark)}
     .header-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+    #downloads{max-width:956px;margin:28px auto 0;text-align:left}
+    #downloads h2{margin-bottom:10px;font-size:1.4rem;color:var(--ink)}
+    .downloads-grid{display:grid;gap:12px}
+    @media (min-width:780px){
+      .downloads-grid{grid-template-columns:3fr 2fr}
+      .downloads-grid > :first-child{grid-row:span 2}
+    }
+    .downloads-grid p{margin:0;font-size:.95rem}
+    .download-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .downloads-grid .btn{padding:10px 16px;font-size:1rem;align-self:flex-start}
     .btn{display:inline-block;padding:14px 30px;font-size:1.05rem;font-weight:600;color:#fff;background:linear-gradient(180deg,#1486e2,var(--blue));border-radius:10px;text-decoration:none;box-shadow:0 6px 16px rgba(0,120,212,.22),inset 0 1px 0 rgba(255,255,255,.18);transition:background .2s,box-shadow .2s,transform .2s}
     .btn:hover{background:linear-gradient(180deg,#0d76cf,var(--blue-dark));transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,90,158,.28),inset 0 1px 0 rgba(255,255,255,.18)}
     .btn:active{transform:translateY(0);box-shadow:0 4px 10px rgba(0,90,158,.25)}
     .btn:focus-visible{outline:3px solid rgba(0,120,212,.45);outline-offset:2px}
     .btn.secondary{background:linear-gradient(180deg,#27496a,#1f3c55);box-shadow:0 6px 16px rgba(31,60,85,.25),inset 0 1px 0 rgba(255,255,255,.12)}
     .btn.secondary:hover{background:linear-gradient(180deg,#20405e,#17324d)}
-    .install-note{max-width:760px;margin:16px auto 8px;color:var(--ink-muted);font-size:.95rem;line-height:1.55}
-    .install-note strong{color:#38516b}
     .hero-shot{max-width:980px;margin:30px auto 0;padding:0 12px}
     .hero-shot img{width:100%;border-radius:var(--radius);box-shadow:0 18px 44px rgba(17,34,56,.18);border:1px solid var(--line-strong);display:block}
     .trust{font-size:.9rem;color:var(--ink-muted);margin-top:12px}
@@ -321,14 +330,31 @@
     <p>Free Path of Exile 2 price-check overlay. Machine-learning valuations for rare items, from live trade data.</p>
 
     <p><a href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Price items in Discord</a> &middot; <a href="#api-access">Request API access for your own tool</a></p>
+    <section id="downloads" aria-labelledby="downloads-title">
+      <h2 id="downloads-title">Downloads</h2>
+      <div class="downloads-grid">
+        <div class="setup-card">
+          <h3>Desktop</h3>
+          <div class="download-actions">
+            <a id="download-windows" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.30/StashSageWindows.zip">Download for Windows (.zip)</a>
+            <a id="download-linux" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.30/StashSageLinux.zip">Download for Linux (.zip)</a>
+          </div>
+          <p>On Windows, extract the whole ZIP to a folder and run <code>StashSage.exe</code> from there. Keep it beside the <code>_internal</code> folder. You can create a desktop shortcut.</p>
+          <p class="muted"><em>Requires approximately 2.1 GB of disk space on Windows.</em></p>
+        </div>
+        <div class="setup-card">
+          <h3>Android Companion</h3>
+          <p id="android-download-status">No APK is offered for this release.</p>
+        </div>
+        <div class="setup-card">
+          <h3>iPhone Companion</h3>
+          <p>Coming via TestFlight.</p>
+        </div>
+      </div>
+    </section>
     <div class="header-actions">
-      <a id="download-windows" class="btn" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.30/StashSageWindows.zip">Download for Windows (.zip)</a>
-      <a id="download-linux" class="btn secondary" href="https://github.com/rheinze08/StashSage/releases/download/v0.5.30/StashSageLinux.zip">Download for Linux (.zip)</a>
-      
       <a class="btn secondary" href="https://discord.gg/k58TnRgFPb" target="_blank" rel="noopener">Join Discord</a>
     </div>
-    <p class="install-note"><strong>How to use ZIP:</strong> extract the whole ZIP to a folder, then run <code>StashSage.exe</code> from there. Keep <code>StashSage.exe</code> and the <code>_internal</code> folder together; create a shortcut if you want it on your desktop.</p>
-    <p class="muted" style="margin-top: 10px; margin-bottom: 8px;"><em>Requires approximately 2.1 GB of disk space on Windows.</em></p>
     
     <p class="trust"><strong><em>The desktop app prices items locally; no item or account data is sent to StashSage for pricing.</em></strong></p>
     <div class="hero-shot">
@@ -338,6 +364,7 @@
 
   <nav class="page-nav" aria-label="StashSage page sections">
     <ul>
+      <li><a href="#downloads">Downloads</a></li>
       <li><a href="#feature-importances">Top Mods</a></li>
       <li><a href="#why-stashsage">Why StashSage</a></li>
       <li><a href="#using-app">Features</a></li>
@@ -1062,6 +1089,7 @@
       <a href="https://github.com/rheinze08/StashSage" target="_blank" rel="noopener">GitHub Source Code</a>
       &bull; <a href="#terms">Terms</a> &bull; <a href="#privacy">Privacy</a>
     </p>
+    <p>Built by <a href="https://rheinze08.github.io/Datawiseguysllc/" target="_blank" rel="noopener">Data WiseGuys LLC</a> &mdash; data and AI tools for small businesses and creators.</p>
     <div class="disclaimer">
       This product isn't affiliated with or endorsed by Grinding Gear Games in any way.
     </div>
