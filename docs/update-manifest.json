@@ -4901,6 +4901,12 @@
     "generated_at": "2026-11-18T01:47:17Z",
     "payload_bytes": 1582130449
   },
+  "mobile_pack": {
+    "version": "0.5.30",
+    "url": "https://github.com/rheinze08/StashSage/releases/download/v0.5.30/stashsage-mobile-pack-0.5.30.zip",
+    "sha256": "07431d43ee03bc648a1228eab3f5560365427556308585f03308890591e3adfa",
+    "size": 60618175
+  },
   "platforms": {
     "linux": {
       "kind": "browser-download",
