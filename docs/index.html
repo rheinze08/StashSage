@@ -843,12 +843,16 @@
             </li>
             <li>The bot confirms your request number. Keep direct messages enabled and the bot unblocked while an administrator reviews it. Pending requests expire after seven days; approval is not automatic.</li>
             <li>Check your request at any time by sending <code>!apikey status</code> in the same private conversation.</li>
-            <li><strong>If approved</strong>, the bot privately sends your API key, base URL, and usage instructions. Save the key as a server-side secret; never place it in browser JavaScript, public repositories, or screenshots. The bot will not reveal it again.</li>
+            <li><strong>If approved</strong>, the bot privately sends your API key and usage instructions. Save the key as a server-side secret; never place it in browser JavaScript, public repositories, or screenshots. The bot will not reveal it again.</li>
           </ol>
           <p>Access is linked to your Discord account. An administrator can assign a friendly name while retaining that account link. Consumer keys support league discovery and single-item predictions; rate limits apply, and metrics and batch scoring are unavailable.</p>
           <p>API keys are for your own integrations. Ordinary Discord bot pricing and local desktop or Android pricing do not require you to request a key. This is also separate from your computer's <a href="#desktop-api">desktop access token</a>.</p>
           <p>If delivery fails, allow direct messages and ask an administrator to retry using your request number. If your key is lost or exposed, ask an administrator to revoke and replace it. Do not post the key when asking for help. See <a href="#privacy-api-requests">what we store for API requests</a>.</p>
         </section>
+
+        <h4 id="api-base-url">Base URL</h4>
+        <p style="overflow-wrap:anywhere">The API's base URL is <code>https://stashsage-serve.fly.dev</code>. Every path below is relative to it; the <code>curl</code> example reads it from <code>$STASHSAGE_API_URL</code>.</p>
+        <p class="callout" style="overflow-wrap:anywhere"><strong>The API has moved.</strong> The old address (<code>https://datawiseguysllc.pythonanywhere.com</code>) keeps working until November 29, 2026 &mdash; please switch to the new address before then.</p>
 
         <h4>Authentication</h4>
         <p>Send your key on every request as an <code>X-API-Key</code> header, or as <code>Authorization: Bearer &lt;key&gt;</code>.</p>

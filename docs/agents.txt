@@ -18,14 +18,17 @@ estimate the value of rare items from live trade listings.
 4. Keep the request number and leave DMs enabled while an administrator reviews
    the request manually. Send `!apikey status` in the same DM to check progress.
    Pending requests expire after seven days.
-5. If approved, the bot sends the API key and hosted base URL privately. Save
-   the key as a server-side secret. The bot shows it only once.
+5. If approved, the bot sends the API key privately. Save the key as a
+   server-side secret. The bot shows it only once.
 
 ## Price an item with the hosted API
 
-Use the base URL from the approval DM as `$STASHSAGE_API_URL`. Send either
-`X-API-Key: <hosted-api-key>` or `Authorization: Bearer <hosted-api-key>` on
-every request.
+The hosted API's base URL is https://stashsage-serve.fly.dev. Use it as
+`$STASHSAGE_API_URL`. Send either `X-API-Key: <hosted-api-key>` or
+`Authorization: Bearer <hosted-api-key>` on every request.
+
+The old address (https://datawiseguysllc.pythonanywhere.com) keeps working
+until November 29, 2026. Please switch to the new address before then.
 
 1. `GET /leagues` takes no request body. Read `leagues` for the installed
    league IDs and `default_league` for the server's default.
