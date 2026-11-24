@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "default": "forbidden-rites",
+  "sets": [
+    {
+      "id": "forbidden-rites",
+      "label": "Forbidden Rites",
+      "league": "Forbidden Rites",
+      "manifest": "forbidden-rites/feature_importances_index.json"
+    },
+    {
+      "id": "runes-of-aldur",
+      "label": "Runes of Aldur",
+      "league": "Runes of Aldur",
+      "manifest": "runes-of-aldur/feature_importances_index.json"
+    }
+  ]
+}

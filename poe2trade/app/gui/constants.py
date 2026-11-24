@@ -1,0 +1,22 @@
+"""Shared constants for the Tk/CTk GUI."""
+from __future__ import annotations
+
+DEFAULT_PRICE_FILTER = "1e"
+DEFAULT_MAX_PRICE_FILTER = "100d"
+DEFAULT_OVERLAY_HOTKEY = "ctrl+1"
+DEFAULT_FILTERED_OVERLAY_HOTKEY = "ctrl+2"
+DEFAULT_COPY_HOTKEY = "ctrl+c"
+DEFAULT_STASH_SCRAPE_HOTKEY = "ctrl+3"
+DEFAULT_CRAFT_POTENTIAL_HOTKEY = "ctrl+4"
+DEV_SAMPLE_HOTKEY = "ctrl+0"
+DEV_CRAFT_SAMPLE_HOTKEY = "ctrl+shift+0"
+
+NAME_ROW_HEIGHT = 34
+KNN_CELL_HEIGHT_FACTOR = 0.92
+BAR_COLOUR = "#2E3A46"
+BAR_HEIGHT_PX = 100
+BUCKET_COLOURS = {
+    "low": "#B94A48",
+    "medium": "#B9770E",
+    "high": "#21885A",
+}
